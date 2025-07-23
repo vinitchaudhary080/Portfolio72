@@ -24,7 +24,7 @@ export default function HeroSection() {
               'UX Research Specialist',
               2000,
             ]}
-            speed={100}
+            speed={200}
             repeat={Infinity}
           />
         </div>
@@ -47,7 +47,7 @@ export default function HeroSection() {
               'AI-Driven Designer',
               2000,
             ]}
-            speed={100}
+            speed={200}
             repeat={Infinity}
           />
         </div>
