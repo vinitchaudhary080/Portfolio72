@@ -29,11 +29,11 @@ export default function WorkCard({
         <div className="flip-card-back bg-black rounded-xl p-6 flex flex-col justify-between text-white shadow-md">
           {/* Author */}
           <div className="flex items-center gap-3 mb-4">
-            <img
+            {/* <img
               src="/profile.jpg"
               alt="author"
               className="w-9 h-9 rounded-full"
-            />
+            /> */}
             <div>
               <h4 className="text-sm font-semibold">{author}</h4>
               <p className="text-xs text-gray-400">
@@ -52,7 +52,7 @@ export default function WorkCard({
 
           {/* Read More */}
           <div className="mt-4 underline text-white text-sm font-medium">
-            Continue reading
+            View Project
           </div>
         </div>
       </div>
