@@ -7,7 +7,7 @@ import ScrollHero from "./components/ScrollHero";
 
 
 import Navbar1 from './components/Navbar1';
-import Navbar from './components/Navbar';
+
 import SlideMenu from './components/SlideMenu'; 
 import KnowMore from './components/KnowMoreSection';
 import HeroSection1 from './components/HeroSection1';
@@ -17,6 +17,9 @@ import Banner from './components/BannersSection1';
 import Footer from './components/FooterSection1';
 import ProjectDummy from './components/projectdetails/projectdummy/ProjectDummy'; // ya agar pura page ho toh uske main component ka import
 import AboutMain from './components/about/Aboutmain';
+import WorkMain from './components/work/Workmain';
+
+ 
 
 
 export default function App() {
@@ -51,6 +54,10 @@ export default function App() {
           />
           <Route path="/project/:slug" element={<ProjectDummy />} />
           <Route path="/About" element={<AboutMain />} />
+          <Route path="/Work" element={<WorkMain />} />
+          <Route path="/projects/straps" element={<StrapsDetail />} />
+        
+          {/* <Route path="/works" element={<ProjectsPage />} /> */}
           
         </Routes>
       </div>

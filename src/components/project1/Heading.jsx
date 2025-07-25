@@ -12,7 +12,7 @@ export default function Heading() {
 
       {/* Main Heading */}
       <h1 className="text-4xl sm:text-6xl md:text-7xl font-light leading-tight max-w-5xl">
-        Straps combines <br />
+        Work <br />
         high-end visuals <br />
         with exceptional <br />
         moments

@@ -9,7 +9,9 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 text-gray-200">
       {/* Top bar */}
       <div className="w-full flex justify-between items-center px-6 py-6 text-xs sm:text-sm bg-black/40 backdrop-blur-sm">
-        <div className="font-medium tracking-wide">Vinitchaudhary</div>
+        <div className="font-medium tracking-wide">
+          <Link to="/">Vinitchaudhary</Link>
+        </div>
         <div className="flex items-center gap-6 tracking-wide">
           <span>©2025</span>
           <span
@@ -34,7 +36,7 @@ export default function Navbar() {
         className={`fixed top-0 right-0 h-full w-full sm:w-[450px] bg-black text-white z-[999] transition-transform duration-500 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
-        onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside menu
+        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex justify-between items-center px-6 py-6 text-[13px] font-medium">
@@ -49,19 +51,34 @@ export default function Navbar() {
 
         {/* Nav Links */}
         <nav className="flex flex-col gap-10 mt-20 px-6">
-          {["Home", "About", "Works", "Contact"].map((label, i) => {
-            const path = label === "Home" ? "/" : `/${label.toLowerCase()}`;
-            return (
-              <Link
-                key={i}
-                to={path}
-                className="text-[40px] font-light tracking-tight leading-tight"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {label}
-              </Link>
-            );
-          })}
+          <Link
+            to="/"
+            className="text-[40px] font-light tracking-tight leading-tight"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="text-[40px] font-light tracking-tight leading-tight"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            to="/Works"
+            className="text-[40px] font-light tracking-tight leading-tight"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Works
+          </Link>
+          <Link
+            to="/contact"
+            className="text-[40px] font-light tracking-tight leading-tight"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* VIEW ALL PAGES */}
@@ -74,7 +91,8 @@ export default function Navbar() {
           <div>
             <h4 className="uppercase mb-1 text-white text-[13px]">Connect</h4>
             <p className="leading-relaxed">
-              1600 Amphitheatre Parkway<br />
+              1600 Amphitheatre Parkway
+              <br />
               Mountain View — California
             </p>
           </div>
