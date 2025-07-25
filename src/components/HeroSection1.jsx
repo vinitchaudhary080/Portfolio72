@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 export default function HeroSection() {
   return (
     <section
-      className="relative w-full h-screen bg-cover bg-center text-white font-sans"
+      className="relative w-full h-screen bg-cover bg-center text-white "
       style={{
         backgroundImage: `url(${image})`,
       }}

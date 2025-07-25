@@ -1,13 +1,14 @@
 // src/components/Navbar1.jsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50 text-gray-300 font-sans">
+    <header className="fixed top-0 left-0 w-full z-50 text-gray-200">
       {/* Top bar */}
-      <div className="w-full flex justify-between items-center px-6 pt-6 text-xs sm:text-sm">
+      <div className="w-full flex justify-between items-center px-6 py-6 text-xs sm:text-sm bg-black/40 backdrop-blur-sm">
         <div className="font-medium tracking-wide">Vinitchaudhary</div>
         <div className="flex items-center gap-6 tracking-wide">
           <span>©2025</span>
@@ -48,16 +49,19 @@ export default function Navbar() {
 
         {/* Nav Links */}
         <nav className="flex flex-col gap-10 mt-20 px-6">
-          {["Home", "About", "Works", "Contact"].map((label, i) => (
-            <a
-              key={i}
-              href="#"
-              className="text-[40px] font-light tracking-tight leading-tight"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {label}
-            </a>
-          ))}
+          {["Home", "About", "Works", "Contact"].map((label, i) => {
+            const path = label === "Home" ? "/" : `/${label.toLowerCase()}`;
+            return (
+              <Link
+                key={i}
+                to={path}
+                className="text-[40px] font-light tracking-tight leading-tight"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* VIEW ALL PAGES */}

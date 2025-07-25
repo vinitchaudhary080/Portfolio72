@@ -6,10 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi.woff2') format('woff2'),
-       url('/fonts/Satoshi.woff') format('woff');
-  font-weight: 400 700;
-  font-style: normal;
+body {
+  font-family: "Satoshi", ui-sans-serif, system-ui;
 }

@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollHero from "./components/ScrollHero";
+
 
 import Navbar1 from './components/Navbar1';
 import Navbar from './components/Navbar';
@@ -13,6 +15,9 @@ import CounterSection from './components/CounterSection';
 import WorkSection from './components/WorksSection';
 import Banner from './components/BannersSection1';
 import Footer from './components/FooterSection1';
+import ProjectDummy from './components/projectdetails/projectdummy/ProjectDummy'; // ya agar pura page ho toh uske main component ka import
+import AboutMain from './components/about/Aboutmain';
+
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,6 +49,9 @@ export default function App() {
               </>
             }
           />
+          <Route path="/project/:slug" element={<ProjectDummy />} />
+          <Route path="/About" element={<AboutMain />} />
+          
         </Routes>
       </div>
     </>

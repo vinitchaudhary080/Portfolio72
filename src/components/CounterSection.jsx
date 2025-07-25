@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CounterSection() {
   return (
-   <section className="w-full bg-black px-6 sm:px-20 py-2 font-sans">
+   <section className="w-full bg-black px-6 sm:px-20 py-2 ">
   <div className="grid grid-cols-1 sm:grid-cols-3 sm:grid-rows-3 gap-6">
     {/* Block 1 */}
     <div className="bg-[#141414] rounded-xl p-8 h-[270px] relative flex flex-col justify-end">
