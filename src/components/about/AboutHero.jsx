@@ -2,6 +2,7 @@ import React from "react";
 import { FaComments } from "react-icons/fa";
 import bgImage from "../../assets/about-hero-bg.jpg";
 
+
 export default function AboutHero() {
   return (
     <section className="bg-black py-16 px-6 sm:py-24 sm:px-24">
@@ -26,10 +27,29 @@ export default function AboutHero() {
             and launching brands, and rebranding. The role of a branding agency
           </p>
 
-          <button className="mt-10 bg-white text-black px-6 py-3 rounded-full flex items-center gap-2 hover:bg-gray-200 transition-all mx-auto">
-            <FaComments className="text-lg" />
-            Discuss Project
-          </button>
+          <button
+      onClick={() => window.open("https://wa.me/918398020076", "_blank")}
+      className="
+        inline-flex 
+        items-center 
+        gap-2 
+        bg-white 
+        text-black 
+        px-6 
+        py-3 
+        rounded-md 
+        text-sm 
+        font-medium 
+        hover:scale-105 
+        transition 
+        mt-10 
+        mx-auto
+      "
+    >
+      <FaComments className="text-lg" />
+      Discuss Project
+    </button>
+
         </div>
       </div>
     </section>

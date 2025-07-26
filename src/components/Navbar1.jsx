@@ -79,6 +79,24 @@ export default function Navbar1({ onMenuClick }) {
             <h4 className="uppercase mb-1 text-white text-[13px]">Social</h4>
             <p className="leading-relaxed space-y-2 text-gray-400">
               <a
+                href="https://www.behance.net/vinitchaudhary1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Behance
+              </a>
+              <br />
+               <a
+                href="https://www.behance.net/vinitchaudhary1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                LinkedIn
+              </a>
+              <br />
+              <a
                 href="https://www.instagram.com/ui_ux.uiigsh=eXpzcDVlaGZoNzVv&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -86,15 +104,10 @@ export default function Navbar1({ onMenuClick }) {
               >
                 Instagram
               </a>
-              <br />
-              <a
-                href="https://www.linkedin.com/in/vinitc69/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
-                LinkedIn
-              </a>
+              
+             
+               
+              
             </p>
           </div>
         </div>

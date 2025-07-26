@@ -1,6 +1,7 @@
 // src/components/contact/ContactPage.jsx
 import React from 'react'
 import bgVideo from '../assets/contact-bg.mp4'
+import { FaRegCommentDots } from "react-icons/fa";
 
 export default function ContactPage() {
     return (
@@ -71,16 +72,13 @@ export default function ContactPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
-              inline-block 
-              bg-white text-black 
-              px-8 py-3 
-              rounded-md 
-              font-medium 
-              hover:bg-gray-100 
-              transition-shadow 
-              shadow
-            "
+        inline-flex items-center gap-2
+        bg-white text-black
+        px-6 py-3 rounded-md text-sm font-medium
+        hover:scale-105 transition
+      "
                     >
+                        <FaRegCommentDots className="text-lg" />
                         Let’s talk
                     </a>
                 </div>

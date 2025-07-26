@@ -25,70 +25,27 @@ export default function AboutContent() {
                     {/* Buttons: stacked on mobile, row on md+ */}
                     <div className="flex flex-col gap-4 mt-8 md:ml-96 md:flex-row md:gap-6">
                         {/* Primary Button with lift & shadow on hover */}
-                        <button
-                            className="
-    relative overflow-hidden group
-    bg-white text-black
-    px-6 py-3 rounded-md
-    text-xs sm:text-sm font-medium
-
-    transition-colors duration-200 ease-in-out
-    hover:bg-gray-100
-  "
-                        >
-                            Book a 15‑min call
-
-                            {/* top‑left */}
-                            <span
-                                className="
-      absolute w-2 h-2
-      top-2 left-2
-      border-t-2 border-l-2 border-black
-      opacity-0 group-hover:opacity-100
-      transition-opacity duration-200
-    "
-                            />
-
-                            {/* top‑right */}
-                            <span
-                                className="
-      absolute w-2 h-2
-      top-2 right-2
-      border-t-2 border-r-2 border-black
-      opacity-0 group-hover:opacity-100
-      transition-opacity duration-200
-    "
-                            />
-
-                            {/* bottom‑left */}
-                            <span
-                                className="
-      absolute w-2 h-2
-      bottom-2 left-2
-      border-b-2 border-l-2 border-black
-      opacity-0 group-hover:opacity-100
-      transition-opacity duration-200
-    "
-                            />
-
-                            {/* bottom‑right */}
-                            <span
-                                className="
-      absolute w-2 h-2
-      bottom-2 right-2
-      border-b-2 border-r-2 border-black
-      opacity-0 group-hover:opacity-100
-      transition-opacity duration-200
-    "
-                            />
-                        </button>
+                         <a
+      href="https://wa.me/918398020076"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        inline-flex items-center gap-2
+        bg-white text-black
+        px-6 py-3 rounded-xl text-sm font-medium
+        hover:scale-105 transition
+      "
+    >
+      
+      Book a 15-min Call
+    </a>
 
 
 
 
                         {/* Secondary link-style button */}
                         <button className="text-gray-400 text-sm font-medium hover:text-white transition-colors duration-200">
-                            We are available for work
+                            I'm available for work
                         </button>
                     </div>
                 </div>

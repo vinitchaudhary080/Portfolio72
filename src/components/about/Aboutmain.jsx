@@ -7,19 +7,35 @@ import Services from "./ServicesSection";
 import WorksSection from "../WorksSection";
 import Banner from '../BannersSection1';
 import Footer from '../FooterSection1';
+import ScrollCard from "../ScrollCard";
 
 
 export default function ProjectDummy() {
   return (
     <div className="bg-black min-h-screen">  
       
-      <AboutHero />
-      <AboutContent />
-      <MyImage />
-      <Services />
-      <WorksSection />
-      <Banner />
-      <Footer />
+      <ScrollCard>
+       <AboutHero />
+      </ScrollCard>
+      <ScrollCard>
+       <AboutContent />
+      </ScrollCard>
+      <ScrollCard>
+       <MyImage />
+      </ScrollCard>
+      <ScrollCard>
+       <Services />
+      </ScrollCard>
+      <ScrollCard>
+       <WorksSection />
+      </ScrollCard>
+      <ScrollCard>
+       <Banner />
+      </ScrollCard>
+      <ScrollCard>
+       <Footer />
+      </ScrollCard>
+      
       
      
       
