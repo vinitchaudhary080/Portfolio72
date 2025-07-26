@@ -9,7 +9,7 @@ import {
 
 export default function FooterSection() {
   return (
-    <footer className="bg-black text-white px-6 sm:px-20 py-16">
+    <footer className="bg-black text-white px-6 sm:px-20 pt-16 pb-2">
       {/* Top Section */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 items-start text-center sm:text-left">
         {/* Email */}

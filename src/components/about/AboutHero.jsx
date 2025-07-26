@@ -4,7 +4,7 @@ import bgImage from "../../assets/about-hero-bg.jpg";
 
 export default function AboutHero() {
   return (
-    <section className="bg-black py-16 px-8 sm:py-24 sm:px-24">
+    <section className="bg-black py-16 px-6 sm:py-24 sm:px-24">
       <div
         className="relative w-full min-h-[60vh] bg-cover bg-center flex items-center justify-center rounded-xl overflow-hidden"
         style={{

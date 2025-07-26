@@ -11,3 +11,27 @@ html {
 body {
   font-family: "Satoshi", ui-sans-serif, system-ui;
 }
+
+body {
+  @apply bg-black text-white;
+}
+
+/* index.css */
+.animated-underline {
+  position: relative;
+  display: inline-block;    
+}
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+.animated-underline:hover::after {
+  left: 0;
+  width: 100%;
+}

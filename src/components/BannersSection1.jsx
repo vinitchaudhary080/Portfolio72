@@ -20,7 +20,8 @@ export default function BannersSection() {
       {/* Text + CTA */}
       <div className="relative z-10 text-center max-w-3xl">
         <h2 className="text-3xl sm:text-5xl font-light leading-snug mb-8">
-          This is where we get in touch <br /> and discuss your ideas!
+          “When passion meets purpose, magic happens.”<br />
+          Let’s create something unforgettable together.
         </h2>
         <a
           href="https://wa.me/918398020076"

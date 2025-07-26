@@ -1,25 +1,24 @@
 // src/App.jsx
-
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
-import ScrollHero from "./components/ScrollHero";
+import ScrollCard from "./components/ScrollCard";
 
-
-import Navbar1 from './components/Navbar1';
-
-import SlideMenu from './components/SlideMenu'; 
-import KnowMore from './components/KnowMoreSection';
+import Navbar1      from './components/Navbar1';
+import SlideMenu    from './components/SlideMenu';
 import HeroSection1 from './components/HeroSection1';
+import KnowMore     from './components/KnowMoreSection';
 import CounterSection from './components/CounterSection';
-import WorkSection from './components/WorksSection';
-import Banner from './components/BannersSection1';
-import Footer from './components/FooterSection1';
-import ProjectDummy from './components/projectdetails/projectdummy/ProjectDummy'; // ya agar pura page ho toh uske main component ka import
-import AboutMain from './components/about/Aboutmain';
-import WorkMain from './components/work/Workmain';
+import WorkSection  from './components/WorksSection';
+import Banner       from './components/BannersSection1';
+import Footer       from './components/FooterSection1';
+import ContactPage  from './components/ContactPage';
 
- 
+import AboutMain    from './components/about/Aboutmain';
+// ← corrected import
+import WorkMain     from './components/work/Workmain';
+
+import ProjectDummy from './components/projectdetails/projectdummy/ProjectDummy';
 
 
 export default function App() {
@@ -29,36 +28,46 @@ export default function App() {
     <>
       <ScrollToTop />
 
-      {/* Sticky Navbar */}
       <Navbar1 onMenuClick={() => setIsMenuOpen(true)} />
-
-      {/* Slide-out Menu */}
       <SlideMenu open={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
-      {/* Scrollable Content */}
       <div className="pt-0">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-               
+          <Route path="/" element={
+            <>
+              
+               <ScrollCard>
                 <HeroSection1 />
+               </ScrollCard>
+               <ScrollCard>
                 <KnowMore />
+               </ScrollCard>
+               <ScrollCard>
                 <CounterSection />
+               </ScrollCard>
+               <ScrollCard>
                 <WorkSection />
+               </ScrollCard>
+               <ScrollCard>
                 <Banner />
+               </ScrollCard>
+               <ScrollCard>
                 <Footer />
-              </>
-            }
-          />
+               </ScrollCard>
+              
+            </>
+          }/>
+
+          <Route path="/about" element={<AboutMain />} />
+
+          {/* now points at your Workmain.jsx */}
+          <Route path="/works" element={<WorkMain />} />
+
           <Route path="/project/:slug" element={<ProjectDummy />} />
-          <Route path="/About" element={<AboutMain />} />
-          <Route path="/Work" element={<WorkMain />} />
-          <Route path="/projects/straps" element={<StrapsDetail />} />
-        
-          {/* <Route path="/works" element={<ProjectsPage />} /> */}
-          
+
+          <Route path="/contact" element={<ContactPage />} />
+
+         
         </Routes>
       </div>
     </>
