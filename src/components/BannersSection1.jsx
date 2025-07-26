@@ -28,7 +28,7 @@ export default function BannersSection() {
           href="https://wa.me/918398020076"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-md text-sm font-medium hover:scale-105 transition"
+          className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl text-sm font-medium hover:scale-105 transition"
         >
           <FaRegCommentDots className="text-lg" />
           Discuss Project

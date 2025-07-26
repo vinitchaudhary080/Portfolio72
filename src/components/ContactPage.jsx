@@ -74,7 +74,7 @@ export default function ContactPage() {
                         className="
         inline-flex items-center gap-2
         bg-white text-black
-        px-6 py-3 rounded-md text-sm font-medium
+        px-6 py-3 rounded-xl text-sm font-medium
         hover:scale-105 transition
       "
                     >

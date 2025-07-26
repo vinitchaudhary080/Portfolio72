@@ -59,7 +59,7 @@ export default function Card1() {
             to="/project/straps"
             className="
               inline-block bg-white text-black
-              px-8 py-4 rounded-md text-base font-medium
+              px-8 py-4 rounded-xl text-base font-medium
               hover:bg-gray-100 transition-shadow hover:shadow-md
             "
           >

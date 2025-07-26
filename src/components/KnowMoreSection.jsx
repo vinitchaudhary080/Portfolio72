@@ -12,11 +12,12 @@ export default function KnowMoreSection() {
 
   {/* Content block (no more full‑screen min‑height) */}
   <div className="mx-auto max-w-3xl space-y-6">
-    <p className="text-2xl sm:text-3xl leading-[1.6] font-medium tracking-tight">
-      Discover the stories, moments, and shared vision that shape a
-      collaborative and vibrant space at our agency, where design thrives
-      and bold concepts turn into reality.
-    </p>
+   <p className="text-2xl sm:text-3xl leading-[1.6] font-medium tracking-tight">
+  My belief is simple: great design is human‑centered. By blending user
+  research with bold visual storytelling, I help brands connect
+  authentically—and leave a lasting impact in people’s hands.
+</p>
+
     <p className="text-lg text-gray-500 leading-[1.7] tracking-normal">
       Uncover the journeys, ideas, and creative drive that fuel a{' '}
       <span className="text-white font-medium">dynamic and innovative</span>{' '}

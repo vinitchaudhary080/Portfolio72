@@ -4,32 +4,33 @@ import bgImage from "../../assets/about-hero-bg.jpg";
 
 
 export default function AboutHero() {
-  return (
-    <section className="bg-black py-16 px-6 sm:py-24 sm:px-24">
-      <div
-        className="relative w-full min-h-[60vh] bg-cover bg-center flex items-center justify-center rounded-xl overflow-hidden"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-        }}
-      >
-        {/* Black overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+    return (
+        <section className="bg-black py-16 px-6 sm:py-24 sm:px-24">
+            <div
+                className="relative w-full min-h-[60vh] bg-cover bg-center flex items-center justify-center rounded-xl overflow-hidden"
+                style={{
+                    backgroundImage: `url(${bgImage})`,
+                }}
+            >
+                {/* Black overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
-        {/* Centered content */}
-        <div className="relative z-10 max-w-5xl text-white text-center p-6">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight">
-            This is where we get in touch <br />
-            and discuss your ideas!
-          </h1>
+                {/* Centered content */}
+                <div className="relative z-10 max-w-5xl text-white text-center p-6">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight">
+                        Hi, I’m Vinit Chaudhary<br />
+                        UI/UX Designer & Creative Director
+                    </h1>
 
-          <p className="mt-6 text-base sm:text-xl font-light text-gray-200">
-            Founded in 2023, a branding agency is a firm that specializes in creating <br className="hidden sm:block" />
-            and launching brands, and rebranding. The role of a branding agency
-          </p>
 
-          <button
-      onClick={() => window.open("https://wa.me/918398020076", "_blank")}
-      className="
+                    <p className="mt-6 text-base sm:text-xl font-light text-gray-200">
+                        As a Sr. UI/UX Designer, I partner with startups and Fortune 50+ brands
+                        to create interfaces that delight users and drive real results.
+                    </p>
+
+                    <button
+                        onClick={() => window.open("https://wa.me/918398020076", "_blank")}
+                        className="
         inline-flex 
         items-center 
         gap-2 
@@ -37,7 +38,7 @@ export default function AboutHero() {
         text-black 
         px-6 
         py-3 
-        rounded-md 
+        rounded-xl 
         text-sm 
         font-medium 
         hover:scale-105 
@@ -45,13 +46,13 @@ export default function AboutHero() {
         mt-10 
         mx-auto
       "
-    >
-      <FaComments className="text-lg" />
-      Discuss Project
-    </button>
+                    >
+                        <FaComments className="text-lg" />
+                        Discuss Project
+                    </button>
 
-        </div>
-      </div>
-    </section>
-  );
+                </div>
+            </div>
+        </section>
+    );
 }
