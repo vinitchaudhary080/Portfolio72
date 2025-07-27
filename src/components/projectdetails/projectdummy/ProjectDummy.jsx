@@ -15,23 +15,24 @@ import FullImages from "./Full";
 // 1️⃣ Import each project’s “main” component
 import ProjectMain1 from "../../project1/Projectmain";    // for slug "user-centric-websites"
 import ProjectMain2 from "../../project2/Projectmain2"; 
-
+import Chartinghqmain from "../../ChartingHQ/Chartinghqmain"; 
+import Alphamain from "../../alpha/Alphamain";
+import Ramain from "../../radashboard/Ramain";
 
 export default function ProjectDummy() {
   const { slug } = useParams();  // ← read the slug from the URL
   // 2️⃣ Choose which to render based on slug
-  if (slug === "user-centric-websites") {
-    return <ProjectMain1 />;
+  if (slug === "ChartingHQProject") {
+    return <Chartinghqmain />;
   }
-  else if (slug === "high-end-branding-that-resonates") {
-    return <ProjectMain2 />;
+  else if (slug === "Apha-ExchangeProject") {
+    return <Alphamain />;
   }
 
   return (
     <div className="bg-black min-h-screen">
-      <div className="bg-black text-white min-h-screen flex items-center justify-center">
-      <h2 className="text-2xl">Project not found</h2>
-    </div>
+      
+    
       <Heading />
       <ImageSection />
       <Summary />

@@ -19,6 +19,9 @@ import AboutMain    from './components/about/Aboutmain';
 import WorkMain     from './components/work/Workmain';
 
 import ProjectDummy from './components/projectdetails/projectdummy/ProjectDummy';
+import ChartingHqmain from './components/ChartingHQ/Chartinghqmain';
+import Alphamain from './components/alpha/Alphamain';
+import Ramain from './components/radashboard/Ramain';
 
 
 export default function App() {
@@ -63,7 +66,9 @@ export default function App() {
           {/* now points at your Workmain.jsx */}
           <Route path="/works" element={<WorkMain />} />
 
-          <Route path="/project/:slug" element={<ProjectDummy />} />
+          <Route path="/chartinghq/:slug" element={<ChartingHqmain />} />
+          <Route path="/alpha/:slug" element={<Alphamain />} />
+          <Route path="/raDashboard/:slug" element={<Ramain />} />
 
           <Route path="/contact" element={<ContactPage />} />
 
