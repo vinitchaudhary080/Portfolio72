@@ -3,7 +3,7 @@ import React from "react";
 import WorkCard from "./WorkCard";
 import img1 from "../assets/ChartingHQ/project1.jpg";
 import img2 from "../assets/Alpha/MacBook_Mockup_3.jpg";
-import img3 from "../assets/RaDashboard/raDashNew1.png";
+import img3 from "../assets/RaDashboard/raDashNew2.png";
 
 export default function WorksSection() {
   const posts = [
