@@ -22,7 +22,12 @@ import ProjectDummy from './components/projectdetails/projectdummy/ProjectDummy'
 import ChartingHqmain from './components/ChartingHQ/Chartinghqmain';
 import Alphamain from './components/alpha/Alphamain';
 import Ramain from './components/radashboard/Ramain';
-
+import Algomain from './components/algorooms/Algomain';
+import Alphaappmain from './components/alphaapp/Alphaappmain';
+import Nestohubmain from './components/nestohub/Nestohubmain';
+import Cribonixmain from './components/cribonix/Cribonixmain';
+import Copartnerappmain from './components/copartnerapp/Copartnerappmain';
+import Budgettreemain from './components/budgettree/Budgettreemain';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,7 +74,12 @@ export default function App() {
           <Route path="/chartinghq/:slug" element={<ChartingHqmain />} />
           <Route path="/alpha/:slug" element={<Alphamain />} />
           <Route path="/raDashboard/:slug" element={<Ramain />} />
-
+          <Route path="/algorooms/:slug" element={<Algomain />} />
+          <Route path="/alphaapp/:slug" element={<Alphaappmain />} />
+          <Route path="/nestohub/:slug" element={<Nestohubmain />} />
+          <Route path="/cribonix/:slug" element={<Cribonixmain />} />
+          <Route path="/copartnerapp/:slug" element={<Copartnerappmain />} />
+          <Route path="/budgettree/:slug" element={<Budgettreemain />} />
           <Route path="/contact" element={<ContactPage />} />
 
          

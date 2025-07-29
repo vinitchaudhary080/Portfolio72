@@ -3,16 +3,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // big hero image on the left
-import mainImage from "../../assets/List2/full.jpg";
+import mainImage from "../../assets/ChartingHQ/project1.jpg";
 
 // small thumbnails underneath
-import thumb1 from "../../assets/List2/thumb1.jpg";
-import thumb2 from "../../assets/List2/thumb2.jpg";
-import thumb3 from "../../assets/List2/thumb3.jpg";
-import thumb4 from "../../assets/List2/thumb4.jpg";
-import thumb5 from "../../assets/List2/thumb5.jpg";
-import thumb6 from "../../assets/List2/thumb6.jpg";
-import thumb7 from "../../assets/List2/thumb7.jpg";
+import thumb1 from "../../assets/ChartingHQ/project1.jpg";
+import thumb2 from "../../assets/ChartingHQ/2.jpg";
+import thumb3 from "../../assets/ChartingHQ/3.jpg";
+import thumb4 from "../../assets/ChartingHQ/4.jpg";
+import thumb5 from "../../assets/ChartingHQ/5.jpg";
+import thumb6 from "../../assets/ChartingHQ/2.jpg";
+import thumb7 from "../../assets/ChartingHQ/3.jpg";
 
 export default function Card1() {
   // duplicate the array so the marquee can loop seamlessly
@@ -44,9 +44,9 @@ export default function Card1() {
         <div>
           <p className="text-xs text-gray-300 mb-2">©2025</p>
           <h3 className="text-2xl sm:text-3xl font-light text-white mb-4 leading-tight">
-            Straps combines high‑end visuals
+            ChartingHQ Dashboard
             <br className="hidden sm:block" />
-            with exceptional moments
+            Strategy Builder & Backtest
           </h3>
           <p className="text-gray-300 text-sm mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -56,7 +56,7 @@ export default function Card1() {
 
         {/* View project button */}
         <Link
-          to="/project/straps"
+          to="/chartinghq/chartinghq-dashboard"
           className="
             inline-block bg-white text-black
             px-8 py-4 rounded-xl  text-base font-medium 
