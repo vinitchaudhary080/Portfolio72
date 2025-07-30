@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/RADashboard/raDashNew2.png";
+import projectImage from "../../assets/RADashboard/radashnew2.png";
 
 export default function ImageSection() {
   return (

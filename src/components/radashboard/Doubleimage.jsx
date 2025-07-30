@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React from "react";
-import editorImg1 from "../../assets/RADashboard/raDashNew2.png";
-import editorImg2 from "../../assets/RADashboard/raDashNew3.png";
+import editorImg1 from "../../assets/RADashboard/radashnew2.png";
+import editorImg2 from "../../assets/RADashboard/radashnew3.png";
 
 export default function ScriptEditorSection() {
   return (

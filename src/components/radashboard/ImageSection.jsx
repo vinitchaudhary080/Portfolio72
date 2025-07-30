@@ -1,6 +1,6 @@
 // src/components/ChartingHQ/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/RADashboard/raDashNew1.png";
+import projectImage from "../../assets/RADashboard/radashnew1.png";
 
 export default function ImageSection() {
   return (

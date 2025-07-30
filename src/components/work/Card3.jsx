@@ -3,16 +3,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // big hero image on the left
-import mainImage from "../../assets/RaDashboard/raDashNew1.png";
+import mainImage from "../../assets/RaDashboard/radashnew1.png";
 
 // small thumbnails underneath
-import thumb1 from "../../assets/RaDashboard/raDashNew1.png";
-import thumb2 from "../../assets/RaDashboard/raDashNew2.png";
-import thumb3 from "../../assets/RaDashboard/raDashNew3.png";
-import thumb4 from "../../assets/RaDashboard/raDashNew4.png";
-import thumb5 from "../../assets/RaDashboard/raDashNew5.png";
-import thumb6 from "../../assets/RaDashboard/raDashNew1.png";
-import thumb7 from "../../assets/RaDashboard/raDashNew2.png";
+import thumb1 from "../../assets/RaDashboard/radashnew1.png";
+import thumb2 from "../../assets/RaDashboard/radashnew2.png";
+import thumb3 from "../../assets/RaDashboard/radashnew3.png";
+import thumb4 from "../../assets/RaDashboard/radashnew4.png";
+import thumb5 from "../../assets/RaDashboard/radashnew5.png";
+import thumb6 from "../../assets/RaDashboard/radashnew1.png";
+import thumb7 from "../../assets/RaDashboard/radashnew2.png";
 
 export default function Card1() {
   // duplicate the array so the marquee can loop seamlessly
