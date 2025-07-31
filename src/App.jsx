@@ -7,6 +7,7 @@ import ScrollCard from "./components/ScrollCard";
 import Navbar1      from './components/Navbar1';
 import SlideMenu    from './components/SlideMenu';
 import HeroSection1 from './components/HeroSection1';
+import HeroSection from './components/HeroSection';
 import KnowMore     from './components/KnowMoreSection';
 import CounterSection from './components/CounterSection';
 import WorkSection  from './components/WorksSection';
@@ -44,8 +45,11 @@ export default function App() {
           <Route path="/" element={
             <>
               
-               <ScrollCard>
+               {/* <ScrollCard>
                 <HeroSection1 />
+               </ScrollCard> */}
+               <ScrollCard>
+                <HeroSection />
                </ScrollCard>
                <ScrollCard>
                 <KnowMore />

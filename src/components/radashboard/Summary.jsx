@@ -1,4 +1,3 @@
-// components/projectdummy/Summary.jsx
 import React from "react";
 
 export default function Summary() {
@@ -12,7 +11,7 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Mission</h3>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-              Provenance set out to build a company that reimagines the way people think about community, connection, and meaning, starting with how they celebrate major life milestones. With the initial entry wedge being weddings, they were looking to come out of stealth and launch their MVP to the market, and they also needed a marketing website to accompany it.
+              Empower traders and analysts with a unified platform for real-time analytics, subscription & tip management, and earnings tracking—streamlining workflows, reducing manual errors, and enabling faster, data-driven decisions.
             </p>
           </div>
 
@@ -20,38 +19,41 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">My Contributions</h3>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-              As a Product Designer, I built Provenance's MVP from scratch – I took the web app through all stages of the UX design process and got it ready for launch. I then designed and built a highly effective Webflow website that educates visitors about Provenance's offering and converts them into users and customers. Over the next two years, I worked on countless iterations of their existing offering, and also helped them launch a few new apps.
+              As the Senior UI/UX Designer, I led stakeholder workshops and user interviews to define core workflows, created low- and high-fidelity wireframes & interactive prototypes in Figma for rapid validation, established a modular design system, and collaborated with engineers to integrate data-visualization libraries (Highcharts) into responsive React components—while ensuring accessibility and performance optimizations.
             </p>
           </div>
         </div>
 
         {/* Right Column */}
-        <div className="space-y-16 sm:space-y-32 sm:pl-16"> {/* Shifted Right */}
+        <div className="space-y-16 sm:space-y-32 sm:pl-16">
           {/* Client */}
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Client</h3>
-            <p className="text-gray-300 text-sm sm:text-base">
-              Provenance (Chim3ra, Inc.)<br />
-              Los Angeles, CA, US
+            <p className="text-gray-400 text-sm sm:text-base">
+              ChartingHQ<br />
+              Internal Trading Analytics Platform
             </p>
             <div className="flex gap-3 mt-3">
-              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">cb</span>
-              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">in</span>
+              <a href="https://purple-wren-537479.hostingersite.com/#/raDashboard/RA-Dashboard" target="_blank" rel="noopener noreferrer">
+                <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">Live</span>
+              </a>
+              <a href="https://github.com/your-repo/ra-dashboard" target="_blank" rel="noopener noreferrer">
+                <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">Repo</span>
+              </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Services</h3>
-            <ul className="list-disc pl-5 text-gray-300 text-sm sm:text-base space-y-1">
-              <li>User Interface Design</li>
-              <li>User Experience Design</li>
-              <li>User Research & User Flows</li>
-              <li>Wireframing</li>
-              <li>A/B Testing & CRO</li>
-              <li>Web design</li>
-              <li>Webflow development</li>
-              <li>SEO</li>
+            <ul className="list-disc pl-5 text-gray-400 text-sm sm:text-base space-y-1">
+              <li>UX Strategy & User Research</li>
+              <li>Information Architecture</li>
+              <li>Data Visualization Design</li>
+              <li>Interaction Design & Prototyping</li>
+              <li>Usability Testing & Iteration</li>
+              <li>Responsive React Component Design</li>
+              <li>Performance & Accessibility Optimization</li>
             </ul>
           </div>
         </div>

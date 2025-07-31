@@ -4,28 +4,28 @@ import React from "react";
 export default function Impact() {
   const data = [
     {
-      value: "1554%",
-      label: "Increase in monthly organic search traffic in 8 months",
+      value: "80%",
+      label: "Increase in qualified inquiries from the website",
     },
     {
-      value: "10x",
-      label: "Increase in user adoption of one of their tools",
+      value: "3x",
+      label: "Improvement in lead conversion rate",
     },
     {
-      value: "0 to 100.000+",
-      label: "Couples using their wedding app",
+      value: "45%",
+      label: "Reduction in bounce rate on service pages",
     },
     {
-      value: "63.9%",
-      label: "Increase in purchase conversion rate",
+      value: "Top 5",
+      label: "Organic keyword rankings for primary service terms within 4 months",
     },
     {
-      value: "66%",
-      label: "Increase in sign up conversion rate",
+      value: "60%",
+      label: "Faster page load time after performance optimizations",
     },
     {
-      value: "70+",
-      label: "Net Promoter Score (NPS)",
+      value: "4.7/5",
+      label: "Average brand trust rating from client feedback survey",
     },
   ];
 
@@ -33,7 +33,7 @@ export default function Impact() {
     <section className="bg-black text-white px-6 sm:px-20 py-16 ">
       <h2 className="text-3xl sm:text-5xl font-semibold mb-6">Impact</h2>
       <p className="text-gray-400 text-base sm:text-lg mb-16 max-w-4xl">
-        Both the initial launch and further iterations produced great results:
+        The redesign and strategic restructuring delivered measurable business outcomes:
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">

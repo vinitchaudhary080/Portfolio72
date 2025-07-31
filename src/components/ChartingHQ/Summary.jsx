@@ -12,7 +12,7 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Mission</h3>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-              Provenance set out to build a company that reimagines the way people think about community, connection, and meaning, starting with how they celebrate major life milestones. With the initial entry wedge being weddings, they were looking to come out of stealth and launch their MVP to the market, and they also needed a marketing website to accompany it.
+              ChartingHQ’s mission is to empower traders by consolidating fragmented tools into one unified platform. Traders can now access live charts, technical indicators, order entry and P&L tracking—all in a single, customizable dashboard—reducing context switches and speeding up decision-making.
             </p>
           </div>
 
@@ -20,38 +20,38 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">My Contributions</h3>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-              As a Product Designer, I built Provenance's MVP from scratch – I took the web app through all stages of the UX design process and got it ready for launch. I then designed and built a highly effective Webflow website that educates visitors about Provenance's offering and converts them into users and customers. Over the next two years, I worked on countless iterations of their existing offering, and also helped them launch a few new apps.
+              As Lead UI/UX Designer, I owned the end-to-end workflow: conducted user research and trader interviews, crafted wireframes and interactive prototypes in Figma, and developed high-fidelity React components styled with Tailwind CSS. I built a modular design system, integrated real-time broker APIs via WebSockets, and ran iterative usability tests with active traders—refining layouts, micro-interactions, and performance optimizations for launch.
             </p>
           </div>
         </div>
 
         {/* Right Column */}
-        <div className="space-y-16 sm:space-y-32 sm:pl-16"> {/* Shifted Right */}
+        <div className="space-y-16 sm:space-y-32 sm:pl-16">
           {/* Client */}
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Client</h3>
-            <p className="text-gray-300 text-sm sm:text-base">
-              Provenance (Chim3ra, Inc.)<br />
-              Los Angeles, CA, US
+            <p className="text-gray-400 text-sm sm:text-base">
+              ChartingHQ (Stealth Fintech Startup)<br />
+              Remote / India
             </p>
             <div className="flex gap-3 mt-3">
-              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">cb</span>
-              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">in</span>
+              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">React</span>
+              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">Tailwind CSS</span>
             </div>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Services</h3>
-            <ul className="list-disc pl-5 text-gray-300 text-sm sm:text-base space-y-1">
-              <li>User Interface Design</li>
-              <li>User Experience Design</li>
-              <li>User Research & User Flows</li>
-              <li>Wireframing</li>
-              <li>A/B Testing & CRO</li>
-              <li>Web design</li>
-              <li>Webflow development</li>
-              <li>SEO</li>
+            <ul className="text-gray-400 list-disc pl-5  text-sm sm:text-base space-y-1">
+              <li>User Research & Trader Interviews</li>
+              <li>Wireframing & Interactive Prototyping</li>
+              <li>High-Fidelity UI Design</li>
+              <li>Design System & Component Library</li>
+              <li>React Front-End Development</li>
+              <li>Real-Time API & WebSocket Integration</li>
+              <li>Usability Testing & Iteration</li>
+              <li>Performance Optimization & Accessibility</li>
             </ul>
           </div>
         </div>

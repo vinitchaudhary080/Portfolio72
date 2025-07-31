@@ -4,28 +4,28 @@ import React from "react";
 export default function Impact() {
   const data = [
     {
-      value: "1554%",
-      label: "Increase in monthly organic search traffic in 8 months",
+      value: "80%",
+      label: "Reduction in backtest iteration time",
     },
     {
-      value: "10x",
-      label: "Increase in user adoption of one of their tools",
+      value: "12x",
+      label: "Faster backtest processing (from hours to minutes)",
     },
     {
-      value: "0 to 100.000+",
-      label: "Couples using their wedding app",
+      value: "60%",
+      label: "Reduction in onboarding time",
     },
     {
-      value: "63.9%",
-      label: "Increase in purchase conversion rate",
+      value: "92%",
+      label: "User satisfaction rating",
     },
     {
-      value: "66%",
-      label: "Increase in sign up conversion rate",
+      value: "25%",
+      label: "Increase in trial-to-paid conversion",
     },
     {
-      value: "70+",
-      label: "Net Promoter Score (NPS)",
+      value: "200+",
+      label: "Strategies deployed in first month",
     },
   ];
 
@@ -33,7 +33,7 @@ export default function Impact() {
     <section className="bg-black text-white px-6 sm:px-20 py-16 ">
       <h2 className="text-3xl sm:text-5xl font-semibold mb-6">Impact</h2>
       <p className="text-gray-400 text-base sm:text-lg mb-16 max-w-4xl">
-        Both the initial launch and further iterations produced great results:
+        Key outcomes after launch:
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">

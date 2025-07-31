@@ -1,43 +1,63 @@
-// src/components/projectdetails/projectdummy/ProcessStep1.jsx
+// components/projectdummy/Summary.jsx
 import React from "react";
 
-export default function ProcessStep1() {
+export default function Summary() {
   return (
-    <section className="bg-black text-white px-6 sm:px-20 py-20 ">
-      {/* Heading Line like "Work Samples" style */}
-      <div className="flex items-center gap-4 mb-10">
-        <h2 className="text-white text-base sm:text-lg font-medium whitespace-nowrap">
-          THE PROCESS – STEP 1
-        </h2>
-        <div className="flex-1 h-px bg-gray-700"></div>
-      </div>
+    <section className="w-full bg-black text-white px-6 sm:px-20 py-16 ">
+      <h2 className="text-3xl sm:text-5xl font-semibold mb-12">Project Summary</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 ">
+        {/* Left Column */}
+        <div className="space-y-16 sm:space-y-32">
+          {/* Mission */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">Mission</h3>
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+              Develop a unified, intuitive dashboard for both beginner and professional crypto traders—combining real-time market overviews, trading tools,
+              and portfolio tracking into one seamless interface to eliminate the need for multiple platforms.
+            </p>
+          </div>
 
-      {/* Main Heading */}
-      <h1 className="text-4xl sm:text-5xl font-semibold mb-12">
-        Designing the MVP
-      </h1>
+          {/* My Contributions */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">My Contributions</h3>
+            <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+              As Sr. UI/UX Designer & Team Lead, I drove the end-to-end process over three months: conducting user research and wireframing,
+              building interactive prototypes, running usability and A/B tests, designing high-fidelity mockups, integrating real-time WebSocket feeds,
+              and optimizing micro-interactions and overall performance.
+            </p>
+          </div>
+        </div>
 
-      {/* Discovery Block */}
-      <div className="mb-10">
-        <h3 className="text-xl sm:text-2xl font-semibold mb-4">Discovery</h3>
-        <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-4xl">
-          The first step was to get acquainted with the team’s vision and the plans
-          they had for the product. Weddings are very complex by nature and for that
-          reason getting alignment before starting any design work was crucial. To tackle
-          this complexity, we decided to focus only on the ceremony and not try to tackle
-          all aspects of a wedding.
-        </p>
-      </div>
+        {/* Right Column */}
+        <div className="space-y-16 sm:space-y-32 sm:pl-16">
+          {/* Client */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">Client</h3>
+            <p className="text-gray-300 text-sm sm:text-base">
+              Alpha Exchange<br />
+              Crypto Brokerage
+            </p>
+            <div className="flex gap-3 mt-3">
+              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">web</span>
+              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">in</span>
+            </div>
+          </div>
 
-      {/* Planning Block */}
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold mb-4">Planning the App Structure</h3>
-        <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-4xl">
-          After we identified the key areas to focus on, I moved onto devising the app structure
-          and what the user flows would look like for different user roles. Those different roles
-          needed to have different levels of access to the tools and information regarding the wedding,
-          meaning they would have a slightly different user flow so I ended up creating a lot of flow charts.
-        </p>
+          {/* Services */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2">Services</h3>
+            <ul className="list-disc pl-5 text-gray-300 text-sm sm:text-base space-y-1">
+              <li>User Research & Flow Mapping</li>
+              <li>Wireframing & Prototyping</li>
+              <li>User Interface Design</li>
+              <li>High-Fidelity Mockups</li>
+              <li>Real-Time Data Integration (WebSockets)</li>
+              <li>Micro-Interactions & Animations</li>
+              <li>Usability & A/B Testing</li>
+              <li>Performance Optimization</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

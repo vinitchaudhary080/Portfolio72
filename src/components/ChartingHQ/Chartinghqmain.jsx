@@ -22,13 +22,13 @@ export default function ChartingHqmain() {
        <ScrollCard><Heading /></ScrollCard>
                   <ScrollCard><ImageSection /></ScrollCard>
                   <ScrollCard><Summary /></ScrollCard>
+                  <ScrollCard><Images /></ScrollCard>
                   <ScrollCard><Impact /></ScrollCard>
                   <ScrollCard><ProcessStep1 /></ScrollCard>
                   <ScrollCard><Strucutre /></ScrollCard>
                   <ScrollCard><Wireframecontent /></ScrollCard>
                   <ScrollCard><Wireframe /></ScrollCard>
-                  <ScrollCard><Images /></ScrollCard>
-                  <ScrollCard><FullImages /></ScrollCard>
+                 <ScrollCard><FullImages /></ScrollCard>
                   
       
     </div>

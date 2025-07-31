@@ -4,27 +4,35 @@ import React from "react";
 export default function Impact() {
   const data = [
     {
-      value: "1554%",
-      label: "Increase in monthly organic search traffic in 8 months",
+      value: "1 min",
+      label: "Average gift card creation time",
     },
     {
-      value: "10x",
-      label: "Increase in user adoption of one of their tools",
+      value: "72%",
+      label: "Send-to-purchase conversion rate",
     },
     {
-      value: "0 to 100.000+",
-      label: "Couples using their wedding app",
+      value: "89%",
+      label: "Redemption rate of sent gift cards",
     },
     {
-      value: "63.9%",
-      label: "Increase in purchase conversion rate",
+      value: "35%",
+      label: "Users returning within 30 days to send another gift",
     },
     {
-      value: "66%",
-      label: "Increase in sign up conversion rate",
+      value: "1.7x",
+      label: "Viral share multiplier per gift (forwarded organically)",
     },
     {
-      value: "70+",
+      value: "₹1,200",
+      label: "Average gift value",
+    },
+    {
+      value: "45%",
+      label: "Engagement uplift during festival campaigns",
+    },
+    {
+      value: "68",
       label: "Net Promoter Score (NPS)",
     },
   ];
@@ -33,7 +41,10 @@ export default function Impact() {
     <section className="bg-black text-white px-6 sm:px-20 py-16 ">
       <h2 className="text-3xl sm:text-5xl font-semibold mb-6">Impact</h2>
       <p className="text-gray-400 text-base sm:text-lg mb-16 max-w-4xl">
-        Both the initial launch and further iterations produced great results:
+        BudgetTree ke initial launches aur occasion-driven campaigns se yeh measurable
+        results mile—user friction kam hua, repeat usage bada, aur gifting experience
+        zyada personalized aur shareable ban gaya. (Numbers ko apne real analytics se
+        replace karo.) 
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">

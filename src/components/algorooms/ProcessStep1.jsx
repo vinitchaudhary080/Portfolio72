@@ -7,36 +7,33 @@ export default function ProcessStep1() {
       {/* Heading Line like "Work Samples" style */}
       <div className="flex items-center gap-4 mb-10">
         <h2 className="text-white text-base sm:text-lg font-medium whitespace-nowrap">
-          THE PROCESS – STEP 1
+          THE PROCESS
         </h2>
         <div className="flex-1 h-px bg-gray-700"></div>
       </div>
 
       {/* Main Heading */}
       <h1 className="text-4xl sm:text-5xl font-semibold mb-12">
-        Designing the MVP
+        Designing the Algo Strategy Builder
       </h1>
 
-      {/* Discovery Block */}
+      {/* Discovery & Research */}
       <div className="mb-10">
-        <h3 className="text-xl sm:text-2xl font-semibold mb-4">Discovery</h3>
+        <h3 className="text-xl sm:text-2xl font-semibold mb-4">
+          Discovery & Research
+        </h3>
         <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-4xl">
-          The first step was to get acquainted with the team’s vision and the plans
-          they had for the product. Weddings are very complex by nature and for that
-          reason getting alignment before starting any design work was crucial. To tackle
-          this complexity, we decided to focus only on the ceremony and not try to tackle
-          all aspects of a wedding.
+          Conducted in-depth interviews with novice and expert algo traders to map out their workflows, pain points, and tool fragmentation. Identified key needs around rapid strategy iteration and error-free backtesting.
         </p>
       </div>
 
-      {/* Planning Block */}
+      {/* Ideation & Information Architecture */}
       <div>
-        <h3 className="text-xl sm:text-2xl font-semibold mb-4">Planning the App Structure</h3>
+        <h3 className="text-xl sm:text-2xl font-semibold mb-4">
+          Ideation & Information Architecture
+        </h3>
         <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-4xl">
-          After we identified the key areas to focus on, I moved onto devising the app structure
-          and what the user flows would look like for different user roles. Those different roles
-          needed to have different levels of access to the tools and information regarding the wedding,
-          meaning they would have a slightly different user flow so I ended up creating a lot of flow charts.
+          Synthesized research insights into a drag-and-drop strategy builder concept. Crafted user flows, wireframes, and site maps to define a step-by-step process for rule creation, risk configuration, and backtest reporting.
         </p>
       </div>
     </section>

@@ -12,7 +12,7 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Mission</h3>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-              Provenance set out to build a company that reimagines the way people think about community, connection, and meaning, starting with how they celebrate major life milestones. With the initial entry wedge being weddings, they were looking to come out of stealth and launch their MVP to the market, and they also needed a marketing website to accompany it.
+              Cribonix ka goal hai brands ko digital duniya mein standout karwana by combining strategic marketing insight with clean, conversion-focused design. Website ka purpose tha credibility build karna, services ko clearly communicate karna, aur visitors ko qualified leads mein convert karna.
             </p>
           </div>
 
@@ -20,23 +20,24 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">My Contributions</h3>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-              As a Product Designer, I built Provenance's MVP from scratch – I took the web app through all stages of the UX design process and got it ready for launch. I then designed and built a highly effective Webflow website that educates visitors about Provenance's offering and converts them into users and customers. Over the next two years, I worked on countless iterations of their existing offering, and also helped them launch a few new apps.
+              Lead UX/UI Designer ke roop mein maine Cribonix ki marketing website ground-up design aur build ki. Kaam mein shamil tha information architecture define karna, visual identity align karna, React + Tailwind CSS se responsive frontend banana, service showcase aur strong CTAs design karna, sticky navigation & smooth scroll implement karna, lead capture form with validation banana, SEO & Open Graph metadata add karna, performance optimizations (image compression, lazy loading), analytics/tracking setup karna, aur accessibility improvements ensure karna. Saath hi microcopy aur brand-consistent tone likhi gayi jo visitor ko engage kare.
             </p>
           </div>
         </div>
 
         {/* Right Column */}
-        <div className="space-y-16 sm:space-y-32 sm:pl-16"> {/* Shifted Right */}
+        <div className="space-y-16 sm:space-y-32 sm:pl-16">
           {/* Client */}
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Client</h3>
             <p className="text-gray-300 text-sm sm:text-base">
-              Provenance (Chim3ra, Inc.)<br />
-              Los Angeles, CA, US
+              Cribonix<br />
+              Digital Marketing Agency<br />
+              Remote / Global
             </p>
             <div className="flex gap-3 mt-3">
-              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">cb</span>
-              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">in</span>
+              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">CR</span>
+              <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded">IX</span>
             </div>
           </div>
 
@@ -44,14 +45,17 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Services</h3>
             <ul className="list-disc pl-5 text-gray-300 text-sm sm:text-base space-y-1">
-              <li>User Interface Design</li>
-              <li>User Experience Design</li>
-              <li>User Research & User Flows</li>
-              <li>Wireframing</li>
-              <li>A/B Testing & CRO</li>
-              <li>Web design</li>
-              <li>Webflow development</li>
-              <li>SEO</li>
+              <li>Brand Strategy & Positioning</li>
+              <li>Digital Marketing Strategy</li>
+              <li>UI/UX Design for Campaigns & Landing Pages</li>
+              <li>Website Design & Development (React + Tailwind)</li>
+              <li>Conversion Rate Optimization (CRO)</li>
+              <li>Lead Capture Funnel Design</li>
+              <li>SEO & Metadata Implementation</li>
+              <li>Performance Optimization</li>
+              <li>Content Strategy & Microcopy</li>
+              <li>Analytics & Engagement Tracking</li>
+              <li>Responsive & Accessible Design</li>
             </ul>
           </div>
         </div>

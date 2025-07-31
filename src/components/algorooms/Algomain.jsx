@@ -22,12 +22,12 @@ export default function Alphamain() {
       <ScrollCard><Heading /></ScrollCard>
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>
+            <ScrollCard><Doubleimage /></ScrollCard>
             <ScrollCard><Impact /></ScrollCard>
             <ScrollCard><ProcessStep1 /></ScrollCard>
             <ScrollCard><Structure /></ScrollCard>
             <ScrollCard><WireframesContent /></ScrollCard>
             <ScrollCard><Wireframer /></ScrollCard>
-            <ScrollCard><Doubleimage /></ScrollCard>
             <ScrollCard><Full /></ScrollCard>
             <ScrollCard><Full2 /></ScrollCard>
       

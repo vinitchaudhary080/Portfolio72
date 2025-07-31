@@ -4,28 +4,28 @@ import React from "react";
 export default function Impact() {
   const data = [
     {
-      value: "1554%",
-      label: "Increase in monthly organic search traffic in 8 months",
+      value: "78%",
+      label: "Average analyst signal accuracy (hit rate) against targets",
     },
     {
-      value: "10x",
-      label: "Increase in user adoption of one of their tools",
+      value: "3x",
+      label: "Growth in paid subscribers in first 6 months",
     },
     {
-      value: "0 to 100.000+",
-      label: "Couples using their wedding app",
+      value: "45%",
+      label: "Reduction in average trade decision time for users",
     },
     {
-      value: "63.9%",
-      label: "Increase in purchase conversion rate",
+      value: "60%",
+      label: "Free-to-paid conversion rate on analyst subscriptions",
     },
     {
-      value: "66%",
-      label: "Increase in sign up conversion rate",
+      value: "85%",
+      label: "Monthly active user retention rate",
     },
     {
-      value: "70+",
-      label: "Net Promoter Score (NPS)",
+      value: "9.1 / 10",
+      label: "Average user satisfaction score from feedback",
     },
   ];
 
@@ -33,7 +33,8 @@ export default function Impact() {
     <section className="bg-black text-white px-6 sm:px-20 py-16 ">
       <h2 className="text-3xl sm:text-5xl font-semibold mb-6">Impact</h2>
       <p className="text-gray-400 text-base sm:text-lg mb-16 max-w-4xl">
-        Both the initial launch and further iterations produced great results:
+        Initial launch and subsequent iterations created measurable outcomes in user confidence, subscription growth,
+        and engagement—turning uncertainty into informed action. (Replace placeholders below with real metrics.)
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">

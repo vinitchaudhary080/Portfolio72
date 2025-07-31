@@ -1,54 +1,56 @@
 // src/components/about/ServicesSection.jsx
 import React from "react";
-import vertigoLogo  from "../../assets/Letter.svg";
-import nextmoveLogo from "../../assets/Letter.svg";
-import borderLogo   from "../../assets/Letter.svg";
-import sitemarkLogo from "../../assets/Letter.svg";
-import wavelessLogo from "../../assets/Letter.svg";
-import delawareLogo from "../../assets/Letter.svg";
-import snapshotLogo from "../../assets/Letter.svg";
-import uturnLogo    from "../../assets/Letter.svg";
+import placeholder from "../../assets/Letter.svg"; // agar alag icon/chhota logo chahiye toh yahan replace karo
+import UI from "../../assets/Icons/Pallete 2.svg";
+import BS from "../../assets/Icons/Database.svg";
+import PD from "../../assets/Icons/Laptop Minimalistic.svg";
+import UR from "../../assets/Icons/Graph.svg";
+import DS from "../../assets/Icons/Bolt.svg";
+import AA from "../../assets/Icons/Widget 5.svg";
+import WF from "../../assets/Icons/Window Frame.svg";
+import OP from "../../assets/Icons/Document Add.svg";
+
 
 const SERVICES = [
   {
-    title: "Vertigo",
-    logo: vertigoLogo,
-    desc: "To truly shine, you’ve got to radiate brilliance. Unleash your imaginative flair with Boulevard."
+    title: "UI / UX Design",
+    logo: UI,
+    desc: "Design elegant, intuitive interfaces that users understand instantly and enjoy using.",
   },
   {
-    title: "Nextmove",
-    logo: nextmoveLogo,
-    desc: "Standing apart requires being exceptional. Embrace your innovative side with Boulevard."
+    title: "Brand Strategy",
+    logo: BS,
+    desc: "Define your brand’s voice, positioning and visual identity to create emotional resonance.",
   },
   {
-    title: "Border",
-    logo: borderLogo,
-    desc: "Dare to be remarkable if you want to make an impression. Embrace creativity with Boulevard."
+    title: "Product Design",
+    logo: PD,
+    desc: "Take ideas from concept to launch with user-centered products built for scale and clarity.",
   },
   {
-    title: "Sitemark",
-    logo: sitemarkLogo,
-    desc: "Being extraordinary is the key to being noticed. Embrace your inventive spirit with Boulevard."
+    title: "UX Research",
+    logo: UR,
+    desc: "Ground decisions in real user insights—interviews, testing, and behavioral analysis.",
   },
   {
-    title: "Waveless",
-    logo: wavelessLogo,
-    desc: "If you aim to be memorable, you must be exceptional. Dive into creativity with Boulevard."
+    title: "Design Systems",
+    logo: DS,
+    desc: "Create reusable, cohesive systems that keep your product consistent and fast to ship.",
   },
   {
-    title: "Delaware",
-    logo: delawareLogo,
-    desc: "To make your mark, you must be outstanding. Let Boulevard ignite your creativity."
+    title: "Web & Frontend",
+    logo: WF,
+    desc: "Build high-performance responsive experiences (Webflow / modern stacks) optimized for conversion.",
   },
   {
-    title: "SnapShot",
-    logo: snapshotLogo,
-    desc: "Standing out demands being exceptional. Embrace creativity and choose Boulevard."
+    title: "Accessibility",
+    logo: AA,
+    desc: "Ensure inclusivity by designing with accessibility best practices from day one.",
   },
   {
-    title: "U‑Turn",
-    logo: uturnLogo,
-    desc: "If you want to be unique, you’ve got to be outstanding. Embrace creativity alongside Boulevard."
+    title: "Optimization & CRO",
+    logo: OP,
+    desc: "Refine user flows and visuals through testing to boost engagement and business outcomes.",
   },
 ];
 
@@ -56,14 +58,22 @@ export default function ServicesSection() {
   return (
     <section className="w-full bg-black text-white py-24 px-6 sm:px-12 mt-8 mb-6">
       <div className="max-w-screen-xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Section heading with divider */}
+        <div className="flex items-center gap-4 mb-10">
+          <h2 className="text-white text-base sm:text-lg font-medium whitespace-nowrap">
+            Services
+          </h2>
+          <div className="flex-1 h-px bg-gray-700" />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {SERVICES.map((s, i) => (
             <div
               key={i}
               className="
                 border border-gray-700
                 p-8
-                lg:min-h-[300px]      
+                lg:min-h-[300px]
                 flex flex-col items-center text-center
                 transition-all duration-300 ease-in-out
                 hover:bg-[#232323]

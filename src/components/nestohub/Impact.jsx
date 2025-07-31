@@ -4,36 +4,37 @@ import React from "react";
 export default function Impact() {
   const data = [
     {
-      value: "1554%",
-      label: "Increase in monthly organic search traffic in 8 months",
+      value: "42%",
+      label: "Increase in broker lead-to-visit conversion rate",
     },
     {
-      value: "10x",
-      label: "Increase in user adoption of one of their tools",
+      value: "5x faster",
+      label: "Time taken by builders to publish inventory (before vs after)",
     },
     {
-      value: "0 to 100.000+",
-      label: "Couples using their wedding app",
+      value: "70%",
+      label: "Reduction in manual coordination messages between brokers and builders",
     },
     {
-      value: "63.9%",
-      label: "Increase in purchase conversion rate",
+      value: "3x",
+      label: "Increase in client dashboard engagement (session depth / repeat visits)",
     },
     {
-      value: "66%",
-      label: "Increase in sign up conversion rate",
+      value: "99.8%",
+      label: "Real-time inventory sync accuracy, cutting availability mismatches",
     },
     {
-      value: "70+",
-      label: "Net Promoter Score (NPS)",
+      value: "68+",
+      label: "Satisfaction score / NPS from brokers & builders (indicative)",
     },
   ];
 
   return (
     <section className="bg-black text-white px-6 sm:px-20 py-16 ">
-      <h2 className="text-3xl sm:text-5xl font-semibold mb-6">Impact</h2>
+      <h2 className="text-3xl sm:text-5xl font-semibold mb-6">Business & UX Impact</h2>
       <p className="text-gray-400 text-base sm:text-lg mb-16 max-w-4xl">
-        Both the initial launch and further iterations produced great results:
+        Nestohub ne fragmented real estate workflows ko streamline karke measurable results diye—
+        brokers, builders, aur clients ke beech coordination, engagement, aur trust significantly improve hua.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">
@@ -48,6 +49,10 @@ export default function Impact() {
           </div>
         ))}
       </div>
+
+      <p className="mt-12 text-sm text-gray-500">
+        *Values are examples—replace with actual metrics from analytics, user feedback, and internal tracking to reflect real impact.
+      </p>
     </section>
   );
 }
