@@ -3,7 +3,7 @@ import React from "react";
 import WorkCard from "./WorkCard";
 import img1 from "../assets/ChartingHQ/project1.jpg";
 import img2 from "../assets/Alpha/MacBook_Mockup_3.jpg";
-import img3 from "../assets/RaDashboard/radashnew2.png";
+import img3 from "../assets/Cribonix/cribonix-1.jpg";
 
 export default function WorksSection() {
   const posts = [
@@ -15,27 +15,27 @@ export default function WorksSection() {
       author: "ChartingHQ",
       date: "April 10, 2025",
       readTime: "2 min",
-      content: "In a world where digital experiences shape our daily interactions…",
+      content: "ChartingHQ Your all-in-one stock market dashboard,delivering real-time insights for smarter trading…",
     },
     {
       slug: "Alpha Exchange",
       path: "/alpha/Alpha Exchange",
       frontImage: img2,
       title: "Alpha Exchange Dashboard & Website",
-      author: "Sarah Lin",
+      author: "Alpha Exchange",
       date: "Mar 2, 2025",
       readTime: "6 min",
-      content: "High-end branding is not just about aesthetics; it’s about storytelling…",
+      content: "A unified crypto trading interface offering real-time market overviews, modular charts, portfolio tracking, and instant trade execution via WebSockets…",
     },
     {
-      slug: "RA-Dashboard",
-      path: "/radashboard/Radashboard", // or change to a 3rd route if you have one
+      slug: "Cribonix",
+      path: "/cribonix/Cribonix", // or change to a 3rd route if you have one
       frontImage: img3,
-      title: "Redesign RA-Dashboard",
-      author: "Alex Cho",
-      date: "Jan 15, 2025",
+      title: "Design Cribonix Website",
+      author: "Cribonix",
+      date: "Dec 15, 2024",
       readTime: "5 min",
-      content: "Merging design with emerging tech like AI and AR has transformed…",
+      content: "Cribonix combines strategic insight with creative excellence…",
     },
   ];
 
