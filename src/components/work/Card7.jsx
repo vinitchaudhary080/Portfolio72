@@ -49,8 +49,10 @@ export default function Card1() {
               A Marketing Agency Website
             </h3>
             <p className="text-gray-300 text-sm mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+               Cribonix combines,
+        strategic insight,
+        with creative,
+        excellence
             </p>
           </div>
 

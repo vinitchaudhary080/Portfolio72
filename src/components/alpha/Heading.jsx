@@ -11,14 +11,15 @@ export default function Heading() {
       </div>
 
       {/* Main Heading */}
-      <h1 className="text-4xl sm:text-6xl md:text-7xl font-light leading-tight max-w-5xl">
-        Alpha Exchange<br />
-        Dashboard
+     <h1 className="text-4xl sm:text-6xl md:text-7xl font-light leading-tight max-w-5xl">
+       – Alpha Exchange – <br />
+        Seamless Crypto Trading Platform<br />
+        <div className="mt-12">
+         <h3 className="text-sm sm:text-lg font-normal mb-2">A modern crypto trading broker built for beginners and professionals, offering a user-friendly interface, fast execution, and a simple way to buy, sell, and manage digital assets.</h3>
+          
+        </div>
+
       </h1>
-      <p className="mt-6 text-lg sm:text-xl max-w-3xl">
-        A unified crypto trading interface offering real-time market overviews, modular charts,
-        portfolio tracking, and instant trade execution via WebSockets.
-      </p>
     </section>
   );
 }

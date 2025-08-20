@@ -37,14 +37,14 @@ export default function FooterSection() {
           </a>
 
           {/* Instagram */}
-          <a
+          {/* <a
             href="https://www.instagram.com/ui_ux.uiigsh=eXpzcDVlaGZoNzVv&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400"
           >
             <FaInstagram />
-          </a>
+          </a> */}
 
           {/* Behance */}
           <a

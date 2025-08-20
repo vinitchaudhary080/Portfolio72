@@ -11,10 +11,13 @@ export default function Heading() {
 
       {/* Main Heading */}
       <h1 className="text-4xl sm:text-6xl md:text-7xl font-light leading-tight max-w-5xl">
-        Design, backtest, and <br />
-        deploy algorithmic <br />
-        trading strategies <br />
-        in one unified platform
+       – Algorooms – <br />
+        Strategy Creation & Automated Trading Platform <br />
+        <div className="mt-12">
+         <h3 className="text-sm sm:text-lg font-normal mb-2">A next-gen algo trading platform that enables traders to design, backtest, and deploy their trading strategies seamlessly with their existing brokers.</h3>
+          
+        </div>
+
       </h1>
     </section>
   );

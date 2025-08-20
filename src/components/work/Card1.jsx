@@ -49,8 +49,8 @@ export default function Card1() {
               & Website Design
             </h3>
             <p className="text-gray-300 text-sm mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+              A unified crypto trading interface offering real-time market overviews, modular charts,
+        portfolio tracking, and instant trade execution via WebSockets.
             </p>
           </div>
 

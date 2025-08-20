@@ -213,11 +213,11 @@ export default function WireframesContent() {
         <div>
           <h3 className="text-xl sm:text-2xl font-semibold mb-4">Results (Draft)</h3>
           <ul className="list-disc pl-5 space-y-2 text-gray-400">
-            <li>Broker lead-to-visit conversion improved by <strong>[insert %]</strong>.</li>
-            <li>Builder listing time dropped from <strong>[X days]</strong> to <strong>[Y hours/days]</strong>.</li>
-            <li>Client engagement (dashboard session length) increased by <strong>[metric]</strong>.</li>
-            <li>Redundant coordination emails/messages reduced by <strong>[metric or %]</strong>.</li>
-            <li>Internal satisfaction (brokers/builders) score: <strong>[quote or rating]</strong>.</li>
+            <li>Broker lead-to-visit conversion improved by <strong>30%</strong>.</li>
+            <li>Builder listing time dropped from <strong>[2 days]</strong> to <strong>4-5 hours</strong>.</li>
+            <li>Client engagement (dashboard session length) increased by <strong>28</strong>.</li>
+            <li>Redundant coordination emails/messages reduced by <strong>32%</strong>.</li>
+            <li>Internal satisfaction (brokers/builders) score: <strong>4</strong>.</li>
           </ul>
         </div>
       </div>

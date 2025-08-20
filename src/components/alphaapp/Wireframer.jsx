@@ -15,7 +15,7 @@ export default function ImageSection() {
 
       {/* Title below image */}
       <div className="text-white text-center mt-6">
-        <p className="text-center text-gray-400 text-sm mt-4">Wedding App Wireframes</p>
+        {/* <p className="text-center text-gray-400 text-sm mt-4">Wedding App Wireframes</p> */}
       
       </div>
     </section>

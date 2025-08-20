@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/CopartnerApp/copartner-3.jpg";
+import projectImage from "../../assets/CopartnerApp/copartner-5.jpg";
 
 export default function ImageSection() {
   return (
@@ -15,7 +15,7 @@ export default function ImageSection() {
 
       {/* Title below image */}
       <div className="text-white text-center mt-6">
-        <p className="text-center text-gray-400 text-sm mt-4">Wedding App Wireframes</p>
+        <p className="text-center text-gray-400 text-sm mt-4"></p>
       
       </div>
     </section>

@@ -14,9 +14,9 @@ export default function ScriptEditorSection() {
             alt="Ceremony Script Editor"
             className="rounded-xl w-full h-auto object-contain shadow-md group-hover:shadow-2xl transition-shadow duration-500"
           />
-          <p className="text-center text-gray-400 text-sm mt-4">
+          {/* <p className="text-center text-gray-400 text-sm mt-4">
             Ceremony Script Editor
-          </p>
+          </p> */}
         </div>
 
         {/* Right Image Block */}
@@ -26,9 +26,9 @@ export default function ScriptEditorSection() {
             alt="Side-by-side view, Vow Builder"
             className="rounded-xl w-full h-auto object-contain shadow-md group-hover:shadow-2xl transition-shadow duration-500"
           />
-          <p className="text-center text-gray-400 text-sm mt-4">
+          {/* <p className="text-center text-gray-400 text-sm mt-4">
             Side-by-side view, Vow Builder
-          </p>
+          </p> */}
         </div>
       </div>
     </section>

@@ -96,14 +96,14 @@ export default function Navbar1({ onMenuClick }) {
                 LinkedIn
               </a>
               <br />
-              <a
+              {/* <a
                 href="https://www.instagram.com/ui_ux.uiigsh=eXpzcDVlaGZoNzVv&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
                 Instagram
-              </a>
+              </a> */}
               
              
                

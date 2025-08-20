@@ -5,31 +5,20 @@ import { useParams } from "react-router-dom";  // ← import useParams
 import ScrollCard from "../ScrollCard";
 
 import Heading             from "./Heading";
-import ImageSection        from "./ImageSection";
+import Showcaseimage       from "./ImageSection";
 import Summary             from "./Summary";
-import Impact              from "./Impact";
-import ProcessStep1        from "./ProcessStep1";
-import Structure           from "./Strucutre";            // fixed typo
-import WireframesContent   from "./WireframesContent";    // match file name
-import Wireframer          from "./Wireframer";
-import Doubleimage         from "./Doubleimage";          // match file name
-import Full                from "./Full";
-import Full2               from "./Full2";
+import Visualhighlights    from "./Visual";
+import Showcase            from "./Doubleimage";
 
 export default function Alphamain() {
   return (
     <div className="bg-black min-h-screen">
       <ScrollCard><Heading /></ScrollCard>
-            <ScrollCard><ImageSection /></ScrollCard>
-            <ScrollCard><Summary /></ScrollCard>
-            <ScrollCard><Doubleimage /></ScrollCard>
-            <ScrollCard><Impact /></ScrollCard>
-            <ScrollCard><ProcessStep1 /></ScrollCard>
-            <ScrollCard><Structure /></ScrollCard>
-            <ScrollCard><WireframesContent /></ScrollCard>
-            <ScrollCard><Wireframer /></ScrollCard>
-            <ScrollCard><Full /></ScrollCard>
-            <ScrollCard><Full2 /></ScrollCard>
+                 <ScrollCard><Showcaseimage /></ScrollCard>
+                 <ScrollCard><Summary /></ScrollCard>
+                 <ScrollCard><Visualhighlights /></ScrollCard>
+                <ScrollCard><Showcase /></ScrollCard>
+           
       
     </div>
   );

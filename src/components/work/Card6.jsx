@@ -49,8 +49,7 @@ export default function Card1() {
               A Real Estate Product
             </h3>
             <p className="text-gray-300 text-sm mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+              List inventory, schedule visits, and convert leads—with real-time sync across web and mobile.
             </p>
           </div>
 

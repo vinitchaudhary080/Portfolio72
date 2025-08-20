@@ -47,13 +47,14 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Services</h3>
             <ul className="list-disc pl-5 text-gray-400 text-sm sm:text-base space-y-1">
-              <li>UX Strategy & User Research</li>
-              <li>Information Architecture</li>
-              <li>Data Visualization Design</li>
-              <li>Interaction Design & Prototyping</li>
-              <li>Usability Testing & Iteration</li>
-              <li>Responsive React Component Design</li>
-              <li>Performance & Accessibility Optimization</li>
+              <li>User Research & Flow Mapping</li>
+              <li>Wireframing & Prototyping</li>
+              <li>User Interface Design</li>
+              <li>High-Fidelity Mockups</li>
+              
+              <li>Micro-Interactions & Animations</li>
+              <li>Usability & A/B Testing</li>
+              <li>Performance Optimization</li>
             </ul>
           </div>
         </div>

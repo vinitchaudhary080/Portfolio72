@@ -49,8 +49,10 @@ export default function Card1() {
             Strategy Builder & Backtest
           </h3>
           <p className="text-gray-300 text-sm mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore.
+             
+        Your all-in-one stock market dashboard,<br />
+        delivering real-time insights for<br />
+        smarter trading
           </p>
         </div>
 

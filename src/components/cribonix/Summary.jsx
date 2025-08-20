@@ -45,17 +45,14 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Services</h3>
             <ul className="list-disc pl-5 text-gray-300 text-sm sm:text-base space-y-1">
-              <li>Brand Strategy & Positioning</li>
-              <li>Digital Marketing Strategy</li>
-              <li>UI/UX Design for Campaigns & Landing Pages</li>
-              <li>Website Design & Development (React + Tailwind)</li>
-              <li>Conversion Rate Optimization (CRO)</li>
-              <li>Lead Capture Funnel Design</li>
-              <li>SEO & Metadata Implementation</li>
+            <li>User Research & Flow Mapping</li>
+              <li>Wireframing & Prototyping</li>
+              <li>User Interface Design</li>
+              <li>High-Fidelity Mockups</li>
+              
+              <li>Micro-Interactions & Animations</li>
+              <li>Usability & A/B Testing</li>
               <li>Performance Optimization</li>
-              <li>Content Strategy & Microcopy</li>
-              <li>Analytics & Engagement Tracking</li>
-              <li>Responsive & Accessible Design</li>
             </ul>
           </div>
         </div>

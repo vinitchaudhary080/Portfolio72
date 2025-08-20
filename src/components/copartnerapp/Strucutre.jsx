@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/CopartnerApp/copartner-5.jpg";
+import projectImage from "../../assets/CopartnerApp/SiteMap.svg";
 
 export default function ImageSection() {
   return (
@@ -15,7 +15,7 @@ export default function ImageSection() {
 
       {/* Title below image */}
       <div className="text-white text-center mt-6">
-        <p className="text-center text-gray-400 text-sm mt-4">Wedding App Flowchart</p>
+        <p className="text-center text-gray-400 text-sm mt-4">Product user flow</p>
         {/* <h3 className="text-lg sm:text-xl font-medium">Wedding App Flowchart</h3> */}
       </div>
     </section>

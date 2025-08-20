@@ -49,8 +49,10 @@ export default function Card1() {
               Strategy Builder & Backtest
             </h3>
             <p className="text-gray-300 text-sm mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+              Design, backtest, and 
+        deploy algorithmic, 
+        trading strategies
+        in one unified platform
             </p>
           </div>
 

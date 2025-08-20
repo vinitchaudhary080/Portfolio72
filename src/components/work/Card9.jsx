@@ -49,8 +49,7 @@ export default function Card1() {
               A Finance Product
             </h3>
             <p className="text-gray-300 text-sm mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+               Diwali, birthdays, festivals ya koi bhi special moment — custom digital gift cards create karo aur turant bhejo. No physical hassle, sirf thoughtful surprise.
             </p>
           </div>
 

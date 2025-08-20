@@ -51,7 +51,7 @@ export default function Summary() {
               <li>Wireframing & Prototyping</li>
               <li>User Interface Design</li>
               <li>High-Fidelity Mockups</li>
-              <li>Real-Time Data Integration (WebSockets)</li>
+              
               <li>Micro-Interactions & Animations</li>
               <li>Usability & A/B Testing</li>
               <li>Performance Optimization</li>

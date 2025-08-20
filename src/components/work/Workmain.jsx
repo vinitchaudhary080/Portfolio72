@@ -28,21 +28,21 @@ export default function Workmain() {
         {/* Cards: single-column grid on mobile → full-width on md+ */}
         <div className=" md:py-8 grid grid-cols-1 gap-8 md:block">
           <ScrollCard>
+              <Card4 />
+            </ScrollCard>
+          <ScrollCard>
               <Card1 />
             </ScrollCard>
+
           <ScrollCard>
               <Card2 />
             </ScrollCard>
-
           <ScrollCard>
-              <Card3 />
-            </ScrollCard>
-          <ScrollCard>
-              <Card4 />
+              <Card5 />
             </ScrollCard>  
 
           <ScrollCard>
-              <Card5 />
+              <Card7 />
             </ScrollCard>  
 
           <ScrollCard>
@@ -50,7 +50,7 @@ export default function Workmain() {
             </ScrollCard> 
 
            <ScrollCard>
-              <Card7 />
+              <Card3 />
             </ScrollCard> 
 
             <ScrollCard>

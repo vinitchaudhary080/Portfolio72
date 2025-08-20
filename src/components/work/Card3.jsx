@@ -49,8 +49,7 @@ export default function Card1() {
               Analysis & Management
             </h3>
             <p className="text-gray-300 text-sm mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+              Centralized analytics and real-time insights for smarter trading decisions—monitor performance, handle user roles, and get actionable tips all in one place.
             </p>
           </div>
 

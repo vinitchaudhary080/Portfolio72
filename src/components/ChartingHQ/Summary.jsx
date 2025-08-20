@@ -44,14 +44,14 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Services</h3>
             <ul className="text-gray-400 list-disc pl-5  text-sm sm:text-base space-y-1">
-              <li>User Research & Trader Interviews</li>
-              <li>Wireframing & Interactive Prototyping</li>
-              <li>High-Fidelity UI Design</li>
-              <li>Design System & Component Library</li>
-              <li>React Front-End Development</li>
-              <li>Real-Time API & WebSocket Integration</li>
-              <li>Usability Testing & Iteration</li>
-              <li>Performance Optimization & Accessibility</li>
+            <li>User Research & Flow Mapping</li>
+              <li>Wireframing & Prototyping</li>
+              <li>User Interface Design</li>
+              <li>High-Fidelity Mockups</li>
+              
+              <li>Micro-Interactions & Animations</li>
+              <li>Usability & A/B Testing</li>
+              <li>Performance Optimization</li>
             </ul>
           </div>
         </div>

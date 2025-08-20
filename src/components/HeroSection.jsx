@@ -1,7 +1,7 @@
 // src/components/HeroSection.jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
-import heroImage from '../assets/image.jpg' // your gradient/headphones image
+import heroImage from '../assets/imagehero.svg' // your gradient/headphones image
 
 export default function HeroSection() {
   return (
@@ -53,7 +53,7 @@ export default function HeroSection() {
               hover:bg-white hover:text-black
             "
           >
-            See my work&nbsp;&rarr;
+            Discover What I’ve Built&nbsp;&rarr;
           </Link>
         </div>
       </div>

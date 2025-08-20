@@ -56,20 +56,14 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">Services</h3>
             <ul className="list-disc pl-5 text-gray-400 text-sm sm:text-base space-y-1">
-              <li>Product & UX Strategy</li>
-              <li>User Research & Persona Development</li>
-              <li>Role-based Dashboard Design (Broker / Builder / Client)</li>
-              <li>Information Architecture & User Flows</li>
-              <li>Inventory Management UX</li>
-              <li>Lead Conversion Funnel Design</li>
-              <li>Visit Scheduling & Notification UX</li>
-              <li>Real-time Sync & Status Visibility</li>
-              <li>Responsive Web + Mobile Experience</li>
-              <li>Prototype & Usability Testing</li>
-              <li>Design System & Component Library</li>
-              <li>Analytics / KPI Dashboard Design</li>
-              <li>Interaction Design & Micro-interactions</li>
-              <li>Accessibility & Performance Optimization</li>
+               <li>User Research & Flow Mapping</li>
+              <li>Wireframing & Prototyping</li>
+              <li>User Interface Design</li>
+              <li>High-Fidelity Mockups</li>
+              
+              <li>Micro-Interactions & Animations</li>
+              <li>Usability & A/B Testing</li>
+              <li>Performance Optimization</li>
             </ul>
           </div>
         </div>

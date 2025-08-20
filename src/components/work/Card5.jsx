@@ -49,8 +49,9 @@ export default function Card1() {
               Strategy Builder & Backtest
             </h3>
             <p className="text-gray-300 text-sm mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+               Alpha Exchange puts the power of real-time market data, customizable charts,  
+        and seamless portfolio management right in your pocket—execute trades instantly  
+        via WebSockets and stay ahead, on the go.
             </p>
           </div>
 
