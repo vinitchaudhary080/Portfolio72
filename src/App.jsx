@@ -18,7 +18,7 @@ import ServicesMasonry  from './components/ServicesMasonry';
 import AboutMain    from './components/about/Aboutmain';
 // ← corrected import
 import WorkMain     from './components/work/Workmain'; 
-
+import ProvidedSection     from './components/ProvidedSection';
 
 import ChartingHqmain from './components/ChartingHQ/Chartinghqmain';
 import Alphamain from './components/alpha/Alphamain';
@@ -57,8 +57,9 @@ export default function App() {
                <ScrollCard>
                 <CounterSection />
                </ScrollCard> 
+             
                <ScrollCard>
-                <ServicesMasonry />
+                <ProvidedSection />
                </ScrollCard> 
 
                <ScrollCard>

@@ -8,6 +8,7 @@ import WorksSection from "../WorksSection";
 import Banner from '../BannersSection1';
 import Footer from '../FooterSection1';
 import ScrollCard from "../ScrollCard";
+import ProvidedSection from "../../components/ProvidedSection";
 
 
 export default function About() {
@@ -24,7 +25,7 @@ export default function About() {
        <MyImage />
       </ScrollCard>
       <ScrollCard>
-       <Services />
+       <ProvidedSection />
       </ScrollCard>
       <ScrollCard>
        <WorksSection />
