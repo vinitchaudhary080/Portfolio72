@@ -7,7 +7,7 @@ export default function Heading() {
       {/* Top Row */}
       <div className="w-full flex justify-between items-center text-xs sm:text-sm tracking-wide px-4 sm:px-20 mb-10">
         <span className="font-medium">Alpha Exchange</span>
-        <span className="font-medium">2025</span>
+        <span className="font-medium">Dashboard & Mobile-App</span>
       </div>
 
       {/* Main Heading */}

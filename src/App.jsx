@@ -13,13 +13,13 @@ import CounterSection from './components/CounterSection';
 import WorkSection  from './components/WorksSection';
 import Banner       from './components/BannersSection1';
 import Footer       from './components/FooterSection1';
-import ContactPage  from './components/ContactPage';
-
+import ContactPage  from './components/ContactPage';  
+import ServicesMasonry  from './components/ServicesMasonry';
 import AboutMain    from './components/about/Aboutmain';
 // ← corrected import
-import WorkMain     from './components/work/Workmain';
+import WorkMain     from './components/work/Workmain'; 
 
-import ProjectDummy from './components/projectdetails/projectdummy/ProjectDummy';
+
 import ChartingHqmain from './components/ChartingHQ/Chartinghqmain';
 import Alphamain from './components/alpha/Alphamain';
 import Ramain from './components/radashboard/Ramain';
@@ -56,7 +56,11 @@ export default function App() {
                </ScrollCard>
                <ScrollCard>
                 <CounterSection />
-               </ScrollCard>
+               </ScrollCard> 
+               <ScrollCard>
+                <ServicesMasonry />
+               </ScrollCard> 
+
                <ScrollCard>
                 <WorkSection />
                </ScrollCard>

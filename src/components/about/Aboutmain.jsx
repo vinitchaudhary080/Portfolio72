@@ -1,4 +1,4 @@
-// src/components/projectdetails/projectdummy/ProjectDummy.jsx
+
 import React from "react";
 import AboutHero from "./AboutHero";
 import AboutContent from "./AboutContent";
@@ -10,7 +10,7 @@ import Footer from '../FooterSection1';
 import ScrollCard from "../ScrollCard";
 
 
-export default function ProjectDummy() {
+export default function About() {
   return (
     <div className="bg-black min-h-screen">  
       

@@ -30,16 +30,19 @@ export default function Workmain() {
           <ScrollCard>
               <Card4 />
             </ScrollCard>
+
           <ScrollCard>
               <Card1 />
             </ScrollCard>
 
+           <ScrollCard>
+              <Card8 />
+            </ScrollCard> 
+
           <ScrollCard>
               <Card2 />
             </ScrollCard>
-          <ScrollCard>
-              <Card5 />
-            </ScrollCard>  
+        
 
           <ScrollCard>
               <Card7 />
@@ -47,14 +50,6 @@ export default function Workmain() {
 
           <ScrollCard>
               <Card6 />
-            </ScrollCard> 
-
-           <ScrollCard>
-              <Card3 />
-            </ScrollCard> 
-
-            <ScrollCard>
-              <Card8 />
             </ScrollCard> 
 
             <ScrollCard>

@@ -7,13 +7,9 @@ import ScrollCard from "../ScrollCard";
 import Heading             from "./Heading";
 import ImageSection        from "./ImageSection";
 import Summary             from "./Summary";
-import Impact              from "./Impact";
-import ProcessStep1        from "./ProcessStep1";
-import Structure           from "./Strucutre";            // fixed typo
-import WireframesContent   from "./WireframesContent";    // match file name
-import Wireframer          from "./Wireframer";
+import Visual        from "./Visual";
 import Doubleimage         from "./Doubleimage";          // match file name
-import Full                from "./Full";
+
 
 
 export default function Copartnerapp() {
@@ -23,12 +19,8 @@ export default function Copartnerapp() {
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>
             <ScrollCard><Doubleimage /></ScrollCard>
-            <ScrollCard><Impact /></ScrollCard>
-            <ScrollCard><ProcessStep1 /></ScrollCard>
-            <ScrollCard><Structure /></ScrollCard>
-            <ScrollCard><WireframesContent /></ScrollCard>
-            <ScrollCard><Wireframer /></ScrollCard>
-           <ScrollCard><Full /></ScrollCard>
+            <ScrollCard><Visual /></ScrollCard>
+           
             
       
     </div>
