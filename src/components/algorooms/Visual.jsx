@@ -2,10 +2,13 @@
 import React from "react";
 import projectImage from "../../assets/Algorooms/Trading.png";
 import projectImage1 from "../../assets/Algorooms/2.png";
+import productflow from "../../assets/Algorooms/productflow.webp";
+import productsite from "../../assets/Algorooms/productsite.svg";
+
 
 export default function ProcessStep1() {
   return (
-    <section className="bg-black text-white px-6 sm:px-20 py-20 ">
+    <section className="bg-black text-white px-6 sm:px-20  ">
       {/* Heading Line like "Work Samples" style */}
       <div className="flex items-center gap-4 mb-10">
         <h2 className="text-white text-base sm:text-lg font-medium whitespace-nowrap">
@@ -20,7 +23,7 @@ export default function ProcessStep1() {
         <div>
           <div className="rounded-3xl overflow-hidden transition duration-700 hover:scale-[1.02]">
             <img
-              src={projectImage}
+              src={productsite}
               alt="Product Flow"
               className="w-full h-auto object-cover"
             />
@@ -29,7 +32,7 @@ export default function ProcessStep1() {
         </div>
 
         {/* Wireframe */}
-        <div>
+        {/* <div>
           <div className="rounded-3xl overflow-hidden transition duration-700 hover:scale-[1.02]">
             <img
               src={projectImage1}
@@ -38,7 +41,7 @@ export default function ProcessStep1() {
             />
           </div>
           <p className="text-center text-gray-400 text-sm mt-4">Wireframe</p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -3,11 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // big hero image on the left
-import mainImage from "../../assets/Algorooms/Dashboard dark.png";
+import mainImage from "../../assets/Algorooms/Mockupdark.jpg";
 
 // small thumbnails underneath
 import thumb1 from "../../assets/Algorooms/Dashboard dark.png";
-import thumb2 from "../../assets/Algorooms/Dashboard light.png";
+import thumb2 from "../../assets/Algorooms/Dashboard light1.jpg";
 import thumb3 from "../../assets/Algorooms/Strategies.png";
 import thumb4 from "../../assets/Algorooms/Trading.png";
 import thumb5 from "../../assets/Algorooms/Simulator1.png";

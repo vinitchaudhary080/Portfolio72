@@ -9,6 +9,7 @@ import Showcaseimage       from "./ImageSection";
 import Summary             from "./Summary";
 import Visualhighlights    from "./Visual";
 import Showcase            from "./Doubleimage";
+import Shcase           from "./shcase";
 
 export default function Alphamain() {
   return (
@@ -18,6 +19,7 @@ export default function Alphamain() {
                  <ScrollCard><Summary /></ScrollCard>
                  <ScrollCard><Visualhighlights /></ScrollCard>
                 <ScrollCard><Showcase /></ScrollCard>
+                  <ScrollCard><Shcase /></ScrollCard>
            
       
     </div>

@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
-import projectImage from "../../assets/Algorooms/Trading.png";
+import projectImage from "../../assets/Alpha/AlphaExchangeflow.svg";
 import projectImage1 from "../../assets/Algorooms/2.png";
 
 export default function ProcessStep1() {
@@ -29,7 +29,7 @@ export default function ProcessStep1() {
         </div>
 
         {/* Wireframe */}
-        <div>
+        {/* <div>
           <div className="rounded-3xl overflow-hidden transition duration-700 hover:scale-[1.02]">
             <img
               src={projectImage1}
@@ -38,7 +38,7 @@ export default function ProcessStep1() {
             />
           </div>
           <p className="text-center text-gray-400 text-sm mt-4">Wireframe</p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
