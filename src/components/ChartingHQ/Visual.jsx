@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
-import projectImage from "../../assets/ChartingHQ/project1.jpg";
-import projectImage1 from "../../assets/ChartingHQ/project1.jpg";
+import projectImage from "../../assets/ChartingHQ/Flow chart.svg";
+import projectImage1 from "../../assets/ChartingHQ/3.jpg";
 
 export default function ProcessStep1() {
   return (
@@ -37,7 +37,7 @@ export default function ProcessStep1() {
               className="w-full h-auto object-cover"
             />
           </div>
-          <p className="text-center text-gray-400 text-sm mt-4">Wireframe</p>
+          {/* <p className="text-center text-gray-400 text-sm mt-4">Wireframe</p> */}
         </div>
       </div>
     </section>

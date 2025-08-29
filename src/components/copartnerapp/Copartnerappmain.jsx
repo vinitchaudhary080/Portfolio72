@@ -8,7 +8,8 @@ import Heading             from "./Heading";
 import ImageSection        from "./ImageSection";
 import Summary             from "./Summary";
 import Visual        from "./Visual";
-import Doubleimage         from "./Doubleimage";          // match file name
+import Doubleimage         from "./Doubleimage"; 
+import Wireframe         from "./Wireframe";          // match file name
 
 
 
@@ -20,6 +21,7 @@ export default function Copartnerapp() {
             <ScrollCard><Summary /></ScrollCard>
             <ScrollCard><Doubleimage /></ScrollCard>
             <ScrollCard><Visual /></ScrollCard>
+            <ScrollCard><Wireframe /></ScrollCard>
            
             
       

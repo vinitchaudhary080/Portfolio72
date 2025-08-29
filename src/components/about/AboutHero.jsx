@@ -19,12 +19,12 @@ export default function AboutHero() {
                 <div className="relative z-10 max-w-5xl text-white text-center p-6">
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight">
                         Hi, I’m Vinit Chaudhary<br />
-                        UI/UX Designer & Creative Director
+                        UX/UI Designer & Creative Director
                     </h1>
 
 
                     <p className="mt-6 text-base sm:text-xl font-light text-gray-200">
-                        As a Sr. UI/UX Designer, I partner with startups and Fortune 50+ brands
+                        As a Sr. UX/UI Designer, I partner with startups and Fortune 50+ brands
                         to create interfaces that delight users and drive real results.
                     </p>
 

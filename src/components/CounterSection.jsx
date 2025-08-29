@@ -15,7 +15,7 @@ export default function CounterSection() {
               5+ Years Designing
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              I’m a Senior UI/UX Designer focused on fintech dashboards, design
+              I’m a Senior UX/UI Designer focused on fintech dashboards, design
               systems, and conversion-driven product UX. Obsessed with clarity,
               speed, and real business impact.
             </p>

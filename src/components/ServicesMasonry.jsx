@@ -13,7 +13,7 @@ import OP from "../assets/Icons/Document Add.svg";
 
 const SERVICES = [
   {
-    title: "UI / UX Design",
+    title: "UX / UI Design",
     logo: UI,
     desc:
       "I craft user journeys that feel natural and interfaces that delight. From concept to dev-handoff, every screen is designed with usability, accessibility, and scalability in mind—ensuring designs not only look good but perform under real-world conditions.",

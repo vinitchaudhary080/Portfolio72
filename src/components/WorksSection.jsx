@@ -1,15 +1,24 @@
 // src/components/WorksSection.jsx
 import React from "react";
 import WorkCard from "./WorkCard";
-import img1 from "../assets/Algorooms/Dashboard dark.png";
+import img1 from "../assets/Algorooms/Mockuplight.jpg";
 import img2 from "../assets/Alpha/MacBook_Mockup_3.jpg";
 import img3 from "../assets/CopartnerApp/copartner-1.jpg";
 import img4 from "../assets/ChartingHQ/project1.jpg";
 import img5 from "../assets/Cribonix/cribonix-1.jpg";
-import img6 from "../assets/Nestohub/nestoHub1.jpg";
+import img from "../assets/Bepro/homemockup.jpg";
 
 export default function WorksSection() {
   const posts = [
+     {
+      slug: "Bepro",
+      path: "/bepro/Bepro App",
+      frontImage: img,
+      title: "Bepro App",
+      author: "Bepro",
+    
+      content: "BePro is a cricket app built for local players, street cricketers, and stadium-level teams, enabling them to create matches, track scores live, schedule tournaments, and maintain performance records—just like professional cricket.",
+    },
     {
       slug: "Algorooms",
       path: "/algorooms/Algorooms Dashboard",
@@ -55,15 +64,7 @@ export default function WorksSection() {
       
       content: "A modern and conversion-focused website designed for Cribonix, a marketing agency that provides end-to-end digital marketing services such as advertising campaigns, SEO, social media, and branding solutions.",
     },
-    {
-      slug: "Nestohub",
-      path: "/nestohub/Nestohub",
-      frontImage: img6,
-      title: "Nestohub ",
-      author: "Nestohub",
-    
-      content: "A comprehensive real estate platform designed to seamlessly connect buyers, builders, and brokers, enabling property discovery, sales, rentals, and financing—all in one ecosystem.",
-    },
+   
     
   ];
 

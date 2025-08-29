@@ -9,6 +9,7 @@ import Card6 from "./Card6";
 import Card7 from "./Card7";
 import Card8 from "./Card8";
 import Card9 from "./Card9";
+import Bepro from "./Bepro";
 import ScrollCard from "../ScrollCard";
 import BannerSection from "../BannersSection1";
 import Footer from "../FooterSection1";
@@ -27,7 +28,10 @@ export default function Workmain() {
 
         {/* Cards: single-column grid on mobile → full-width on md+ */}
         <div className=" md:py-8 grid grid-cols-1 gap-8 md:block">
-          <ScrollCard>
+           <ScrollCard>
+              <Bepro />
+            </ScrollCard>
+            <ScrollCard>
               <Card4 />
             </ScrollCard>
 

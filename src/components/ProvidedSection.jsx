@@ -12,7 +12,7 @@ import OP from "../assets/Icons/Document Add.svg";
 const ITEMS = [
   {
     icon: UI,
-    title: "UI/UX Design",
+    title: "UX/UI Design",
     desc:
       "Pixel-accurate interfaces with clear hierarchies, robust states, and production-ready specs. Focused on usability, clarity, and speed.",
   },

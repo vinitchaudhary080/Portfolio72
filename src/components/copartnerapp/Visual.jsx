@@ -1,7 +1,9 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
-import editorImg1 from "../../assets/CopartnerApp/copartner-3.jpg";
+import editorImg1 from "../../assets/CopartnerApp/SiteMap.svg";
 import editorImg2 from "../../assets/CopartnerApp/copartner-4.jpg";
+
+
 
 export default function ProcessStep1() {
   return (
@@ -28,18 +30,10 @@ export default function ProcessStep1() {
           <p className="text-center text-gray-400 text-sm mt-4">Product Flow</p>
         </div>
 
-        {/* Wireframe */}
-        <div>
-          <div className="rounded-3xl overflow-hidden transition duration-700 hover:scale-[1.02]">
-            <img
-              src={editorImg2}
-              alt="Wireframe"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-          <p className="text-center text-gray-400 text-sm mt-4">Wireframe</p>
-        </div>
+        
       </div>
+
+      
     </section>
   );
 }

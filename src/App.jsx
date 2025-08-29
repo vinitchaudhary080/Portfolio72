@@ -29,6 +29,7 @@ import Nestohubmain from './components/nestohub/Nestohubmain';
 import Cribonixmain from './components/cribonix/Cribonixmain';
 import Copartnerappmain from './components/copartnerapp/Copartnerappmain';
 import Budgettreemain from './components/budgettree/Budgettreemain';
+import Bepromain from './components/bepro/Bepromain';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,6 +90,7 @@ export default function App() {
           <Route path="/cribonix/:slug" element={<Cribonixmain />} />
           <Route path="/copartnerapp/:slug" element={<Copartnerappmain />} />
           <Route path="/budgettree/:slug" element={<Budgettreemain />} />
+          <Route path="/bepro/:slug" element={<Bepromain />} />
           <Route path="/contact" element={<ContactPage />} />
 
          
