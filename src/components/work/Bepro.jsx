@@ -36,26 +36,27 @@ export default function Card1() {
             top-32 bottom-4 left-4 right-4 
             md:top-32 md:bottom-4 md:right-4 md:left-auto 
             max-w-full md:max-w-md 
-            bg-black/40 backdrop-blur-sm 
+            bg-black/40 backdrop-blur-sm
             rounded-xl p-6 
             flex flex-col justify-between
           "
         >
           <div>
-            <p className="text-xs text-gray-300 mb-2">©2025</p>
+            {/* <p className="text-xs text-gray-100 mb-2">©2025</p> */}
             <h3 className="text-2xl sm:text-3xl font-light text-white mb-4 leading-tight">
               Bepro App
+              <span className="sm:hidden">{" "}</span>
               <br className="hidden sm:block" />
-              A Finance Product
+               Play, Track & Relive Your Matches
             </h3>
-            <p className="text-gray-300 text-sm mb-6">
+            <p className="text-gray-100 text-sm mb-6">
                BePro is a cricket app built for local players, street cricketers, and stadium-level teams, enabling them to create matches, track scores live, schedule tournaments, and maintain performance records—just like professional cricket.
             </p>
           </div>
 
           {/* View project button */}
           <Link
-            to="/budgettree/Budgettree A Finance Product"
+            to="/bepro/bepro-app-design"
             className="
               inline-block bg-white text-black
               px-8 py-4 rounded-xl text-base font-medium

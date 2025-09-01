@@ -11,6 +11,7 @@ import Wireframer          from "./Wireframer";
 import Doubleimage         from "./Doubleimage";          // match file name
 import Full                from "./Full";
 import Full2               from "./Full2";
+import Ux               from "./UxStrategy";
 
 export default function Cribonixmain() {
   return (
@@ -19,9 +20,10 @@ export default function Cribonixmain() {
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>
             <ScrollCard><Doubleimage /></ScrollCard>
+            <ScrollCard><Ux /></ScrollCard>
             <ScrollCard><Wireframer /></ScrollCard>
-            <ScrollCard><Full /></ScrollCard>
-            <ScrollCard><Full2 /></ScrollCard>
+            <Full />
+            <Full2 />
       
     </div>
   );

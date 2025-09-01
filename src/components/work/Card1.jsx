@@ -42,13 +42,14 @@ export default function Card1() {
           "
         >
           <div>
-            <p className="text-xs text-gray-300 mb-2">©2025</p>
+            {/* <p className="text-xs text-gray-300 mb-2">©2025</p> */}
             <h3 className="text-2xl sm:text-3xl font-light text-white mb-4 leading-tight">
               Alpha Exchange Broker Dashboard 
+              <span className="sm:hidden">{" "}</span>
               <br className="hidden sm:block" />
               & Website Design
             </h3>
-            <p className="text-gray-300 text-sm mb-6">
+            <p className="text-gray-100 text-sm mb-6">
               A unified crypto trading interface offering real-time market overviews, modular charts,
         portfolio tracking, and instant trade execution via WebSockets.
             </p>
@@ -56,7 +57,7 @@ export default function Card1() {
 
           {/* View project button */}
           <Link
-            to="/alpha/Alpha Exchange"
+            to="/alpha/alpha-exchange"
             className="
               inline-block bg-white text-black
               px-8 py-4 rounded-xl text-base font-medium

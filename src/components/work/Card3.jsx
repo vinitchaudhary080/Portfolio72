@@ -42,20 +42,21 @@ export default function Card1() {
           "
         >
           <div>
-            <p className="text-xs text-gray-300 mb-2">©2025</p>
+            {/* <p className="text-xs text-gray-300 mb-2">©2025</p> */}
             <h3 className="text-2xl sm:text-3xl font-light text-white mb-4 leading-tight">
               RA-Dashboard 
+              <span className="sm:hidden">{" "}</span>
               <br className="hidden sm:block" />
               Analysis & Management
             </h3>
-            <p className="text-gray-300 text-sm mb-6">
+            <p className="text-gray-100 text-sm mb-6">
               Centralized analytics and real-time insights for smarter trading decisions—monitor performance, handle user roles, and get actionable tips all in one place.
             </p>
           </div>
 
           {/* View project button */}
           <Link
-            to="/raDashboard/RA-Dashboard"
+            to="/raDashboard/ra-dashboard"
             className="
               inline-block bg-white text-black
               px-8 py-4 rounded-xl text-base font-medium

@@ -10,7 +10,7 @@ import Summary             from "./Summary";
 import Visual        from "./Visual";
 import Doubleimage         from "./Doubleimage"; 
 import Wireframe         from "./Wireframe";          // match file name
-
+import Ux         from "./UxStrategy";  
 
 
 export default function Copartnerapp() {
@@ -19,6 +19,7 @@ export default function Copartnerapp() {
       <ScrollCard><Heading /></ScrollCard>
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>
+            <ScrollCard><Ux /></ScrollCard>
             <ScrollCard><Doubleimage /></ScrollCard>
             <ScrollCard><Visual /></ScrollCard>
             <ScrollCard><Wireframe /></ScrollCard>

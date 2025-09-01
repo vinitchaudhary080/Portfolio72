@@ -7,20 +7,23 @@ export default function AboutContent() {
             <div className="max-w-screen-xl mx-auto">
                 {/* Row 1: Headline */}
                 <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-light leading-tight max-w-3xl">
-                    Discover the stories behind each project—
-                    where strategy meets style and innovation
-                    becomes experience.
+                    <span className="block">Insights → Interfaces → Impact</span>
+                    <span className="block text-gray-300">How I turn ideas into usable products.</span>
                 </h1>
+
+
 
 
                 {/* Row 2: Subtext + Buttons */}
                 <div className="mt-16 flex flex-col items-end">
                     {/* Paragraph shifts right on md+ */}
-                    <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl md:ml-96">
-                        Great branding is more than a logo—it’s a living narrative. I craft end‑to‑end
-                        brand journeys—from positioning and voice to visual systems—ensuring your
-                        message cuts through the noise and builds lasting connections.
+                    <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl md:ml-96">
+                        I blend lightweight research, crisp IA, and opinionated UI systems to reduce
+                        cognitive load and speed up releases. From discovery to dev-handoff, I document
+                        decisions, design for edge states, and keep specs production-ready so your team
+                        ships faster with fewer regressions.
                     </p>
+
 
                 </div>
                 <div className="mr-44 flex flex-col items-end md:mr-64">
@@ -39,7 +42,7 @@ export default function AboutContent() {
       "
                         >
 
-                            Book a 15-min Call
+                            Book a 15-min Call&nbsp;&rarr;
                         </a>
 
 

@@ -14,9 +14,9 @@ import WorkSection  from './components/WorksSection';
 import Banner       from './components/BannersSection1';
 import Footer       from './components/FooterSection1';
 import ContactPage  from './components/ContactPage';  
-import ServicesMasonry  from './components/ServicesMasonry';
+
 import AboutMain    from './components/about/Aboutmain';
-// ← corrected import
+
 import WorkMain     from './components/work/Workmain'; 
 import ProvidedSection     from './components/ProvidedSection';
 
@@ -30,6 +30,7 @@ import Cribonixmain from './components/cribonix/Cribonixmain';
 import Copartnerappmain from './components/copartnerapp/Copartnerappmain';
 import Budgettreemain from './components/budgettree/Budgettreemain';
 import Bepromain from './components/bepro/Bepromain';
+import Investockmain from './components/investock/Investockmain';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -91,7 +92,8 @@ export default function App() {
           <Route path="/copartnerapp/:slug" element={<Copartnerappmain />} />
           <Route path="/budgettree/:slug" element={<Budgettreemain />} />
           <Route path="/bepro/:slug" element={<Bepromain />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/investock/:slug" element={<Investockmain />} />
+         <Route path="/contact" element={<ContactPage />} />
 
          
         </Routes>

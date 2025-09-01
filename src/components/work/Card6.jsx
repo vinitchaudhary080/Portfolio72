@@ -42,20 +42,21 @@ export default function Card1() {
           "
         >
           <div>
-            <p className="text-xs text-gray-300 mb-2">©2025</p>
+            {/* <p className="text-xs text-gray-300 mb-2">©2025</p> */}
             <h3 className="text-2xl sm:text-3xl font-light text-white mb-4 leading-tight">
               Nestohub
+              <span className="sm:hidden">{" "}</span>
               <br className="hidden sm:block" />
               A Real Estate Product
             </h3>
-            <p className="text-gray-300 text-sm mb-6">
+            <p className="text-gray-100 text-sm mb-6">
               List inventory, schedule visits, and convert leads—with real-time sync across web and mobile.
             </p>
           </div>
 
           {/* View project button */}
           <Link
-            to="/nestohub/Nestohub a Real Estate Product"
+            to="/nestohub/nestohub-real-estate-product"
             className="
               inline-block bg-white text-black
               px-8 py-4 rounded-xl text-base font-medium

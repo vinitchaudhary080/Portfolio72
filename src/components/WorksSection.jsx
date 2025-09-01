@@ -7,66 +7,98 @@ import img3 from "../assets/CopartnerApp/copartner-1.jpg";
 import img4 from "../assets/ChartingHQ/project1.jpg";
 import img5 from "../assets/Cribonix/cribonix-1.jpg";
 import img from "../assets/Bepro/homemockup.jpg";
+import imgs from "../assets/Investock/lightmockup.jpg";
 
 export default function WorksSection() {
-  const posts = [
-     {
-      slug: "Bepro",
-      path: "/bepro/Bepro App",
-      frontImage: img,
-      title: "Bepro App",
-      author: "Bepro",
-    
-      content: "BePro is a cricket app built for local players, street cricketers, and stadium-level teams, enabling them to create matches, track scores live, schedule tournaments, and maintain performance records—just like professional cricket.",
-    },
-    {
-      slug: "Algorooms",
-      path: "/algorooms/Algorooms Dashboard",
-      frontImage: img1,
-      title: "Algorooms Dashboard",
-      author: "Algorooms",
-      content: "A next-gen algo trading platform that enables traders to design, backtest, and deploy their trading strategies seamlessly with their existing brokers.",
-    },
-    {
-      slug: "Alpha Exchange Broker",
-      path: "/alpha/Alpha Exchange",
-      frontImage: img2,
-      title: "Alpha Exchange Dashboard & Website",
-      author: "Alpha Exchange",
-     
-      content: "A modern crypto trading broker built for beginners and professionals, offering a user-friendly interface, fast execution, and a simple way to buy, sell, and manage digital assets.",
-    },
-    {
-      slug: "Copartner App",
-      path: "/copartnerapp/Copartner App", // or change to a 3rd route if you have one
-      frontImage: img3,
-      title: "Copartner App",
-      author: "Copartner App",
-      
-      content: "A finance product where professional research analysts and traders share actionable buy/sell tips and market insights, which users can access through a subscription model.",
-    },
+  // WorksSection.jsx (sirf posts update)
+const posts = [
+  {
+  slug: "investock",
+  path: "/investock/investock-app",
+  frontImage: imgs,
+  title: "Investock.ai App",
+  author: "Investock.ai",
+  content:
+    "An AI-powered trading and investing platform—advanced charting, strategy building, backtesting, and real-time market insights in one place.",
+  role: "Product UX • Web & Mobile",
+  result: "Unified platform reduced tool-hopping, improved strategy testing speed, and enhanced trader decision-making.",
+  tags: ["Fintech", "Trading", "AI", "Dashboard"]
+},
 
     {
-      slug: "ChartingHQ Dashboard",
-      path: "/chartinghq/ChartingHQ Dashboard",
-      frontImage: img4,
-      title: "ChartingHQ Dashboard",
-      author: "ChartingHQ",
-      
-      content: "A trading platform that consolidates charts, market overview, stock sectors, and an insider strategy feature—helping traders analyze, backtest, and deploy strategies seamlessly without switching between multiple tools.",
-    },
-    {
-      slug: "Cribonix",
-      path: "/cribonix/Cribonix", // or change to a 3rd route if you have one
-      frontImage: img5,
-      title: "Cribonix Website",
-      author: "Cribonix",
-      
-      content: "A modern and conversion-focused website designed for Cribonix, a marketing agency that provides end-to-end digital marketing services such as advertising campaigns, SEO, social media, and branding solutions.",
-    },
-   
-    
-  ];
+    slug: "bepro",
+    path: "/bepro/bepro-app",
+    frontImage: img,
+    title: "BePro App",
+    author: "BePro",
+    content:
+      "Cricket for local & semi-pro teams—create matches, live scoring, tournaments, and performance records.",
+    role: "Product UX • Mobile",
+    result: "Live score flows, team mgmt; faster match setup & clearer roles.",
+    tags: ["Sports", "Mobile", "MVP"]
+  },
+  {
+    slug: "algorooms",
+    path: "/algorooms/algorooms-dashboard",
+    frontImage: img1,
+    title: "Algorooms Dashboard",
+    author: "Algorooms",
+    content:
+      "Design, backtest, and deploy algos with existing brokers in one place.",
+    role: "UX/UI • Design System",
+    result: "Simplified params & presets; quicker backtests; fewer context switches.",
+    tags: ["Fintech", "Trading", "Web"]
+  },
+  {
+    slug: "alpha-exchange",
+    path: "/alpha/alpha-exchange",
+    frontImage: img2,
+    title: "Alpha Exchange Dashboard & Website",
+    author: "Alpha Exchange",
+    content:
+      "Beginner-friendly crypto broker for fast execution and simple order flows.",
+    role: "Product UI • Web",
+    result: "Clearer order states; improved first-trade completion.",
+    tags: ["Crypto", "Web", "Growth"]
+  },
+  {
+    slug: "copartner-app",
+    path: "/copartnerapp/copartner-app",
+    frontImage: img3,
+    title: "Copartner App",
+    author: "Copartner",
+    content:
+      "Actionable buy/sell ideas and research in a subscription model.",
+    role: "UX flows • Mobile",
+    result: "Reduced ‘where to act’ confusion; fewer support pings.",
+    tags: ["Finance", "Mobile", "Subscriptions"]
+  },
+  {
+    slug: "chartinghq",
+    path: "/chartinghq/chartinghq-dashboard",
+    frontImage: img4,
+    title: "ChartingHQ Dashboard",
+    author: "ChartingHQ",
+    content:
+      "Charts, market overview, sector data, and insider strategies in one place.",
+    role: "Product • DS",
+    result: "Fewer tool hops; faster compare flows.",
+    tags: ["Fintech", "Analytics", "Web"]
+  },
+  {
+    slug: "cribonix",
+    path: "/cribonix/cribonix",
+    frontImage: img5,
+    title: "Cribonix Website",
+    author: "Cribonix",
+    content:
+      "Conversion-focused site for a full-stack marketing agency.",
+    role: "UX + Web",
+    result: "Cleaner funnels; more qualified leads.",
+    tags: ["Web", "Marketing", "SEO"]
+  }
+];
+
 
   return (
     <section className="w-full bg-black px-6 sm:px-20 py-20">

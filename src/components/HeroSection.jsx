@@ -31,8 +31,7 @@ export default function HeroSection() {
             Hello, I’m Vinit Chaudhary
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight max-w-lg">
-            I craft elegant, human‑centered interfaces <br className="hidden sm:block" />
-            that drive real results.
+            I design human-centered product interfaces that move the metrics.
           </h1>
         </div>
 

@@ -18,38 +18,24 @@ export default function AboutHero() {
                 {/* Centered content */}
                 <div className="relative z-10 max-w-5xl text-white text-center p-6">
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight">
-                        Hi, I’m Vinit Chaudhary<br />
-                        UX/UI Designer & Creative Director
-                    </h1>
+  Hi, I’m Vinit Chaudhary<br />
+  Senior UX/UI Designer
+</h1>
 
+<p className="mt-6 text-base sm:text-xl font-light text-gray-200">
+  I partner with high-growth startups and enterprise teams to turn complex,
+  data-heavy problems into calm, task-first product experiences that ship.
+</p>
 
-                    <p className="mt-6 text-base sm:text-xl font-light text-gray-200">
-                        As a Sr. UX/UI Designer, I partner with startups and Fortune 50+ brands
-                        to create interfaces that delight users and drive real results.
-                    </p>
+<button
+  onClick={() => window.open("https://wa.me/918398020076", "_blank")}
+  aria-label="Discuss your project with Vinit on WhatsApp"
+  className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl text-sm font-medium hover:scale-105 transition mt-10 mx-auto"
+>
+  <FaComments className="text-lg" />
+  Discuss Project&nbsp;&rarr;
+</button>
 
-                    <button
-                        onClick={() => window.open("https://wa.me/918398020076", "_blank")}
-                        className="
-        inline-flex 
-        items-center 
-        gap-2 
-        bg-white 
-        text-black 
-        px-6 
-        py-3 
-        rounded-xl 
-        text-sm 
-        font-medium 
-        hover:scale-105 
-        transition 
-        mt-10 
-        mx-auto
-      "
-                    >
-                        <FaComments className="text-lg" />
-                        Discuss Project
-                    </button>
 
                 </div>
             </div>

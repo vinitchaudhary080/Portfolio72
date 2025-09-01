@@ -42,20 +42,21 @@ export default function Card1() {
           "
         >
           <div>
-            <p className="text-xs text-gray-300 mb-2">©2025</p>
+            {/* <p className="text-xs text-gray-300 mb-2">©2025</p> */}
             <h3 className="text-2xl sm:text-3xl font-light text-white mb-4 leading-tight">
               BudgetTree App
+              <span className="sm:hidden">{" "}</span>
               <br className="hidden sm:block" />
               A Finance Product
             </h3>
-            <p className="text-gray-300 text-sm mb-6">
+            <p className="text-gray-100 text-sm mb-6">
                Diwali, birthdays, festivals ya koi bhi special moment — custom digital gift cards create karo aur turant bhejo. No physical hassle, sirf thoughtful surprise.
             </p>
           </div>
 
           {/* View project button */}
           <Link
-            to="/budgettree/Budgettree A Finance Product"
+            to="/budgettree/budgettree-finance-product"
             className="
               inline-block bg-white text-black
               px-8 py-4 rounded-xl text-base font-medium

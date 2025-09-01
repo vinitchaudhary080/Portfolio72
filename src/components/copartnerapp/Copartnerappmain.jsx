@@ -9,7 +9,8 @@ import ImageSection        from "./ImageSection";
 import Summary             from "./Summary";
 import Visual        from "./Visual";
 import Doubleimage         from "./Doubleimage"; 
-import Wireframe         from "./Wireframe";          // match file name
+import Wireframe         from "./Wireframe";   
+import Ux         from "./UxStrategy";        // match file name
 
 
 
@@ -20,6 +21,7 @@ export default function Copartnerapp() {
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>
             <ScrollCard><Doubleimage /></ScrollCard>
+            <ScrollCard><Ux /></ScrollCard>
             <ScrollCard><Visual /></ScrollCard>
             <ScrollCard><Wireframe /></ScrollCard>
            

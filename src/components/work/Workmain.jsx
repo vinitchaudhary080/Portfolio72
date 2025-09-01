@@ -13,6 +13,8 @@ import Bepro from "./Bepro";
 import ScrollCard from "../ScrollCard";
 import BannerSection from "../BannersSection1";
 import Footer from "../FooterSection1";
+import Investock from "./Investock";
+import Heading from "../work/Heading";
 
 export default function Workmain() {
   return (
@@ -21,14 +23,18 @@ export default function Workmain() {
         {/* Heading + Divider */}
         <div className="flex items-center gap-4 px-6 mb-10">
           <h2 className="text-white text-base sm:text-lg font-normal whitespace-nowrap">
-            Selected Project
+            Projects
           </h2>
           <div className="flex-1 h-px bg-gray-700" />
         </div>
 
         {/* Cards: single-column grid on mobile → full-width on md+ */}
         <div className=" md:py-8 grid grid-cols-1 gap-8 md:block">
-           <ScrollCard>
+          
+            <ScrollCard>
+              <Investock />
+            </ScrollCard>
+             <ScrollCard>
               <Bepro />
             </ScrollCard>
             <ScrollCard>

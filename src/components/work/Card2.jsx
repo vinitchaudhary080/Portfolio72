@@ -42,13 +42,14 @@ export default function Card1() {
           "
       >
         <div>
-          <p className="text-xs text-gray-300 mb-2">©2025</p>
+          {/* <p className="text-xs text-gray-300 mb-2">©2025</p> */}
           <h3 className="text-2xl sm:text-3xl font-light text-white mb-4 leading-tight">
             ChartingHQ Dashboard
+            <span className="sm:hidden">{" "}</span>
             <br className="hidden sm:block" />
             Strategy Builder & Backtest
           </h3>
-          <p className="text-gray-300 text-sm mb-6">
+          <p className="text-gray-100 text-sm mb-6">
              
         Your all-in-one stock market dashboard,<br />
         delivering real-time insights for<br />

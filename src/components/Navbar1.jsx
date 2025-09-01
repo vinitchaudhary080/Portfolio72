@@ -41,27 +41,27 @@ export default function Navbar1({ onMenuClick }) {
     className="animated-underline text-[40px] font-light transition-colors"
     onClick={() => setIsMenuOpen(false)}
   >
-    Home  </Link>
+    Main  </Link>
           <Link
             to="/about"
             className="animated-underline text-[40px] font-light transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            About
+            Who I Am
           </Link>
           <Link
             to="/works"
             className="animated-underline text-[40px] font-light transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            Works
+            Projects
           </Link>
           <Link
             to="/contact"
            className="animated-underline text-[40px] font-light transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            Contact
+            Say Hello
           </Link>
 
         </nav>

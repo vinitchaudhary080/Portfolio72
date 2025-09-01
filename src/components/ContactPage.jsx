@@ -63,10 +63,15 @@ export default function ContactPage() {
             order-1 lg:order-2
           "
                 >
-                    <h2 className="text-3xl sm:text-5xl font-light leading-snug mb-8 text-white">
-                        “Every project starts with a conversation.”<br />
-                        Let’s chat about yours today.
-                    </h2>
+
+                     <h2 className="text-3xl sm:text-5xl font-light leading-snug text-white">
+             “Every project starts with a conversation.”
+          </h2>
+                    <p className="text-sm text-gray-300 italic">
+            Have a brief? I’ll map scope, risks, and a first sprint plan in 48 hours.
+          </p>
+
+        
                     <a
                         href="https://wa.me/918398020076"
                         target="_blank"
@@ -79,7 +84,7 @@ export default function ContactPage() {
       "
                     >
                         <FaRegCommentDots className="text-lg" />
-                        Let’s talk
+                        Let’s talk&nbsp;&rarr;
                     </a>
                 </div>
             </div>

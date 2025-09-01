@@ -11,6 +11,7 @@ import Structure           from "./Strucutre";            // fixed typo
 import Wireframer          from "./Wireframer";
 import Doubleimage         from "./Doubleimage";          // match file name
 import Full                from "./Full";
+import Ux                from "./UxStrategy";
 
 
 export default function Budgettreemain() {
@@ -20,6 +21,7 @@ export default function Budgettreemain() {
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>
             <ScrollCard><Doubleimage /></ScrollCard>
+             <ScrollCard><Ux /></ScrollCard>
            
             <ScrollCard><Structure /></ScrollCard>
             

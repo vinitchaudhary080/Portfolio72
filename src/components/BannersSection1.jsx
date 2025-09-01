@@ -20,10 +20,13 @@ export default function BannersSection() {
 
       {/* Text + CTA */}
       <div className="relative z-10 text-center max-w-3xl">
-        <h2 className="text-3xl sm:text-5xl font-light leading-snug mb-8">
-          “When passion meets purpose, magic happens.”<br />
-          Let’s create something unforgettable together.
-        </h2>
+        <p className="text-sm sm:text-base text-gray-300 italic mb-3">
+  “When passion meets purpose, magic happens.”
+</p>
+<h2 className="text-3xl sm:text-5xl font-light leading-snug mb-8">
+  Have a brief? I’ll map scope, risks, and a first sprint plan in 48 hours.
+</h2>
+
         <a
           href="https://wa.me/918398020076"
           target="_blank"
@@ -31,7 +34,7 @@ export default function BannersSection() {
           className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl text-sm font-medium hover:scale-105 transition"
         >
           <FaRegCommentDots className="text-lg" />
-          Discuss Project
+          Discuss your project&nbsp;&rarr;
         </a>
       </div>
     </section>

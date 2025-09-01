@@ -6,6 +6,7 @@ import ImageSection from "./ImageSection";
 import Summary from "./Summary";
 
 import Visual from "./Visual";
+import Ux from "./UxStrategy";
 
 
 import Images from "./Doubleimage";
@@ -21,6 +22,7 @@ export default function ChartingHqmain() {
                  <ScrollCard><Heading /></ScrollCard>
                   <ScrollCard><ImageSection /></ScrollCard>
                   <ScrollCard><Summary /></ScrollCard>
+                  <ScrollCard><Ux /></ScrollCard>
                   <ScrollCard><Visual /></ScrollCard>
                   <ScrollCard><Images /></ScrollCard>
                   

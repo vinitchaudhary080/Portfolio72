@@ -18,6 +18,7 @@ import Builder               from "./Builder";
 import Buildercopy               from "./Builder copy";
 import Broker               from "./Broker";
 import Brokercopy               from "./Broker copy";
+import Ux               from "./UxStrategy";
 
 export default function Alphamain() {
   return (
@@ -26,12 +27,10 @@ export default function Alphamain() {
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>
             <ScrollCard><Doubleimage /></ScrollCard>
-            
-            
-            <ScrollCard><Structure /></ScrollCard>
+            <ScrollCard><Ux /></ScrollCard>
+           <ScrollCard><Structure /></ScrollCard>
             <ScrollCard><Visual /></ScrollCard>
-           
-            <ScrollCard><Full /></ScrollCard>
+           <ScrollCard><Full /></ScrollCard>
             <ScrollCard><Full2 /></ScrollCard>
             <ScrollCard><Builder /></ScrollCard>
             <ScrollCard><Buildercopy /></ScrollCard>
