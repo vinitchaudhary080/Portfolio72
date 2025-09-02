@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
-import editorImg1 from "../../assets/Bepro/Flowchart.svg";
+import editorImg1 from "../../assets/Investock/Investockflow.jpg";
 import editorImg2 from "../../assets/Investock/portfoliomockup.jpg";
 import editorImg3 from "../../assets/Investock/onboardmockup.jpg";
 
@@ -21,8 +21,20 @@ export default function ProcessStep1() {
         <div>
           <div className="rounded-3xl overflow-hidden transition duration-700 hover:scale-[1.02]">
             <img
-              src={editorImg2}
+              src={editorImg1}
               alt="Onboarding Mockup"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <p className="text-center text-gray-400 text-sm mt-4">Product Flow</p>
+        </div>
+
+        {/* Portfolio Mockup */}
+        <div>
+          <div className="rounded-3xl overflow-hidden transition duration-700 hover:scale-[1.02]">
+            <img
+              src={editorImg2}
+              alt="Portfolio Mockup"
               className="w-full h-auto object-cover"
             />
           </div>
