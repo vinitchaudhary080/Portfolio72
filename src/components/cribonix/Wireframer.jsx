@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/Cribonix/cribonix-3.jpg";
+import projectImage from "../../assets/Cribonix/cribonix-6.png";
 
 export default function ImageSection() {
   return (

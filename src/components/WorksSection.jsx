@@ -22,7 +22,7 @@ const posts = [
     "An AI-powered trading and investing platform—advanced charting, strategy building, backtesting, and real-time market insights in one place.",
   role: "Product UX • Web & Mobile",
   result: "Unified platform reduced tool-hopping, improved strategy testing speed, and enhanced trader decision-making.",
-  tags: ["Fintech", "Trading", "AI", "Dashboard"]
+  tags: ["Fintech", "Trading", "AI"]
 },
 
     {
@@ -47,7 +47,7 @@ const posts = [
       "Design, backtest, and deploy algos with existing brokers in one place.",
     role: "UX/UI • Design System",
     result: "Simplified params & presets; quicker backtests; fewer context switches.",
-    tags: ["Fintech", "Trading", "Web"]
+    tags: ["Fintech", "Trading", "Web","Dashboard"]
   },
   {
     slug: "alpha-exchange",
@@ -59,7 +59,7 @@ const posts = [
       "Beginner-friendly crypto broker for fast execution and simple order flows.",
     role: "Product UI • Web",
     result: "Clearer order states; improved first-trade completion.",
-    tags: ["Crypto", "Web", "Growth"]
+    tags: ["Crypto", "Web", "Growth","Dashboard","Mobile"]
   },
   {
     slug: "copartner-app",
@@ -73,18 +73,18 @@ const posts = [
     result: "Reduced ‘where to act’ confusion; fewer support pings.",
     tags: ["Finance", "Mobile", "Subscriptions"]
   },
-  {
-    slug: "chartinghq",
-    path: "/chartinghq/chartinghq-dashboard",
-    frontImage: img4,
-    title: "ChartingHQ Dashboard",
-    author: "ChartingHQ",
-    content:
-      "Charts, market overview, sector data, and insider strategies in one place.",
-    role: "Product • DS",
-    result: "Fewer tool hops; faster compare flows.",
-    tags: ["Fintech", "Analytics", "Web"]
-  },
+  // {
+  //   slug: "chartinghq",
+  //   path: "/chartinghq/chartinghq-dashboard",
+  //   frontImage: img4,
+  //   title: "ChartingHQ Dashboard",
+  //   author: "ChartingHQ",
+  //   content:
+  //     "Charts, market overview, sector data, and insider strategies in one place.",
+  //   role: "Product • DS",
+  //   result: "Fewer tool hops; faster compare flows.",
+  //   tags: ["Fintech", "Analytics", "Web"]
+  // },
   {
     slug: "cribonix",
     path: "/cribonix/cribonix",

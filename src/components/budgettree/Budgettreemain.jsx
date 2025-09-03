@@ -26,7 +26,7 @@ export default function Budgettreemain() {
             <ScrollCard><Structure /></ScrollCard>
             
             <ScrollCard><Wireframer /></ScrollCard>
-            <ScrollCard><Full /></ScrollCard>
+            <Full />
             
       
     </div>

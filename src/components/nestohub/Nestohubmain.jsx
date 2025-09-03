@@ -30,8 +30,8 @@ export default function Alphamain() {
             <ScrollCard><Ux /></ScrollCard>
            <ScrollCard><Structure /></ScrollCard>
             <ScrollCard><Visual /></ScrollCard>
-           <ScrollCard><Full /></ScrollCard>
-            <ScrollCard><Full2 /></ScrollCard>
+           <Full />
+            <Full2 />
             <ScrollCard><Builder /></ScrollCard>
             <ScrollCard><Buildercopy /></ScrollCard>
             <ScrollCard><Broker /></ScrollCard>
