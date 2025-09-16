@@ -2,6 +2,7 @@
 import React from "react";
 
 import { useParams } from "react-router-dom";  // ← import useParams
+import BudgettreeSEO from "../../seo/BudgettreeSEO";
 import ScrollCard from "../ScrollCard";
 
 import Heading             from "./Heading";
@@ -17,6 +18,7 @@ import Ux                from "./UxStrategy";
 export default function Budgettreemain() {
   return (
     <div className="bg-black min-h-screen">
+      <BudgettreeSEO />
       <ScrollCard><Heading /></ScrollCard>
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>

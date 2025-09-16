@@ -3,6 +3,7 @@ import React from "react";
 
 import { useParams } from "react-router-dom";  // ← import useParams
 import ScrollCard from "../ScrollCard";
+import AlgoroomsSEO from "../../seo/AlgoroomsSEO";
 
 import Heading             from "./Heading";
 import Showcaseimage       from "./ImageSection";
@@ -16,6 +17,7 @@ import Ux            from "./UxStrategy";
 export default function Alphamain() {
   return (
     <div className="bg-black min-h-screen">
+      <AlgoroomsSEO />
             <ScrollCard><Heading /></ScrollCard>
             <ScrollCard><Showcaseimage /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>

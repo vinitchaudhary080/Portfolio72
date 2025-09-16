@@ -1,11 +1,11 @@
 // src/components/workpage/Card7.jsx
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-// big hero image on the left
+// main hero (left)
 import mainImage from "../../assets/Cribonix/cribonix-1.jpg";
 
-// small thumbnails underneath
+// thumbs (marquee)
 import thumb1 from "../../assets/Cribonix/cribonix-1.jpg";
 import thumb2 from "../../assets/Cribonix/cribonix-2.jpg";
 import thumb3 from "../../assets/Cribonix/cribonix-3.jpg";
@@ -14,76 +14,226 @@ import thumb5 from "../../assets/Cribonix/cribonix-1.jpg";
 import thumb6 from "../../assets/Cribonix/cribonix-2.jpg";
 import thumb7 from "../../assets/Cribonix/cribonix-3.jpg";
 
+// --- Wave overlay (same pattern used before) ---
+function WaveCanvas({ className }) {
+  const canvasRef = useRef(null);
+  const rafRef = useRef(0);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d", { alpha: true });
+    if (!ctx) return;
+
+    let time = 0;
+    const waveData = Array.from({ length: 8 }).map(() => ({
+      value: Math.random() * 0.5 + 0.1,
+      targetValue: Math.random() * 0.5 + 0.1,
+      speed: Math.random() * 0.02 + 0.01,
+    }));
+
+    const dpr = Math.max(1, window.devicePixelRatio || 1);
+
+    function resize() {
+      const { width, height } = canvas.getBoundingClientRect();
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function updateWaveData() {
+      waveData.forEach((d) => {
+        if (Math.random() < 0.01) d.targetValue = Math.random() * 0.7 + 0.1;
+        const diff = d.targetValue - d.value;
+        d.value += diff * d.speed;
+      });
+    }
+
+    function draw() {
+      const { width, height } = canvas.getBoundingClientRect();
+      ctx.clearRect(0, 0, width, height);
+
+      waveData.forEach((data, i) => {
+        const freq = data.value * 7;
+        ctx.beginPath();
+        for (let x = 0; x < width; x++) {
+          const nx = (x / width) * 2 - 1;
+          const px = nx + i * 0.04 + freq * 0.03;
+          const py =
+            Math.sin(px * 10 + time) *
+            Math.cos(px * 2) *
+            freq *
+            0.1 *
+            ((i + 1) / 8);
+          const y = (py + 1) * (height / 2);
+          if (x === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        const intensity = Math.min(1, freq * 0.3);
+        const r = 79 + intensity * 100;
+        const g = 70 + intensity * 130;
+        const b = 229;
+        ctx.lineWidth = 1 + i * 0.3;
+        ctx.strokeStyle = `rgba(${r},${g},${b},0.25)`;
+        ctx.shadowColor = `rgba(${r},${g},${b},0.2)`;
+        ctx.shadowBlur = 3;
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+      });
+    }
+
+    function animate() {
+      time += 0.02;
+      updateWaveData();
+      draw();
+      rafRef.current = requestAnimationFrame(animate);
+    }
+
+    const ro = new ResizeObserver(resize);
+    ro.observe(canvas);
+    resize();
+    animate();
+
+    return () => {
+      ro.disconnect();
+      cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
+
+  return <canvas ref={canvasRef} className={className} />;
+}
+
 export default function Card1() {
-  // duplicate the array so the marquee can loop seamlessly
   const thumbs = [thumb1, thumb2, thumb3, thumb4, thumb5, thumb6, thumb7];
   const looped = [...thumbs, ...thumbs];
 
-  return (
-    <div className="md:px-6 px-6 sm:px-20 mb-16">
-      <div className="relative overflow-hidden rounded-xl">
-        {/* full-size bg image */}
-        <img
-          src={mainImage}
-          alt="Straps project hero"
-          className="w-full h-[550px] object-cover"
-        />
+  // WorkSection वाले Cribonix tags
+  const tags = ["Web", "Marketing", "SEO"];
 
-        {/* blurred overlay card */}
-        <div
-          className="
-            absolute 
-            top-32 bottom-4 left-4 right-4 
-            md:top-32 md:bottom-4 md:right-4 md:left-auto 
-            max-w-full md:max-w-md 
-            bg-black/40 backdrop-blur-sm 
-            rounded-xl p-6 
-            flex flex-col justify-between
-          "
-        >
-          <div>
-            {/* <p className="text-xs text-gray-300 mb-2">©2025</p> */}
-            <h3 className="text-2xl sm:text-3xl font-light text-white mb-4 leading-tight">
-              Cribonix
-              <span className="sm:hidden">{" "}</span>
-              <br className="hidden sm:block" />
-              A Marketing Agency Website
-            </h3>
-            <p className="text-gray-100 text-sm mb-6">
-               Cribonix combines,
-        strategic insight,
-        with creative,
-        excellence
-            </p>
+  return (
+    <section className="px-6 mb-16">
+      <div
+        className="
+          group relative rounded-2xl overflow-hidden
+          border border-white/10 bg-black/50
+          shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]
+          transition-transform duration-300 hover:-translate-y-1
+          focus:outline-none focus:ring-2 focus:ring-white/20
+        "
+      >
+        {/* desktop: 60/40 split; mobile: single col with fixed image height */}
+        <div className="grid grid-cols-1 md:grid-cols-[60%_40%]">
+          {/* LEFT IMAGE (soft zoom on hover) */}
+          <div className="relative overflow-hidden h-[220px] sm:h-[260px] md:h-auto">
+            <img
+              src={mainImage}
+              alt="Cribonix hero"
+              className="
+                absolute inset-0 w-full h-full object-cover
+                motion-safe:transition-transform motion-safe:duration-[900ms]
+                motion-safe:ease-[cubic-bezier(0.22,1,0.36,1)]
+                motion-safe:will-change-transform
+                group-hover:scale-[1.06]
+              "
+            />
+            {/* overlays for consistency/contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/40" />
+            <WaveCanvas className="absolute inset-0 w-full h-full mix-blend-screen opacity-30 pointer-events-none" />
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg,rgba(255,255,255,0.25) 1px,transparent 1px),linear-gradient(rgba(255,255,255,0.25) 1px,transparent 1px)",
+                backgroundSize: "16px 16px",
+              }}
+            />
           </div>
 
-          {/* View project button */}
-          <Link
-            to="/cribonix/cribonix-marketing-agency"
-            className="
-              inline-block bg-white text-black
-              px-8 py-4 rounded-xl text-base font-medium
-              hover:bg-gray-100 transition-shadow hover:shadow-md
-            "
-          >
-            View Project
-          </Link>
+          {/* RIGHT CONTENT */}
+          <div className="relative p-5 sm:p-6 md:p-8 flex flex-col">
+            {/* top-right badge */}
+            <div className="absolute top-3 right-3 md:top-4 md:right-4">
+              <span
+                className="
+                  px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wide
+                  bg-black/40 text-white border border-white/20 backdrop-blur-sm
+                  dark:bg-white/10 dark:text-white/80
+                "
+              >
+                Cribonix
+              </span>
+            </div>
 
-          {/* Auto‑scrolling thumbnail marquee */}
-          <div className="mt-4 w-full overflow-hidden">
-            <div className="flex space-x-2 animate-marquee">
-              {looped.map((src, i) => (
-                <img
+            <h3 className="text-white text-lg sm:text-xl md:text-2xl font-light leading-snug">
+              Cribonix
+              <br />
+              <span className="text-white/90">A Marketing Agency Website</span>
+            </h3>
+
+            <p className="text-white/75 text-sm sm:text-base leading-relaxed mt-3">
+              Cribonix combines, strategic insight, with creative, excellence
+            </p>
+
+            <p className="mt-3 text-xs text-white/55">UX + Web</p>
+
+            {/* TAGS (same style as WorkSection.jsx) */}
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {tags.map((t, i) => (
+                <span
                   key={i}
-                  src={src}
-                  alt={`Thumbnail ${i + 1}`}
-                  className="h-16 w-16 object-cover rounded-lg flex-shrink-0"
-                />
+                  className="px-2 py-0.5 rounded-md text-[10px] border border-cyan-400/25 text-cyan-200/90 bg-cyan-500/10"
+                >
+                  {t}
+                </span>
               ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-5">
+              <Link
+                to="/cribonix/cribonix-marketing-agency"
+                className="
+                  inline-flex items-center gap-2
+                  px-6 py-3 rounded-xl text-sm font-medium
+                  border border-white/10 text-white
+                  backdrop-blur-sm
+                  bg-white/10 hover:bg-white/20
+                  hover:scale-105 transition
+                  focus:outline-none focus:ring-2 focus:ring-white/30
+                "
+              >
+                View Project
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+            </div>
+
+            {/* thumbnails marquee */}
+            <div className="mt-5 w-full overflow-hidden">
+              <div className="flex gap-2 animate-marquee">
+                {looped.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`Cribonix thumbnail ${i + 1}`}
+                    className="h-10 w-10 sm:h-12 sm:w-12 object-cover rounded-lg flex-shrink-0"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
+
+        {/* faint divider */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
       </div>
-    </div>
+    </section>
   );
 }

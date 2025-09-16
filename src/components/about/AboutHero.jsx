@@ -1,44 +1,56 @@
 import React from "react";
 import { FaComments } from "react-icons/fa";
-import bgImage from "../../assets/about-hero-bg.jpg";
-
+import contactVideo from "../../assets/contact-bg.mp4"; // <-- video import
 
 export default function AboutHero() {
-    return (
-        <section className="bg-black py-16 px-6 sm:py-24 sm:px-24">
-            <div
-                className="relative w-full min-h-[60vh] bg-cover bg-center flex items-center justify-center rounded-xl overflow-hidden"
-                style={{
-                    backgroundImage: `url(${bgImage})`,
-                }}
-            >
-                {/* Black overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+  return (
+    <section className="bg-black py-16 px-6 sm:py-24 sm:px-24">
+      <div className="relative w-full min-h-[60vh] flex items-center justify-center rounded-xl overflow-hidden">
+        {/* Video background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={contactVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
 
-                {/* Centered content */}
-                <div className="relative z-10 max-w-5xl text-white text-center p-6">
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight">
-  Hi, I’m Vinit Chaudhary<br />
-  Senior UX/UI Designer
-</h1>
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
-<p className="mt-6 text-base sm:text-xl font-light text-gray-200">
-  I partner with high-growth startups and enterprise teams to turn complex,
-  data-heavy problems into calm, task-first product experiences that ship.
-</p>
+        {/* Centered content */}
+        <div className="relative z-10 max-w-5xl text-white text-center p-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight">
+            Hi, I’m Vinit Chaudhary<br />
+            Senior UX/UI Designer
+          </h1>
 
-<button
-  onClick={() => window.open("https://wa.me/918398020076", "_blank")}
-  aria-label="Discuss your project with Vinit on WhatsApp"
-  className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl text-sm font-medium hover:scale-105 transition mt-10 mx-auto"
->
-  <FaComments className="text-lg" />
-  Discuss Project&nbsp;&rarr;
-</button>
+          <p className="mt-6 text-base sm:text-xl font-light text-gray-200">
+            I partner with high growth startups and enterprise teams to turn
+            complex, data heavy problems into calm, task first product
+            experiences that ship.
+          </p>
 
-
-                </div>
-            </div>
-        </section>
-    );
+          <button
+            onClick={() => window.open("https://wa.me/918398020076", "_blank")}
+            aria-label="Discuss your project with Vinit on WhatsApp"
+            className="
+              inline-flex items-center gap-2
+              px-6 py-3 mt-10 mx-auto
+              rounded-xl text-sm font-medium
+              border border-white/10 text-white
+              backdrop-blur-sm
+              bg-white/10 hover:bg-white/20
+              hover:scale-105 transition
+              focus:outline-none focus:ring-2 focus:ring-white/30
+            "
+          >
+            <FaComments className="text-base opacity-90" />
+            Discuss Project&nbsp;&rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 }

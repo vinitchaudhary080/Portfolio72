@@ -15,6 +15,7 @@ import BannerSection from "../BannersSection1";
 import Footer from "../FooterSection1";
 import Investock from "./Investock";
 import Heading from "../work/Heading";
+import { LampDemo }from "../lamp-demo";
 
 export default function Workmain() {
   return (
@@ -66,9 +67,9 @@ export default function Workmain() {
               <Card9 />
             </ScrollCard> 
 
-          <ScrollCard>
-              <BannerSection />
-            </ScrollCard> 
+          
+              <LampDemo />
+            
 
           <ScrollCard>
               <Footer />

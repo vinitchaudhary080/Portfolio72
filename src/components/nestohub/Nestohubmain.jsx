@@ -2,6 +2,7 @@
 import React from "react";
 
 import { useParams } from "react-router-dom";  // ← import useParams
+import NestohubSEO from "../../seo/NestohubSEO";
 import ScrollCard from "../ScrollCard";
 
 import Heading             from "./Heading";
@@ -23,6 +24,7 @@ import Ux               from "./UxStrategy";
 export default function Alphamain() {
   return (
     <div className="bg-black min-h-screen">
+      <NestohubSEO />
       <ScrollCard><Heading /></ScrollCard>
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>

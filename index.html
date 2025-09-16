@@ -1,31 +1,139 @@
+<!-- public/index.html -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Viewport (safe for notched devices) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Robots + Large image previews for social -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Theme color (dark/light aware) -->
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Canonical (home) -->
+    <link rel="canonical" href="https://vinitchaudhary.in/" />
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en-IN" href="https://vinitchaudhary.in/" />
+    <link rel="alternate" hreflang="x-default" href="https://vinitchaudhary.in/" />
+
+    <!-- Favicon / App icons -->
     <link rel="icon" type="image/png" href="/fabicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vinit Chaudhary</title>
-    <!-- 1) Preconnect for best performance -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Preconnect/DNS-prefetch to cut handshake latency -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 
-    <!-- 2) Load Satoshi with weights 400 & 700 -->
+    <!-- Font: Satoshi (display=swap to avoid FOIT/CLS) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVFN15K32Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-WVFN15K32Q');
-</script>
+    <!-- Preload your largest above-the-fold image to improve LCP -->
+    <!-- TODO: update path/filenames to your real hero -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/hero.webp"
+      imagesrcset="/assets/hero.webp 1x, /assets/hero@2x.webp 2x"
+      imagesizes="(min-width: 768px) 1200px, 100vw"
+    />
+
+    <!-- ==== GLOBAL SEO FALLBACKS (per-route React 19 metadata will override) ==== -->
+
+    <title>Vinit Chaudhary — UX/UI Designer (India)</title>
+    <meta
+      name="description"
+      content="Senior UX/UI designer crafting websites, mobile apps, and SaaS dashboards for Indian startups & businesses."
+    />
+    <meta
+      name="keywords"
+      content="freelance ux/ui designer india, ui ux freelancer india, hire product designer india, website design freelancer india, mobile app ui designer india, saas dashboard ux, fintech ux, startup ux designer india"
+    />
+
+    <!-- Open Graph defaults -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vinit Chaudhary — UX/UI Designer" />
+    <meta property="og:title" content="Vinit Chaudhary — UX/UI Designer (India)" />
+    <meta
+      property="og:description"
+      content="Senior UX/UI designer crafting websites, mobile apps, and SaaS dashboards for Indian startups & businesses."
+    />
+    <meta property="og:url" content="https://vinitchaudhary.in/" />
+    <!-- Keep this image at 1200x630; per-page images can override from React 19 metadata -->
+    <meta property="og:image" content="/og-default.jpg" />
+    <meta property="og:image:alt" content="Vinit Chaudhary Portfolio" />
+
+    <!-- Twitter defaults -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vinit Chaudhary — UX/UI Designer (India)" />
+    <meta
+      name="twitter:description"
+      content="Senior UX/UI designer crafting websites, mobile apps, and SaaS dashboards for Indian startups & businesses."
+    />
+    <meta name="twitter:image" content="/og-default.jpg" />
+    <meta name="twitter:site" content="@vinitchaudhary" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVFN15K32Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      // SPA: don't auto-fire page_view twice
+      gtag('config', 'G-WVFN15K32Q', { send_page_view: false });
+
+      // Fire page_view on route changes (SPA-friendly)
+      (function () {
+        const sendPV = () =>
+          gtag('event', 'page_view', {
+            page_location: location.href,
+            page_path: location.pathname + location.search,
+            page_title: document.title
+          });
+
+        window.addEventListener('DOMContentLoaded', sendPV);
+        window.addEventListener('popstate', sendPV);
+
+        // patch pushState/replaceState to detect client routing
+        ['pushState', 'replaceState'].forEach(fn => {
+          const orig = history[fn];
+          history[fn] = function () {
+            const ret = orig.apply(this, arguments);
+            setTimeout(sendPV, 0);
+            return ret;
+          };
+        });
+      })();
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- Vite injects built CSS/JS here -->
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- NoScript fallback -->
+    <noscript>
+      <style>
+        main { display:block; padding:16px; font:16px/1.5 system-ui }
+      </style>
+      <main>
+        JavaScript is required for the full experience. You can still view my
+        <a href="/works">portfolio works</a> and <a href="/contact">contact</a> pages.
+      </main>
+    </noscript>
   </body>
 </html>

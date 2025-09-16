@@ -1,10 +1,11 @@
-// src/components/about/MyImage.jsx
 import React from "react";
-import myImage from "../../assets/myimages.JPG";
+import myImage from "../../assets/Myformal.JPG";
 import ScrollHero from "../ScrollHero";
 
 export default function MyImage() {
   return (
-   <ScrollHero src={myImage} />
+    <section role="region" aria-label="Portfolio photo">
+      <ScrollHero src={myImage} />
+    </section>
   );
 }

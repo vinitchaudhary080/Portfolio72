@@ -3,6 +3,7 @@ import React from "react";
 
 import { useParams } from "react-router-dom";  // ← import useParams
 import ScrollCard from "../ScrollCard";
+import CribonixSEO from "../../seo/CribonixSEO";
 
 import Heading             from "./Heading";
 import ImageSection        from "./ImageSection";
@@ -16,6 +17,7 @@ import Ux               from "./UxStrategy";
 export default function Cribonixmain() {
   return (
     <div className="bg-black min-h-screen">
+      <CribonixSEO />
       <ScrollCard><Heading /></ScrollCard>
             <ScrollCard><ImageSection /></ScrollCard>
             <ScrollCard><Summary /></ScrollCard>

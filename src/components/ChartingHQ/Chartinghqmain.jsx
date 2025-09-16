@@ -1,6 +1,8 @@
 // src/components/ChartingHQ/Chartinghqmain.jsx
 import React from "react";
 import { useParams } from "react-router-dom";  // ← import useParams
+import ChartingHQSEO from "../../seo/ChartingHQSEO";
+
 import Heading from "./Heading";
 import ImageSection from "./ImageSection";
 import Summary from "./Summary";
@@ -19,6 +21,7 @@ export default function ChartingHqmain() {
  
  return (
     <div className="bg-black min-h-screen">
+      <ChartingHQSEO />
                  <ScrollCard><Heading /></ScrollCard>
                   <ScrollCard><ImageSection /></ScrollCard>
                   <ScrollCard><Summary /></ScrollCard>
