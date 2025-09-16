@@ -1,5 +1,5 @@
 // src/components/workpage/Card7.jsx
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 // main hero (left)
@@ -13,95 +13,6 @@ import thumb4 from "../../assets/CopartnerApp/copartner-4.webp";
 import thumb5 from "../../assets/CopartnerApp/copartner-5.webp";
 import thumb6 from "../../assets/CopartnerApp/copartner-1.webp";
 import thumb7 from "../../assets/CopartnerApp/copartner-2.webp";
-
-// --- Wave overlay ---
-function WaveCanvas({ className }) {
-  const canvasRef = useRef(null);
-  const rafRef = useRef(0);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d", { alpha: true });
-    if (!ctx) return;
-
-    let time = 0;
-    const waveData = Array.from({ length: 8 }).map(() => ({
-      value: Math.random() * 0.5 + 0.1,
-      targetValue: Math.random() * 0.5 + 0.1,
-      speed: Math.random() * 0.02 + 0.01,
-    }));
-
-    const dpr = Math.max(1, window.devicePixelRatio || 1);
-
-    function resize() {
-      const { width, height } = canvas.getBoundingClientRect();
-      canvas.width = Math.floor(width * dpr);
-      canvas.height = Math.floor(height * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-
-    function updateWaveData() {
-      waveData.forEach((d) => {
-        if (Math.random() < 0.01) d.targetValue = Math.random() * 0.7 + 0.1;
-        const diff = d.targetValue - d.value;
-        d.value += diff * d.speed;
-      });
-    }
-
-    function draw() {
-      const { width, height } = canvas.getBoundingClientRect();
-      ctx.clearRect(0, 0, width, height);
-
-      waveData.forEach((data, i) => {
-        const freq = data.value * 7;
-        ctx.beginPath();
-        for (let x = 0; x < width; x++) {
-          const nx = (x / width) * 2 - 1;
-          const px = nx + i * 0.04 + freq * 0.03;
-          const py =
-            Math.sin(px * 10 + time) *
-            Math.cos(px * 2) *
-            freq *
-            0.1 *
-            ((i + 1) / 8);
-          const y = (py + 1) * (height / 2);
-          if (x === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        }
-        const intensity = Math.min(1, freq * 0.3);
-        const r = 79 + intensity * 100;
-        const g = 70 + intensity * 130;
-        const b = 229;
-        ctx.lineWidth = 1 + i * 0.3;
-        ctx.strokeStyle = `rgba(${r},${g},${b},0.25)`;
-        ctx.shadowColor = `rgba(${r},${g},${b},0.2)`;
-        ctx.shadowBlur = 3;
-        ctx.stroke();
-        ctx.shadowBlur = 0;
-      });
-    }
-
-    function animate() {
-      time += 0.02;
-      updateWaveData();
-      draw();
-      rafRef.current = requestAnimationFrame(animate);
-    }
-
-    const ro = new ResizeObserver(resize);
-    ro.observe(canvas);
-    resize();
-    animate();
-
-    return () => {
-      ro.disconnect();
-      cancelAnimationFrame(rafRef.current);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} className={className} />;
-}
 
 export default function Card1() {
   const thumbs = [thumb1, thumb2, thumb3, thumb4, thumb5, thumb6, thumb7];
@@ -136,7 +47,6 @@ export default function Card1() {
               "
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/40" />
-            <WaveCanvas className="absolute inset-0 w-full h-full mix-blend-screen opacity-30 pointer-events-none" />
             <div
               className="absolute inset-0 opacity-10"
               style={{
