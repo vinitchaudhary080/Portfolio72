@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React from "react";
-import editorImg1 from "../../assets/Nestohub/nestoHub6.jpg";
-import editorImg2 from "../../assets/Nestohub/nestoHub9.jpg";
+import editorImg1 from "../../assets/Nestohub/nestoHub6.webp";
+import editorImg2 from "../../assets/Nestohub/nestoHub9.webp";
 
 export default function ScriptEditorSection() {
   return (

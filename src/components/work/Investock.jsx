@@ -1,16 +1,16 @@
 // src/components/workpage/Card7.jsx
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import mainImage from "../../assets/Investock/Darkm.jpg";
+import mainImage from "../../assets/Investock/Darkm.webp";
 
 // thumbs
-import thumb1 from "../../assets/Investock/loginmockup.jpg";
-import thumb2 from "../../assets/Investock/advisorymockup.jpg";
-import thumb3 from "../../assets/Investock/onboardmockup.jpg";
-import thumb4 from "../../assets/Investock/portfoliomockups.jpg";
-import thumb5 from "../../assets/Investock/lightmockup.jpg";
-import thumb6 from "../../assets/Investock/portfoliomockup.jpg";
-import thumb7 from "../../assets/Investock/Darkm.jpg";
+import thumb1 from "../../assets/Investock/loginmockup.webp";
+import thumb2 from "../../assets/Investock/advisorymockup.webp";
+import thumb3 from "../../assets/Investock/onboardmockup.webp";
+import thumb4 from "../../assets/Investock/portfoliomockups.webp";
+import thumb5 from "../../assets/Investock/lightmockup.webp";
+import thumb6 from "../../assets/Investock/portfoliomockup.webp";
+import thumb7 from "../../assets/Investock/Darkm.webp";
 
 // --- Wave overlay ---
 function WaveCanvas({ className }) {

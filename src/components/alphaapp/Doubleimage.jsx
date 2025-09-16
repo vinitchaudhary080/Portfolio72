@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React from "react";
-import editorImg1 from "../../assets/Alpha/Trading.png";
-import editorImg2 from "../../assets/Alpha/buy.png";
+import editorImg1 from "../../assets/Alpha/Trading.webp";
+import editorImg2 from "../../assets/Alpha/buy.webp";
 
 export default function ScriptEditorSection() {
   return (

@@ -1,11 +1,11 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import login from "../../assets/Alpha/signin.jpg";
-import dashboard from "../../assets/Alpha/dashboard.jpg";
-import notification from "../../assets/Alpha/pnl.jpg";
-import createstrategy from "../../assets/Alpha/futures.jpg";
-import mystrategy from "../../assets/Alpha/add fund.jpg";
-import backtest from "../../assets/Alpha/market.jpg";
+import login from "../../assets/Alpha/signin.webp";
+import dashboard from "../../assets/Alpha/dashboard.webp";
+import notification from "../../assets/Alpha/pnl.webp";
+import createstrategy from "../../assets/Alpha/futures.webp";
+import mystrategy from "../../assets/Alpha/add fund.webp";
+import backtest from "../../assets/Alpha/market.webp";
 
 export default function ScriptEditorSection() {
   const images = useMemo(

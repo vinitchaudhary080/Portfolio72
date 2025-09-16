@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React from "react";
-import editorImg1 from "../../assets/Investock/advisorymockup.jpg";
-import editorImg2 from "../../assets/Investock/portfoliomockups.jpg";
+import editorImg1 from "../../assets/Investock/advisorymockup.webp";
+import editorImg2 from "../../assets/Investock/portfoliomockups.webp";
 
 export default function ScriptEditorSection() {
   return (

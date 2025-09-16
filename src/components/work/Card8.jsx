@@ -3,16 +3,16 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // main hero (left)
-import mainImage from "../../assets/CopartnerApp/copartner-1.jpg";
+import mainImage from "../../assets/CopartnerApp/copartner-1.webp";
 
 // thumbs
-import thumb1 from "../../assets/CopartnerApp/copartner-1.jpg";
-import thumb2 from "../../assets/CopartnerApp/copartner-2.jpg";
-import thumb3 from "../../assets/CopartnerApp/copartner-3.jpg";
-import thumb4 from "../../assets/CopartnerApp/copartner-4.jpg";
-import thumb5 from "../../assets/CopartnerApp/copartner-5.jpg";
-import thumb6 from "../../assets/CopartnerApp/copartner-1.jpg";
-import thumb7 from "../../assets/CopartnerApp/copartner-2.jpg";
+import thumb1 from "../../assets/CopartnerApp/copartner-1.webp";
+import thumb2 from "../../assets/CopartnerApp/copartner-2.webp";
+import thumb3 from "../../assets/CopartnerApp/copartner-3.webp";
+import thumb4 from "../../assets/CopartnerApp/copartner-4.webp";
+import thumb5 from "../../assets/CopartnerApp/copartner-5.webp";
+import thumb6 from "../../assets/CopartnerApp/copartner-1.webp";
+import thumb7 from "../../assets/CopartnerApp/copartner-2.webp";
 
 // --- Wave overlay ---
 function WaveCanvas({ className }) {

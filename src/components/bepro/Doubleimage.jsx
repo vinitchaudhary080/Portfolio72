@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React from "react";
-import editorImg1 from "../../assets/Bepro/teamcreatemockup.jpg";
-import editorImg2 from "../../assets/Bepro/scoremockup.jpg";
+import editorImg1 from "../../assets/Bepro/teamcreatemockup.webp";
+import editorImg2 from "../../assets/Bepro/scoremockup.webp";
 
 export default function ScriptEditorSection() {
   return (

@@ -1,256 +1,189 @@
-// src/components/ux/VennUxStrategy.jsx
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+// src/components/ux/UxStrategyCards.jsx
+import React from "react";
+import { User, Target, Briefcase, AlertTriangle, Cpu, CheckCircle2 } from "lucide-react";
+import founder from "@/assets/persona/investock.webp";
 
-export default function VennUxStrategy() {
-  const controls = useAnimation();
-  const sectionRef = useRef(null);
 
-  // "stacked" initially; will switch to "row" once and never go back
-  const [state, setState] = useState("stacked");
-  const playedOnceRef = useRef(false);
 
-  // Trigger the animation once when the section is centered enough
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        const entry = entries[0];
-        // When ~55% or more of the section is visible, fire once
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.55 && !playedOnceRef.current) {
-          playedOnceRef.current = true;
-          setState("row");     // go to row state
-          obs.disconnect();    // stop observing so it never flips back
-        }
-      },
-      {
-        root: null,
-        threshold: [0, 0.25, 0.5, 0.55, 0.75, 1],
-      }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  // Drive framer-motion with our state
-  useEffect(() => {
-    controls.start(state);
-  }, [state, controls]);
-
-  // desktop animation tuning
-  const ROW_OFFSET = 420;
-  const ROW_SCALE = 0.88;
-  const SPRING = { type: "spring", stiffness: 120, damping: 18 };
-
-  const circleVariants = {
-    stacked: (pos) => ({
-      x: pos === "left" ? -80 : pos === "right" ? 80 : 0,
-      y: pos === "top" ? -80 : 60,
-      scale: 1,
-      transition: SPRING,
-    }),
-    row: (pos) => ({
-      x: pos === "left" ? -ROW_OFFSET : pos === "right" ? ROW_OFFSET : 0,
-      y: 0,
-      scale: ROW_SCALE,
-      transition: SPRING,
-    }),
-  };
-
-  // headings visible position before row; then settle to center in row
-  const headingVariants = {
-    stacked: (which) => ({
-      x: which === "left" ? -140 : 0,
-      y: which === "top" ? -160 : 0,
-      opacity: 1,
-      transition: { duration: 0.35 },
-    }),
-    row: { x: 0, y: 0, opacity: 1, transition: { duration: 0.35 } },
-  };
-
-  const listVariants = {
-    stacked: { opacity: 0, y: 8, transition: { duration: 0.25 } },
-    row: { opacity: 1, y: 0, transition: { delay: 0.35, duration: 0.45 } },
-  };
-
+export default function UxStrategyCards({
+  persona = {
+    name: "Aarav Mehta",
+    role: "Part-time Investor",
+    avatar: founder,
+    bio: "Works in finance ops, invests 2–3 hours/week. Wants simple, guided & automated investing.",
+    traits: ["Time-constrained", "Risk-aware", "Beginner-friendly UI", "Mobile-first"],
+  },
+}) {
   return (
-    <section className="w-full text-[#1a1a1a] px-6 sm:px-10 lg:px-16 py-28 flex flex-col items-center">
-      {/* ===== Desktop / Tablet (animated once) ===== */}
-      <div
-        ref={sectionRef}
-        className="relative hidden md:flex w-full max-w-7xl h-[760px] lg:h-[820px] items-center justify-center"
-      >
-        {/* Business Goals */}
-        <motion.div
-          custom="top"
-          variants={circleVariants}
-          initial="stacked"
-          animate={controls}
-          className="absolute rounded-full shadow-lg flex items-center justify-center text-center
-                     bg-gradient-to-b from-[#FFE0D4] to-[#F9BFB0]
-                     w-[520px] h-[520px] lg:w-[560px] lg:h-[560px]"
-        >
-          <div className="px-8 md:px-10 max-w-[420px] flex flex-col items-center justify-center">
-            <motion.h3
-              custom="top"
-              variants={headingVariants}
-              initial="stacked"
-              animate={controls}
-              className="font-semibold text-[#F08A66] text-lg md:text-xl"
-            >
-              Business Goals
-            </motion.h3>
-            <motion.ul
-              variants={listVariants}
-              initial="stacked"
-              animate={controls}
-              className="list-disc pl-5 text-xs md:text-sm text-[#2B2B2B]/85 text-left mt-4 space-y-2"
-            >
-              <li>Build an AI-powered investing platform that simplifies stock market participation for beginners, part-time investors, and professionals.</li>
-              <li>Drive growth through subscriptions to model portfolios, advisory services, and stock baskets.</li>
-              <li>Improve user retention by automating rebalancing, stock shuffling, and stop-loss handling—reducing manual workload.</li>
-              <li>Differentiate from competitors (Liquide, Univest, Stratzy) by offering a more automated, beginner-friendly, and trustworthy experience.</li>
-              <li>Increase trading volume and platform adoption by making investing as easy as “pick &amp; run”.</li>
-            </motion.ul>
-          </div>
-        </motion.div>
-
-        {/* User Needs & Pain Points */}
-        <motion.div
-          custom="left"
-          variants={circleVariants}
-          initial="stacked"
-          animate={controls}
-          className="absolute rounded-full shadow-lg flex items-center justify-center text-center
-                     bg-gradient-to-b from-[#E7F8D9] to-[#CBEFB1]
-                     w-[520px] h-[520px] lg:w-[560px] lg:h-[560px]"
-        >
-          <div className="px-8 md:px-10 max-w-[420px] flex flex-col items-center justify-center">
-            <motion.h3
-              custom="left"
-              variants={headingVariants}
-              initial="stacked"
-              animate={controls}
-              className="font-semibold text-[#60A34F] text-lg md:text-xl"
-            >
-              User Needs &amp; Pain Points
-            </motion.h3>
-            <motion.ul
-              variants={listVariants}
-              initial="stacked"
-              animate={controls}
-              className="list-disc pl-5 text-xs md:text-sm text-[#2B2B2B]/85 text-left mt-4 space-y-2"
-            >
-              <li>Beginners: Didn’t know how to start, which stocks to buy, when to exit, or how long to hold → felt overwhelmed.</li>
-              <li>Part-time investors: Wanted guidance but lacked the time or expertise to actively monitor and rebalance portfolios.</li>
-              <li>Full-time traders: Had knowledge but not enough time to manually rebalance and shuffle stocks daily → needed automation.</li>
-              <li>Too many fragmented tools (broker apps for execution, websites for advisory, Excel sheets for tracking).</li>
-              <li>Emotional trading leading to poor entry/exit timing.</li>
-              <li>Existing competitor apps had cluttered dashboards, jargon-heavy UI, and limited automation.</li>
-              <li>Users wanted a reliable, simple, and SEBI-registered advisor backed system they could trust.</li>
-            </motion.ul>
-          </div>
-        </motion.div>
-
-        {/* Technical Capabilities */}
-        <motion.div
-          custom="right"
-          variants={circleVariants}
-          initial="stacked"
-          animate={controls}
-          className="absolute rounded-full shadow-lg flex items-center justify-center text-center
-                     bg-gradient-to-b from-[#DCEEFF] to-[#BFD9FF]
-                     w-[520px] h-[520px] lg:w-[560px] lg:h-[560px]"
-        >
-          <div className="px-8 md:px-10 max-w-[440px] flex flex-col items-center justify-center">
-            <motion.h3
-              custom="right"
-              variants={headingVariants}
-              initial="stacked"
-              animate={controls}
-              className="font-semibold text-[#3E86E0] text-lg md:text-xl"
-            >
-              Technical Capabilities
-            </motion.h3>
-            <motion.ul
-              variants={listVariants}
-              initial="stacked"
-              animate={controls}
-              className="list-disc pl-5 text-xs md:text-sm text-[#2B2B2B]/85 text-left mt-4 space-y-2"
-            >
-              <li>Broker API integration (Upstox, Zerodha, AngelOne).</li>
-              <li>Automated rebalancing engine (portfolio-level stock adjustments).</li>
-              <li>Real-time advisory push notifications.</li>
-              <li>Basket execution system (multi-stock single order).</li>
-              <li>Analytics dashboards for portfolio performance, returns, and risk.</li>
-              <li>Scalable cloud-based infra for live data feeds.</li>
-            </motion.ul>
-          </div>
-        </motion.div>
+    <section id="ux-strategy" className="bg-black text-white py-20 sm:py-28  ">
+      <div className="mx-auto w-full px-6 sm:px-20 py-16">
+        {/* Heading */}
+         <div className="flex items-center gap-4 mb-10">
+        <h2 className="text-white text-base sm:text-lg font-medium whitespace-nowrap">
+          Align Business, Users & Tech
+        </h2>
+        <div className="flex-1 h-px bg-gray-700"></div>
       </div>
+        
 
-      {/* ===== Mobile Version (no animation flip) ===== */}
-      <div className="md:hidden w-full max-w-xl mx-auto space-y-10">
-        {/* Business Goals */}
-        <div className="flex flex-col items-center">
-          <div className="rounded-full w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]
-                          bg-gradient-to-b from-[#FFE0D4] to-[#F9BFB0]
-                          shadow-md flex items-center justify-center text-center">
-            <h3 className="font-semibold text-[#F08A66] text-base sm:text-lg">
-              Business Goals
-            </h3>
-          </div>
-          <ul className="mt-4 list-disc pl-5 text-[13px] sm:text-sm text-white/80">
-            <li>Build an AI-powered investing platform that simplifies stock market participation for beginners, part-time investors, and professionals.</li>
-            <li>Drive growth through subscriptions to model portfolios, advisory services, and stock baskets.</li>
-            <li>Improve user retention by automating rebalancing, stock shuffling, and stop-loss handling—reducing manual workload.</li>
-            <li>Differentiate from competitors (Liquide, Univest, Stratzy) by offering a more automated, beginner-friendly, and trustworthy experience.</li>
-            <li>Increase trading volume and platform adoption by making investing as easy as “pick &amp; run”.</li>
-          </ul>
-        </div>
+        {/* Grid (like FeatureListing): big + four small */}
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          {/* Big Context Card */}
+          <Card className="lg:col-span-2">
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <Briefcase className="h-4 w-4" />
+              <span className="font-semibold">Project Context</span>
+            </div>
 
-        {/* User Needs */}
-        <div className="flex flex-col items-center">
-          <div className="rounded-full w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]
-                          bg-gradient-to-b from-[#E7F8D9] to-[#CBEFB1]
-                          shadow-md flex items-center justify-center text-center">
-            <h3 className="font-semibold text-[#60A34F] text-base sm:text-lg">
-              User Needs &amp; Pain Points
-            </h3>
-          </div>
-          <ul className="mt-4 list-disc pl-5 text-[13px] sm:text-sm text-white/80">
-            <li>Beginners: Didn’t know how to start, which stocks to buy, when to exit, or how long to hold → felt overwhelmed.</li>
-            <li>Part-time investors: Wanted guidance but lacked the time or expertise to actively monitor and rebalance portfolios.</li>
-            <li>Full-time traders: Had knowledge but not enough time to manually rebalance and shuffle stocks daily → needed automation.</li>
-            <li>Too many fragmented tools (broker apps for execution, websites for advisory, Excel sheets for tracking).</li>
-            <li>Emotional trading leading to poor entry/exit timing.</li>
-            <li>Existing competitor apps had cluttered dashboards, jargon-heavy UI, and limited automation.</li>
-            <li>Users wanted a reliable, simple, and SEBI-registered advisor backed system they could trust.</li>
-          </ul>
-        </div>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* User Goals */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-white/70">User Goals</h3>
+                <ul className="mt-2 space-y-1 text-sm text-white/70">
+                  <li>• Easy entry to markets (no jargon).</li>
+                  <li>• Guided strategy setup & backtest.</li>
+                  <li>• Fewer tools, one unified dashboard.</li>
+                  <li>• Real-time alerts & clear next action.</li>
+                </ul>
+              </div>
+              {/* Business Requirements */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-white/70">Business Requirements</h3>
+                <ul className="mt-2 space-y-1 text-sm text-white/70">
+                  <li>• Subscriptions & advisory monetization.</li>
+                  <li>• Higher activation & retention.</li>
+                  <li>• Broker integrations & compliant flows.</li>
+                  <li>• Scalable design system & performance.</li>
+                </ul>
+              </div>
+              {/* Challenges */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-white/70">Key Challenges</h3>
+                <ul className="mt-2 space-y-1 text-sm text-white/70">
+                  <li>• Fragmented tool-hopping.</li>
+                  <li>• Emotional trading & bad exits.</li>
+                  <li>• Cluttered competitor dashboards.</li>
+                  <li>• Trust & onboarding clarity.</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
 
-        {/* Technical Capabilities */}
-        <div className="flex flex-col items-center">
-          <div className="rounded-full w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]
-                          bg-gradient-to-b from-[#DCEEFF] to-[#BFD9FF]
-                          shadow-md flex items-center justify-center text-center">
-            <h3 className="font-semibold text-[#3E86E0] text-base sm:text-lg">
-              Technical Capabilities
-            </h3>
-          </div>
-          <ul className="mt-4 list-disc pl-5 text-[13px] sm:text-sm text-white/80">
-            <li>Broker API integration (Upstox, Zerodha, AngelOne).</li>
-            <li>Automated rebalancing engine (portfolio-level stock adjustments).</li>
-            <li>Real-time advisory push notifications.</li>
-            <li>Basket execution system (multi-stock single order).</li>
-            <li>Analytics dashboards for portfolio performance, returns, and risk.</li>
-            <li>Scalable cloud-based infra for live data feeds.</li>
-          </ul>
+          {/* Persona Card */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <User className="h-4 w-4" />
+              <span className="font-semibold">User Persona</span>
+            </div>
+
+            <div className="mt-6 flex items-center gap-4">
+              <div className="relative">
+                {/* Avatar */}
+                <img
+                  src={persona.avatar}
+                  alt={persona.name}
+                  className="h-14 w-14 rounded-xl object-cover ring-1 ring-white/10"
+                  loading="lazy"
+                  decoding="async"
+                />
+                {/* Accent dot */}
+                {/* <span className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-black" /> */}
+              </div>
+              <div>
+                <h3 className="text-base font-medium">{persona.name}</h3>
+                <p className="text-xs text-white/60">{persona.role}</p>
+              </div>
+            </div>
+
+            <p className="mt-4 text-sm text-white/70">{persona.bio}</p>
+
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {persona.traits.map((t, i) => (
+                <span
+                  key={i}
+                  className="px-2 py-0.5 rounded-md text-[10px] border border-emerald-400/25 text-emerald-200/90 bg-emerald-500/10"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </Card>
+
+          {/* Business Goals */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <CheckCircle2 className="h-4 w-4" />
+              <span className="font-semibold">Business Goals</span>
+            </div>
+
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
+              <li>• AI-powered platform for beginners to pros.</li>
+              <li>• Subscription growth via portfolios/advisory.</li>
+              <li>• Automated rebalancing & stop-loss systems.</li>
+              <li>• Faster execution → higher trading volume.</li>
+            </ul>
+          </Card>
+
+          {/* User Needs & Pain Points */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <AlertTriangle className="h-4 w-4" />
+              <span className="font-semibold">User Needs &amp; Pain Points</span>
+            </div>
+
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
+              <li>• Where to start? What to buy? When to exit?</li>
+              <li>• Guidance without heavy time investment.</li>
+              <li>• Automation to avoid manual daily work.</li>
+              <li>• Clean UI; fewer scattered tools.</li>
+            </ul>
+          </Card>
+
+          {/* Technical Capabilities */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <Cpu className="h-4 w-4" />
+              <span className="font-semibold">Technical Capabilities</span>
+            </div>
+
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
+              <li>• Broker APIs (Upstox, Zerodha, AngelOne).</li>
+              <li>• Automated portfolio rebalancing engine.</li>
+              <li>• Real-time advisory & basket execution.</li>
+              <li>• Analytics dashboards & scalable infra.</li>
+            </ul>
+          </Card>
         </div>
       </div>
     </section>
+  );
+}
+
+/* ---------- Small presentational Card w/ dark style ---------- */
+function Card({ className = "", children }) {
+  return (
+    <div
+      className={[
+        "relative overflow-hidden rounded-2xl border border-white/10 bg-white/5",
+        "shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]",
+        "p-6 sm:p-7",
+        "transition-transform duration-300 hover:-translate-y-0.5",
+        className,
+      ].join(" ")}
+    >
+      {/* subtle grid like your pattern */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.10]"
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg,rgba(255,255,255,0.2) 1px,transparent 1px),linear-gradient(rgba(255,255,255,0.2) 1px,transparent 1px)",
+          backgroundSize: "16px 16px",
+        }}
+      />
+      {/* soft top-to-bottom fade for readability */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
+      {/* content */}
+      <div className="relative z-10">{children}</div>
+    </div>
   );
 }

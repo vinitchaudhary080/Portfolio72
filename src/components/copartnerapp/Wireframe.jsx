@@ -1,9 +1,9 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import img from "../../assets/CopartnerApp/signup.jpg";
-import img2 from "../../assets/CopartnerApp/feature.jpg";
-import dashboard from "../../assets/CopartnerApp/feature1.jpg";
-import strategy from "../../assets/CopartnerApp/home.jpg";
+import img from "../../assets/CopartnerApp/signup.webp";
+import img2 from "../../assets/CopartnerApp/feature.webp";
+import dashboard from "../../assets/CopartnerApp/feature1.webp";
+import strategy from "../../assets/CopartnerApp/home.webp";
 
 export default function ScriptEditorSection() {
   const images = useMemo(

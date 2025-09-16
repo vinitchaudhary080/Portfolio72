@@ -1,10 +1,10 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React from "react";
-import img from "../../assets/Alpha/iPhone_Mockup_2.jpg";
-import img2 from "../../assets/Alpha/iMac_on_Table_Mockup_2.png";
-import dashboard from "../../assets/Alpha/phone_mockup_5.jpg";
-import strategy from "../../assets/Alpha/Dashboard.png";
-import trading from "../../assets/Alpha/Landing Page.png";
+import img from "../../assets/Alpha/iPhone_Mockup_2.webp";
+import img2 from "../../assets/Alpha/iMac_on_Table_Mockup_2.webp";
+import dashboard from "../../assets/Alpha/phone_mockup_5.webp";
+import strategy from "../../assets/Alpha/Dashboard.webp";
+import trading from "../../assets/Alpha/Landing Page.webp";
 
 export default function ScriptEditorSection() {
   return (

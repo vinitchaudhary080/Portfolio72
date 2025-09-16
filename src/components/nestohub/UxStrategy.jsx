@@ -1,233 +1,182 @@
 // src/components/ux/VennUxStrategy.jsx
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React from "react";
+import { User, Briefcase, AlertTriangle, Cpu, CheckCircle2 } from "lucide-react";
+import founder from "@/assets/persona/nestohub.webp"; // <- real-estate persona image ka path yahan update kar sakte ho
 
-export default function VennUxStrategy() {
-  const controls = useAnimation();
-  const sectionRef = useRef(null);
-  const [state, setState] = useState("stacked");
-  const playedOnceRef = useRef(false); // run animation only once
-
-  // Trigger ONCE when ~55% of the section is visible
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        const entry = entries[0];
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.55 && !playedOnceRef.current) {
-          playedOnceRef.current = true;
-          setState("row");
-          obs.disconnect(); // stop observing after first play
-        }
-      },
-      { threshold: [0, 0.25, 0.5, 0.55, 0.75, 1] }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    controls.start(state);
-  }, [state, controls]);
-
-  // desktop animation tuning
-  const ROW_OFFSET = 420;
-  const ROW_SCALE = 0.88;
-  const SPRING = { type: "spring", stiffness: 120, damping: 18 };
-
-  const circleVariants = {
-    stacked: (pos) => ({
-      x: pos === "left" ? -80 : pos === "right" ? 80 : 0,
-      y: pos === "top" ? -80 : 60,
-      scale: 1,
-      transition: SPRING,
-    }),
-    row: (pos) => ({
-      x: pos === "left" ? -ROW_OFFSET : pos === "right" ? ROW_OFFSET : 0,
-      y: 0,
-      scale: ROW_SCALE,
-      transition: SPRING,
-    }),
-  };
-
-  // headings: pre-animation offsets so they’re visible before row
-  const headingVariants = {
-    stacked: (which) => ({
-      x: which === "left" ? -140 : 0,
-      y: which === "top" ? -160 : 0,
-      opacity: 1,
-      transition: { duration: 0.35 },
-    }),
-    row: { x: 0, y: 0, opacity: 1, transition: { duration: 0.35 } },
-  };
-
-  const listVariants = {
-    stacked: { opacity: 0, y: 8, transition: { duration: 0.25 } },
-    row: { opacity: 1, y: 0, transition: { delay: 0.35, duration: 0.45 } },
-  };
-
+export default function VennUxStrategy({
+  persona = {
+    name: "Amit Yadav",
+    role: "Independent Broker • NCR",
+    avatar: founder,
+    bio: "Daily site visits, leads chahiye; fast listing, loan tie-ups aur simple CRM chahta hai.",
+    traits: ["Leads-focused", "On-the-go", "Wants loan facilitation", "Easy CRM", "Trust & verification"],
+  },
+}) {
   return (
-    <section
-      ref={sectionRef}
-      className="w-full text-[#1a1a1a] px-6 sm:px-10 lg:px-16 py-28 flex flex-col items-center"
-    >
-      {/* ===== Desktop / Tablet (animated once) ===== */}
-      <div className="relative hidden md:flex w-full max-w-7xl h-[760px] lg:h-[820px] items-center justify-center">
-        {/* Business Goals (TOP circle) */}
-        <motion.div
-          custom="top"
-          variants={circleVariants}
-          initial="stacked"
-          animate={controls}
-          className="absolute rounded-full shadow-lg flex items-center justify-center text-center
-                     bg-gradient-to-b from-[#FFE0D4] to-[#F9BFB0]
-                     w-[520px] h-[520px] lg:w-[560px] lg:h-[560px]"
-        >
-          <div className="px-8 md:px-10 max-w-[420px] relative flex flex-col items-center justify-center">
-            <motion.h3
-              custom="top"
-              variants={headingVariants}
-              initial="stacked"
-              animate={controls}
-              className="font-semibold text-[#F08A66] text-lg md:text-xl"
-            >
-              Business Goals
-            </motion.h3>
-            <motion.ul
-              variants={listVariants}
-              initial="stacked"
-              animate={controls}
-              className="list-disc pl-5 text-xs md:text-sm text-[#2B2B2B]/85 text-left mt-4 space-y-2"
-            >
-              <li>Create an ecosystem for buyers, builders, and brokers.</li>
-              <li>Monetize via brokerage &amp; loan facilitation.</li>
-            </motion.ul>
-          </div>
-        </motion.div>
-
-        {/* User Needs (LEFT circle) */}
-        <motion.div
-          custom="left"
-          variants={circleVariants}
-          initial="stacked"
-          animate={controls}
-          className="absolute rounded-full shadow-lg flex items-center justify-center text-center
-                     bg-gradient-to-b from-[#E7F8D9] to-[#CBEFB1]
-                     w-[520px] h-[520px] lg:w-[560px] lg:h-[560px]"
-        >
-          <div className="px-8 md:px-10 max-w-[420px] relative flex flex-col items-center justify-center">
-            <motion.h3
-              custom="left"
-              variants={headingVariants}
-              initial="stacked"
-              animate={controls}
-              className="font-semibold text-[#60A34F] text-lg md:text-xl"
-            >
-              User Needs &amp; Pain Points
-            </motion.h3>
-            <motion.ul
-              variants={listVariants}
-              initial="stacked"
-              animate={controls}
-              className="list-disc pl-5 text-xs md:text-sm text-[#2B2B2B]/85 text-left mt-4 space-y-2"
-            >
-              <li>Buyers struggled to find plots/commercial properties.</li>
-              <li>Builders needed digital listing exposure.</li>
-              <li>Brokers lacked unified CRM + loan workflow.</li>
-            </motion.ul>
-          </div>
-        </motion.div>
-
-        {/* Technical Capabilities (RIGHT circle) */}
-        <motion.div
-          custom="right"
-          variants={circleVariants}
-          initial="stacked"
-          animate={controls}
-          className="absolute rounded-full shadow-lg flex items-center justify-center text-center
-                     bg-gradient-to-b from-[#DCEEFF] to-[#BFD9FF]
-                     w-[520px] h-[520px] lg:w-[560px] lg:h-[560px]"
-        >
-          <div className="px-8 md:px-10 max-w-[440px] relative flex flex-col items-center justify-center">
-            <motion.h3
-              custom="center"
-              variants={headingVariants}
-              initial="stacked"
-              animate={controls}
-              className="font-semibold text-[#3E86E0] text-lg md:text-xl"
-            >
-              Technical Capabilities
-            </motion.h3>
-            <motion.ul
-              variants={listVariants}
-              initial="stacked"
-              animate={controls}
-              className="list-disc pl-5 text-xs md:text-sm text-[#2B2B2B]/85 text-left mt-4 space-y-2"
-            >
-              <li>Multi-role login system (Buyer, Builder, Broker).</li>
-              <li>Property listing engine with search &amp; advanced filters.</li>
-              <li>Loan integration APIs with partner banks.</li>
-              <li>Broker CRM tools for lead management &amp; commission tracking.</li>
-              <li>Secure document uploads for property verification.</li>
-            </motion.ul>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* ===== Mobile (single column, no row animation) ===== */}
-      <div className="md:hidden w-full max-w-xl mx-auto space-y-10">
-        {/* Card 1 */}
-        <div className="flex flex-col items-center">
-          <div className="rounded-full w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]
-                          bg-gradient-to-b from-[#FFE0D4] to-[#F9BFB0]
-                          shadow-md flex items-center justify-center text-center">
-            <h3 className="font-semibold text-[#F08A66] text-base sm:text-lg">
-              Business Goals
-            </h3>
-          </div>
-          <ul className="mt-4 list-disc pl-5 text-[13px] sm:text-sm text-white/80">
-            <li>Create an ecosystem for buyers, builders, and brokers.</li>
-            <li>Monetize via brokerage &amp; loan facilitation.</li>
-          </ul>
+    <section id="ux-venn" className="bg-black text-white py-20 sm:py-28">
+      <div className="mx-auto w-full px-6 sm:px-20">
+        {/* Heading */}
+        <div className="flex items-center gap-4 mb-10">
+          <h2 className="text-white text-base sm:text-lg font-medium whitespace-nowrap">
+            Align Business, Users & Tech
+          </h2>
+          <div className="flex-1 h-px bg-gray-700" />
         </div>
 
-        {/* Card 2 */}
-        <div className="flex flex-col items-center">
-          <div className="rounded-full w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]
-                          bg-gradient-to-b from-[#E7F8D9] to-[#CBEFB1]
-                          shadow-md flex items-center justify-center text-center">
-            <h3 className="font-semibold text-[#60A34F] text-base sm:text-lg">
-              User Needs &amp; Pain Points
-            </h3>
-          </div>
-          <ul className="mt-4 list-disc pl-5 text-[13px] sm:text-sm text-white/80">
-            <li>Buyers struggled to find plots/commercial properties.</li>
-            <li>Builders needed digital listing exposure.</li>
-            <li>Brokers lacked unified CRM + loan workflow.</li>
-          </ul>
-        </div>
+        {/* Grid: 1 big + 4 small (total 5 cards) */}
+        <div className="mt-6 grid gap-6 lg:grid-cols-3">
+          {/* 1) Big Project Context (spans 2 cols on lg) */}
+          <Card className="lg:col-span-2">
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <Briefcase className="h-4 w-4" />
+              <span className="font-semibold">Project Context</span>
+            </div>
 
-        {/* Card 3 */}
-        <div className="flex flex-col items-center">
-          <div className="rounded-full w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]
-                          bg-gradient-to-b from-[#DCEEFF] to-[#BFD9FF]
-                          shadow-md flex items-center justify-center text-center">
-            <h3 className="font-semibold text-[#3E86E0] text-base sm:text-lg">
-              Technical Capabilities
-            </h3>
-          </div>
-          <ul className="mt-4 list-disc pl-5 text-[13px] sm:text-sm text-white/80">
-            <li>Multi-role login system (Buyer, Builder, Broker).</li>
-            <li>Property listing engine with search &amp; advanced filters.</li>
-            <li>Loan integration APIs with partner banks.</li>
-            <li>Broker CRM tools for lead management &amp; commission tracking.</li>
-            <li>Secure document uploads for property verification.</li>
-          </ul>
+            {/* Inner 3-col layout like FeatureListing */}
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Business Goals */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-white/70">
+                  Business Goals
+                </h3>
+                <ul className="mt-2 space-y-1 text-sm text-white/70 leading-relaxed">
+                  <li>• Buyers–Builders–Brokers ecosystem build karna.</li>
+                  <li>• Brokerage & loan facilitation se monetization.</li>
+                  <li>• Verified listings & faster deal closures.</li>
+                </ul>
+              </div>
+
+              {/* User Needs & Pain Points */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-white/70">
+                  User Needs &amp; Pain Points
+                </h3>
+                <ul className="mt-2 space-y-1 text-sm text-white/70 leading-relaxed">
+                  <li>• Buyers: plots/commercial dhoondhna mushkil; trust issues.</li>
+                  <li>• Builders: digital reach & qualified leads chahiye.</li>
+                  <li>• Brokers: unified CRM + loan workflow ki kamhi.</li>
+                </ul>
+              </div>
+
+              {/* Technical Capabilities */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-white/70">
+                  Technical Capabilities
+                </h3>
+                <ul className="mt-2 space-y-1 text-sm text-white/70 leading-relaxed">
+                  <li>• Multi-role auth (Buyer/Builder/Broker).</li>
+                  <li>• Powerful search & advanced filters.</li>
+                  <li>• Loan APIs with partner banks.</li>
+                  <li>• Broker CRM (leads, pipeline, commission tracking).</li>
+                  <li>• Secure docs & property verification.</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+
+          {/* 2) Persona */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <User className="h-4 w-4" />
+              <span className="font-semibold">User Persona</span>
+            </div>
+
+            <div className="mt-6 flex items-center gap-4">
+              <img
+                src={persona.avatar}
+                alt={persona.name}
+                className="h-14 w-14 rounded-xl object-cover ring-1 ring-white/10"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <h3 className="text-base font-medium">{persona.name}</h3>
+                <p className="text-xs text-white/60">{persona.role}</p>
+              </div>
+            </div>
+
+            <p className="mt-4 text-sm text-white/70">{persona.bio}</p>
+
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {persona.traits?.map((t, i) => (
+                <span
+                  key={i}
+                  className="px-2 py-0.5 rounded-md text-[10px] border border-emerald-400/25 text-emerald-200/90 bg-emerald-500/10"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </Card>
+
+          {/* 3) Business Goals — compact */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <CheckCircle2 className="h-4 w-4" />
+              <span className="font-semibold">Business Goals</span>
+            </div>
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
+              <li>• Deal velocity & conversion badhana.</li>
+              <li>• Verified inventory se trust build karna.</li>
+              <li>• Cross-sell loans & allied services.</li>
+            </ul>
+          </Card>
+
+          {/* 4) User Needs & Pain Points — compact */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <AlertTriangle className="h-4 w-4" />
+              <span className="font-semibold">User Needs &amp; Pain Points</span>
+            </div>
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
+              <li>• Clean search, map view & verified docs.</li>
+              <li>• Lead routing, reminders & follow-ups.</li>
+              <li>• Loan pre-approval & status visibility.</li>
+            </ul>
+          </Card>
+
+          {/* 5) Technical Capabilities — compact */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <Cpu className="h-4 w-4" />
+              <span className="font-semibold">Technical Capabilities</span>
+            </div>
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
+              <li>• Role-based access + audit logs.</li>
+              <li>• Lead CRM, tasks & commission ledger.</li>
+              <li>• Bank APIs, KYC & secure document vault.</li>
+            </ul>
+          </Card>
         </div>
       </div>
     </section>
+  );
+}
+
+/* ---------- Shared dark Card primitive ---------- */
+function Card({ className = "", children }) {
+  return (
+    <div
+      className={[
+        "relative overflow-hidden rounded-2xl border border-white/10 bg-white/5",
+        "shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]",
+        "p-6 sm:p-7",
+        "transition-transform duration-300 hover:-translate-y-0.5",
+        className,
+      ].join(" ")}
+    >
+      {/* subtle grid */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.10]"
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg,rgba(255,255,255,0.2) 1px,transparent 1px),linear-gradient(rgba(255,255,255,0.2) 1px,transparent 1px)",
+          backgroundSize: "16px 16px",
+        }}
+      />
+      {/* soft fade */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
+      <div className="relative z-10">{children}</div>
+    </div>
   );
 }

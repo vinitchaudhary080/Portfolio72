@@ -1,9 +1,9 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import img from "../../assets/Bepro/login.jpg";
-import img2 from "../../assets/Bepro/home2.jpg";
-import dashboard from "../../assets/Bepro/feature1.jpg";
-import strategy from "../../assets/Bepro/feature1.jpg";
+import img from "../../assets/Bepro/login.webp";
+import img2 from "../../assets/Bepro/home2.webp";
+import dashboard from "../../assets/Bepro/feature1.webp";
+import strategy from "../../assets/Bepro/feature1.webp";
 
 export default function ScriptEditorSection() {
   const images = useMemo(

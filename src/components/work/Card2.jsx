@@ -3,16 +3,16 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // main hero (left)
-import mainImage from "../../assets/ChartingHQ/project1.jpg";
+import mainImage from "../../assets/ChartingHQ/project1.webp";
 
 // thumbs (marquee)
-import thumb1 from "../../assets/ChartingHQ/project1.jpg";
-import thumb2 from "../../assets/ChartingHQ/2.jpg";
-import thumb3 from "../../assets/ChartingHQ/3.jpg";
-import thumb4 from "../../assets/ChartingHQ/4.jpg";
-import thumb5 from "../../assets/ChartingHQ/5.jpg";
-import thumb6 from "../../assets/ChartingHQ/2.jpg";
-import thumb7 from "../../assets/ChartingHQ/3.jpg";
+import thumb1 from "../../assets/ChartingHQ/project1.webp";
+import thumb2 from "../../assets/ChartingHQ/2.webp";
+import thumb3 from "../../assets/ChartingHQ/3.webp";
+import thumb4 from "../../assets/ChartingHQ/4.webp";
+import thumb5 from "../../assets/ChartingHQ/5.webp";
+import thumb6 from "../../assets/ChartingHQ/2.webp";
+import thumb7 from "../../assets/ChartingHQ/3.webp";
 
 // ---- Wave overlay (same as your other cards) ----
 function WaveCanvas({ className }) {

@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/Alpha/PNL Analytics.png";
+import projectImage from "../../assets/Alpha/PNL Analytics.webp";
 
 export default function ImageSection() {
   return (

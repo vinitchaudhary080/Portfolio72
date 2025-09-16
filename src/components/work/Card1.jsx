@@ -3,16 +3,16 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // main hero (left)
-import mainImage from "../../assets/Alpha/iMac_on_Table_Mockup_3.png";
+import mainImage from "../../assets/Alpha/iMac_on_Table_Mockup_3.webp";
 
 // thumbs (marquee)
-import thumb1 from "../../assets/List1/thumb1.jpg";
-import thumb2 from "../../assets/List1/thumb2.jpg";
-import thumb3 from "../../assets/List1/thumb3.jpg";
-import thumb4 from "../../assets/List1/thumb4.jpg";
-import thumb5 from "../../assets/List1/thumb5.jpg";
-import thumb6 from "../../assets/List1/thumb6.jpg";
-import thumb7 from "../../assets/List1/thumb7.jpg";
+import thumb1 from "../../assets/List1/thumb1.webp";
+import thumb2 from "../../assets/List1/thumb2.webp";
+import thumb3 from "../../assets/List1/thumb3.webp";
+import thumb4 from "../../assets/List1/thumb4.webp";
+import thumb5 from "../../assets/List1/thumb5.webp";
+import thumb6 from "../../assets/List1/thumb6.webp";
+import thumb7 from "../../assets/List1/thumb7.webp";
 
 // ---- Wave overlay (same as other cards) ----
 function WaveCanvas({ className }) {

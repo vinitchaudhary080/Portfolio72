@@ -1,11 +1,11 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import img from "../../assets/Investock/login.jpg";
-import img2 from "../../assets/Investock/home.jpg";
-import dashboard from "../../assets/Investock/feature.jpg";
-import strategy from "../../assets/Investock/feature1.jpg";
-import strategy1 from "../../assets/Investock/feature2.jpg";
-import strategy2 from "../../assets/Investock/feature3.jpg";
+import img from "../../assets/Investock/login.webp";
+import img2 from "../../assets/Investock/home.webp";
+import dashboard from "../../assets/Investock/feature.webp";
+import strategy from "../../assets/Investock/feature1.webp";
+import strategy1 from "../../assets/Investock/feature2.webp";
+import strategy2 from "../../assets/Investock/feature3.webp";
 
 export default function ScriptEditorSection() {
   const images = useMemo(

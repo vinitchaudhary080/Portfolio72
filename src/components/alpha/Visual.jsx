@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
 import projectImage from "../../assets/Alpha/AlphaExchangeflow.svg";
-import projectImage1 from "../../assets/Algorooms/2.png";
+
 
 export default function ProcessStep1() {
   return (

@@ -1,6 +1,6 @@
 // src/components/ChartingHQ/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/Investock/lightmockup.jpg";
+import projectImage from "../../assets/Investock/lightmockup.webp";
 
 export default function ImageSection() {
   return (

@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
-import projectImage from "../../assets/Nestohub/nestoHub6.jpg";
-import projectImage1 from "../../assets/Nestohub/nestoHub9.jpg";
+import projectImage from "../../assets/Nestohub/nestoHub6.webp";
+import projectImage1 from "../../assets/Nestohub/nestoHub9.webp";
 import projectImage2 from "../../assets/Nestohub/Productflow.jpg";
 
 export default function ProcessStep1() {

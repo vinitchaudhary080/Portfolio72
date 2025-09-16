@@ -1,10 +1,10 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React from "react";
-import img from "../../assets/Algorooms/2.png";
-import img2 from "../../assets/Algorooms/Simulator1.png";
-import dashboard from "../../assets/Algorooms/Dashboard light1.jpg";
-import strategy from "../../assets/Algorooms/Strategies.png";
-import trading from "../../assets/Algorooms/Trading.png";
+import img from "../../assets/Algorooms/2.webp";
+import img2 from "../../assets/Algorooms/Simulator1.webp";
+import dashboard from "../../assets/Algorooms/Dashboard light1.webp";
+import strategy from "../../assets/Algorooms/Strategies.webp";
+import trading from "../../assets/Algorooms/Trading.webp";
 
 export default function ScriptEditorSection() {
   return (

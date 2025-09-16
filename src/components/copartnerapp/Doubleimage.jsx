@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React from "react";
-import editorImg1 from "../../assets/CopartnerApp/copartner-3.jpg";
-import editorImg2 from "../../assets/CopartnerApp/copartner-4.jpg";
+import editorImg1 from "../../assets/CopartnerApp/copartner-3.webp";
+import editorImg2 from "../../assets/CopartnerApp/copartner-4.webp";
 
 export default function ScriptEditorSection() {
   return (

@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
 import projectImage from "../../assets/ChartingHQ/Flow chart.svg";
-import projectImage1 from "../../assets/ChartingHQ/3.jpg";
+import projectImage1 from "../../assets/ChartingHQ/3.webp";
 
 export default function ProcessStep1() {
   return (

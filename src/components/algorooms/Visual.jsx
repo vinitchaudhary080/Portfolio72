@@ -1,8 +1,6 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
-import projectImage from "../../assets/Algorooms/Trading.png";
-import projectImage1 from "../../assets/Algorooms/2.png";
-import productflow from "../../assets/Algorooms/productflow.webp";
+
 import productsite from "../../assets/Algorooms/productsite.svg";
 
 

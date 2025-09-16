@@ -1,6 +1,6 @@
 // src/components/ChartingHQ/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/Bepro/homemockup.jpg";
+import projectImage from "../../assets/Bepro/homemockup.webp";
 
 export default function ImageSection() {
   return (

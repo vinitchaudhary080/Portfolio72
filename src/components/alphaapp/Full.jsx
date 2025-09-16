@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/Alpha/Home.png";
+import projectImage from "../../assets/Alpha/Home.webp";
 
 export default function ImageSection() {
   return (

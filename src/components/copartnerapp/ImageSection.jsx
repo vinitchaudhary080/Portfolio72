@@ -1,6 +1,6 @@
 // src/components/ChartingHQ/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/CopartnerApp/copartner-1.jpg";
+import projectImage from "../../assets/CopartnerApp/copartner-1.webp";
 
 export default function ImageSection() {
   return (

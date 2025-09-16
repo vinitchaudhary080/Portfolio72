@@ -3,16 +3,16 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // main hero (left)
-import mainImage from "../../assets/Budgettree/budgetTreeVideo.png";
+import mainImage from "../../assets/Budgettree/budgetTreeVideo.webp";
 
 // thumbs
-import thumb1 from "../../assets/Budgettree/budgetTreeVideo.png";
-import thumb2 from "../../assets/Budgettree/budgetTree1.png";
-import thumb3 from "../../assets/Budgettree/budgetTreeVideo.png";
-import thumb4 from "../../assets/Budgettree/budgetTree1.png";
-import thumb5 from "../../assets/Budgettree/budgetTreeVideo.png";
-import thumb6 from "../../assets/Budgettree/budgetTree1.png";
-import thumb7 from "../../assets/Budgettree/budgetTreeVideo.png";
+import thumb1 from "../../assets/Budgettree/budgetTreeVideo.webp";
+import thumb2 from "../../assets/Budgettree/budgetTree1.webp";
+import thumb3 from "../../assets/Budgettree/budgetTreeVideo.webp";
+import thumb4 from "../../assets/Budgettree/budgetTree1.webp";
+import thumb5 from "../../assets/Budgettree/budgetTreeVideo.webp";
+import thumb6 from "../../assets/Budgettree/budgetTree1.webp";
+import thumb7 from "../../assets/Budgettree/budgetTreeVideo.webp";
 
 // --- Wave overlay ---
 function WaveCanvas({ className }) {

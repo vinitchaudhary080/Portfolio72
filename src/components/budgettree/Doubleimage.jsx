@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ScriptEditorSection.jsx
 import React from "react";
-import editorImg1 from "../../assets/BudgetTree/budgetTree4.jpg";
-import editorImg2 from "../../assets/BudgetTree/budgetTree5.jpg";
+import editorImg1 from "../../assets/BudgetTree/budgetTree4.webp";
+import editorImg2 from "../../assets/BudgetTree/budgetTree5.webp";
 
 export default function ScriptEditorSection() {
   return (

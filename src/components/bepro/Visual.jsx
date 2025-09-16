@@ -1,7 +1,7 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
 import editorImg1 from "../../assets/Bepro/Flowchart.svg";
-import editorImg2 from "../../assets/CopartnerApp/copartner-4.jpg";
+
 
 
 

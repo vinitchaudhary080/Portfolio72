@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/Nestohub/Thumbnail.png";
+import projectImage from "../../assets/Nestohub/Thumbnail.webp";
 
 export default function ImageSection() {
   return (

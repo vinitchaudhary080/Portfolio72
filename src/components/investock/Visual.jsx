@@ -1,8 +1,8 @@
 // src/components/projectdetails/projectdummy/ProcessStep1.jsx
 import React from "react";
 import editorImg1 from "../../assets/Investock/Investockflow.jpg";
-import editorImg2 from "../../assets/Investock/portfoliomockup.jpg";
-import editorImg3 from "../../assets/Investock/onboardmockup.jpg";
+import editorImg2 from "../../assets/Investock/portfoliomockup.webp";
+import editorImg3 from "../../assets/Investock/onboardmockup.webp";
 
 export default function ProcessStep1() {
   return (

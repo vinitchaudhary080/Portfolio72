@@ -20,7 +20,7 @@ export default function AboutContent() {
           </p>
         </div>
 
-        <div className="mr-44 flex flex-col items-end md:mr-64">
+        <div className="mr-44 flex flex-col items-end md:mr-72">
           {/* Buttons: stacked on mobile, row on md+ */}
           <div className="flex flex-col gap-4 mt-8 md:ml-96 md:flex-row md:gap-6">
             {/* Primary CTA */}
@@ -39,7 +39,7 @@ export default function AboutContent() {
                 focus:outline-none focus:ring-2 focus:ring-white/30
               "
             >
-              Book a 15-min Call&nbsp;&rarr;
+              Hire Me&nbsp;&rarr;
             </a>
 
             {/* Secondary (informational) */}

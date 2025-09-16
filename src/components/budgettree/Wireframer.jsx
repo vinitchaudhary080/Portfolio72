@@ -1,6 +1,6 @@
 // src/components/projectdetails/projectdummy/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/BudgetTree/budgetTreeVideo.png";
+import projectImage from "../../assets/BudgetTree/budgetTreeVideo.webp";
 
 export default function ImageSection() {
   return (

@@ -1,6 +1,6 @@
 // src/components/ChartingHQ/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/Algorooms/Mockuplight.jpg";
+import projectImage from "../../assets/Algorooms/Mockuplight.webp";
 
 export default function ImageSection() {
   return (

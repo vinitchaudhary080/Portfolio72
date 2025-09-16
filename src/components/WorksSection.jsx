@@ -2,13 +2,13 @@
 import React from "react";
 import WorkCardFX from "./WorkCardFX"; // ⬅️ animated card
 
-import img1 from "../assets/Algorooms/Mockuplight.jpg";
-import img2 from "../assets/Alpha/MacBook_Mockup_3.jpg";
-import img3 from "../assets/CopartnerApp/copartner-1.jpg";
-import img4 from "../assets/ChartingHQ/project1.jpg";
-import img5 from "../assets/Cribonix/cribonix-1.jpg";
-import img from "../assets/Bepro/homemockup.jpg";
-import imgs from "../assets/Investock/lightmockup.jpg";
+import img1 from "../assets/Algorooms/Mockuplight.webp";
+import img2 from "../assets/Alpha/MacBook_Mockup_3.webp";
+import img3 from "../assets/CopartnerApp/copartner-1.webp";
+
+import img5 from "../assets/Cribonix/cribonix-1.webp";
+import img from "../assets/Bepro/homemockup.webp";
+import imgs from "../assets/Investock/lightmockup.webp";
 
 export default function WorksSection() {
   const posts = [

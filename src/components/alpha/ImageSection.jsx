@@ -1,6 +1,6 @@
 // src/components/ChartingHQ/ImageSection.jsx
 import React from "react";
-import projectImage from "../../assets/Alpha/Free_L_Mockups_MacBook_Air.jpg";
+import projectImage from "../../assets/Alpha/Free_L_Mockups_MacBook_Air.webp";
 
 export default function ImageSection() {
   return (

@@ -3,16 +3,16 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // main hero (left)
-import mainImage from "../../assets/Nestohub/nestoHub1.jpg";
+import mainImage from "../../assets/Nestohub/nestoHub1.webp";
 
 // thumbs (marquee)
-import thumb1 from "../../assets/Nestohub/nestoHub1.jpg";
-import thumb2 from "../../assets/Nestohub/nestoHub3.jpg";
-import thumb3 from "../../assets/Nestohub/nestoHub6.jpg";
-import thumb4 from "../../assets/Nestohub/nestoHub9.jpg";
-import thumb5 from "../../assets/Nestohub/Cover.png";
-import thumb6 from "../../assets/Nestohub/Thumbnail 2.png";
-import thumb7 from "../../assets/Nestohub/Cover Sheet.png";
+import thumb1 from "../../assets/Nestohub/nestoHub1.webp";
+import thumb2 from "../../assets/Nestohub/nestoHub3.webp";
+import thumb3 from "../../assets/Nestohub/nestoHub6.webp";
+import thumb4 from "../../assets/Nestohub/nestoHub9.webp";
+import thumb5 from "../../assets/Nestohub/Cover.webp";
+import thumb6 from "../../assets/Nestohub/Thumbnail 2.webp";
+import thumb7 from "../../assets/Nestohub/Cover Sheet.webp";
 
 // --- Wave overlay (same as Card7) ---
 function WaveCanvas({ className }) {

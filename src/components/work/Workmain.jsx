@@ -11,10 +11,10 @@ import Card8 from "./Card8";
 import Card9 from "./Card9";
 import Bepro from "./Bepro";
 import ScrollCard from "../ScrollCard";
-import BannerSection from "../BannersSection1";
+
 import Footer from "../FooterSection1";
 import Investock from "./Investock";
-import Heading from "../work/Heading";
+
 import { LampDemo }from "../lamp-demo";
 
 export default function Workmain() {

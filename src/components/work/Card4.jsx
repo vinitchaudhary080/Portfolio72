@@ -3,16 +3,16 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // main hero (left)
-import mainImage from "../../assets/Algorooms/Mockupdark.jpg";
+import mainImage from "../../assets/Algorooms/Mockupdark.webp";
 
 // thumbs (marquee)
-import thumb1 from "../../assets/Algorooms/Dashboard dark.png";
-import thumb2 from "../../assets/Algorooms/Dashboard light1.jpg";
-import thumb3 from "../../assets/Algorooms/Strategies.png";
-import thumb4 from "../../assets/Algorooms/Trading.png";
-import thumb5 from "../../assets/Algorooms/Simulator1.png";
-import thumb6 from "../../assets/Algorooms/2.png";
-import thumb7 from "../../assets/Algorooms/Dashboard dark.png";
+import thumb1 from "../../assets/Algorooms/Dashboard dark.webp";
+import thumb2 from "../../assets/Algorooms/Dashboard light1.webp";
+import thumb3 from "../../assets/Algorooms/Strategies.webp";
+import thumb4 from "../../assets/Algorooms/Trading.webp";
+import thumb5 from "../../assets/Algorooms/Simulator1.webp";
+import thumb6 from "../../assets/Algorooms/2.webp";
+import thumb7 from "../../assets/Algorooms/Dashboard dark.webp";
 
 function WaveCanvas({ className }) {
   const canvasRef = useRef(null);

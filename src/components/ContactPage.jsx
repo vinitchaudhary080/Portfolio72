@@ -1,6 +1,6 @@
 // src/components/contact/ContactPage.jsx
 import React from "react";
-import bgVideo from "../assets/contact-bg.mp4";
+import bgVideo from "../assets/contact-bg.webm";
 import { FaRegCommentDots } from "react-icons/fa";
 
 export default function ContactPage() {

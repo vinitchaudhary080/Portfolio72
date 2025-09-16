@@ -3,16 +3,16 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // --- main hero (left) ---
-import mainImage from "../../assets/Bepro/homemockup.jpg";
+import mainImage from "../../assets/Bepro/homemockup.webp";
 
 // --- thumbs (marquee) ---
-import thumb1 from "../../assets/Bepro/homemockup.jpg";
-import thumb2 from "../../assets/Bepro/teamcreatemockup.jpg";
-import thumb3 from "../../assets/Bepro/scoremockup.jpg";
-import thumb4 from "../../assets/Bepro/winmockup.jpg";
-import thumb5 from "../../assets/Bepro/teammockup.jpg";
-import thumb6 from "../../assets/Bepro/winmockup.jpg";
-import thumb7 from "../../assets/Bepro/teamcreatemockup.jpg";
+import thumb1 from "../../assets/Bepro/homemockup.webp";
+import thumb2 from "../../assets/Bepro/teamcreatemockup.webp";
+import thumb3 from "../../assets/Bepro/scoremockup.webp";
+import thumb4 from "../../assets/Bepro/winmockup.webp";
+import thumb5 from "../../assets/Bepro/teammockup.webp";
+import thumb6 from "../../assets/Bepro/winmockup.webp";
+import thumb7 from "../../assets/Bepro/teamcreatemockup.webp";
 
 function WaveCanvas({ className }) {
   const canvasRef = useRef(null);

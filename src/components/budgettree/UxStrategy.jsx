@@ -1,235 +1,186 @@
 // src/components/ux/VennUxStrategy.jsx
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React from "react";
+import { User, Briefcase, AlertTriangle, Cpu, CheckCircle2 } from "lucide-react";
 
-export default function VennUxStrategy() {
-  const controls = useAnimation();
-  const sectionRef = useRef(null);
-  const [state, setState] = useState("stacked");
-  const playedOnceRef = useRef(false); // run animation only once
+// Persona image (path update kar sakte ho)
+import founder from "@/assets/persona/budgettree.webp"; // <-- replace if needed
 
-  // Run animation ONCE when ~55% of the section is in view; never revert
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        const entry = entries[0];
-        if (
-          entry.isIntersecting &&
-          entry.intersectionRatio >= 0.55 &&
-          !playedOnceRef.current
-        ) {
-          playedOnceRef.current = true;
-          setState("row");
-          obs.disconnect();
-        }
-      },
-      { threshold: [0, 0.25, 0.5, 0.55, 0.75, 1] }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    controls.start(state);
-  }, [state, controls]);
-
-  // desktop animation tuning
-  const ROW_OFFSET = 420;
-  const ROW_SCALE = 0.88;
-  const SPRING = { type: "spring", stiffness: 120, damping: 18 };
-
-  const circleVariants = {
-    stacked: (pos) => ({
-      x: pos === "left" ? -80 : pos === "right" ? 80 : 0,
-      y: pos === "top" ? -80 : 60,
-      scale: 1,
-      transition: SPRING,
-    }),
-    row: (pos) => ({
-      x: pos === "left" ? -ROW_OFFSET : pos === "right" ? ROW_OFFSET : 0,
-      y: 0,
-      scale: ROW_SCALE,
-      transition: SPRING,
-    }),
-  };
-
-  // headings: visible before animation; centered after
-  const headingVariants = {
-    stacked: (which) => ({
-      x: which === "left" ? -140 : 0,
-      y: which === "top" ? -160 : 0,
-      opacity: 1,
-      transition: { duration: 0.35 },
-    }),
-    row: { x: 0, y: 0, opacity: 1, transition: { duration: 0.35 } },
-  };
-
-  const listVariants = {
-    stacked: { opacity: 0, y: 8, transition: { duration: 0.25 } },
-    row: { opacity: 1, y: 0, transition: { delay: 0.35, duration: 0.45 } },
-  };
-
+export default function VennUxStrategy({
+  persona = {
+    name: "Neha Kapoor",
+    role: "HR Manager • Mid-size SaaS",
+    avatar: founder,
+    bio: "Handles employee rewards; needs fast bulk gifting and clear spend tracking.",
+    traits: ["Time-pressed", "Bulk send", "Personalized gifts", "Budget control", "Analytics-first"],
+  },
+}) {
   return (
-    <section className="w-full text-[#1a1a1a] px-6 sm:px-10 lg:px-16 py-28 flex flex-col items-center">
-      {/* ===== Desktop / Tablet (animated once) ===== */}
-      <div
-        ref={sectionRef}
-        className="relative hidden md:flex w-full max-w-7xl h-[760px] lg:h-[820px] items-center justify-center"
-      >
-        {/* Business Goals (TOP circle) */}
-        <motion.div
-          custom="top"
-          variants={circleVariants}
-          initial="stacked"
-          animate={controls}
-          className="absolute rounded-full shadow-lg flex items-center justify-center text-center
-                     bg-gradient-to-b from-[#FFE0D4] to-[#F9BFB0]
-                     w-[520px] h-[520px] lg:w-[560px] lg:h-[560px]"
-        >
-          <div className="px-8 md:px-10 max-w-[420px] relative flex flex-col items-center justify-center">
-            <motion.h3
-              custom="top"
-              variants={headingVariants}
-              initial="stacked"
-              animate={controls}
-              className="font-semibold text-[#F08A66] text-lg md:text-xl"
-            >
-              Business Goals
-            </motion.h3>
-            <motion.ul
-              variants={listVariants}
-              initial="stacked"
-              animate={controls}
-              className="list-disc pl-5 text-xs md:text-sm text-[#2B2B2B]/85 text-left mt-4 space-y-2"
-            >
-              <li>Simplify employee gifting → reduce HR workload.</li>
-              <li>Revenue via SaaS subscriptions + voucher partnerships.</li>
-            </motion.ul>
-          </div>
-        </motion.div>
-
-        {/* User Needs (LEFT circle) */}
-        <motion.div
-          custom="left"
-          variants={circleVariants}
-          initial="stacked"
-          animate={controls}
-          className="absolute rounded-full shadow-lg flex items-center justify-center text-center
-                     bg-gradient-to-b from-[#E7F8D9] to-[#CBEFB1]
-                     w-[520px] h-[520px] lg:w-[560px] lg:h-[560px]"
-        >
-          <div className="px-8 md:px-10 max-w-[420px] relative flex flex-col items-center justify-center">
-            <motion.h3
-              custom="left"
-              variants={headingVariants}
-              initial="stacked"
-              animate={controls}
-              className="font-semibold text-[#60A34F] text-lg md:text-xl"
-            >
-              User Needs &amp; Pain Points
-            </motion.h3>
-            <motion.ul
-              variants={listVariants}
-              initial="stacked"
-              animate={controls}
-              className="list-disc pl-5 text-xs md:text-sm text-[#2B2B2B]/85 text-left mt-4 space-y-2"
-            >
-              <li>HR teams: manual gifting is time-consuming.</li>
-              <li>Employees: generic, non-personalized gifts.</li>
-            </motion.ul>
-          </div>
-        </motion.div>
-
-        {/* Technical Capabilities (RIGHT circle) */}
-        <motion.div
-          custom="right"
-          variants={circleVariants}
-          initial="stacked"
-          animate={controls}
-          className="absolute rounded-full shadow-lg flex items-center justify-center text-center
-                     bg-gradient-to-b from-[#DCEEFF] to-[#BFD9FF]
-                     w-[520px] h-[520px] lg:w-[560px] lg:h-[560px]"
-        >
-          <div className="px-8 md:px-10 max-w-[440px] relative flex flex-col items-center justify-center">
-            <motion.h3
-              custom="center"
-              variants={headingVariants}
-              initial="stacked"
-              animate={controls}
-              className="font-semibold text-[#3E86E0] text-lg md:text-xl"
-            >
-              Technical Capabilities
-            </motion.h3>
-            <motion.ul
-              variants={listVariants}
-              initial="stacked"
-              animate={controls}
-              className="list-disc pl-5 text-xs md:text-sm text-[#2B2B2B]/85 text-left mt-4 space-y-2"
-            >
-              <li>Voucher generation system (unique codes, expiry, denominations).</li>
-              <li>Bulk distribution via email/SMS.</li>
-              <li>Wallet integration for tracking balance &amp; redemption.</li>
-              <li>Analytics dashboard for budget &amp; redemption tracking.</li>
-              <li>Enterprise-grade security for transactions.</li>
-            </motion.ul>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* ===== Mobile (single column, no row animation) ===== */}
-      <div className="md:hidden w-full max-w-xl mx-auto space-y-10">
-        {/* Card 1 */}
-        <div className="flex flex-col items-center">
-          <div className="rounded-full w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]
-                          bg-gradient-to-b from-[#FFE0D4] to-[#F9BFB0]
-                          shadow-md flex items-center justify-center text-center">
-            <h3 className="font-semibold text-[#F08A66] text-base sm:text-lg">
-              Business Goals
-            </h3>
-          </div>
-          <ul className="mt-4 list-disc pl-5 text-[13px] sm:text-sm text-white/80">
-            <li>Simplify employee gifting → reduce HR workload.</li>
-            <li>Revenue via SaaS subscriptions + voucher partnerships.</li>
-          </ul>
+    <section id="ux-venn" className="bg-black text-white py-20 sm:py-28">
+      <div className="mx-auto w-full px-6 sm:px-20">
+        {/* Heading row (same pattern) */}
+        <div className="flex items-center gap-4 mb-10">
+          <h2 className="text-white text-base sm:text-lg font-medium whitespace-nowrap">
+            Align Business, Users & Tech
+          </h2>
+          <div className="flex-1 h-px bg-gray-700" />
         </div>
 
-        {/* Card 2 */}
-        <div className="flex flex-col items-center">
-          <div className="rounded-full w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]
-                          bg-gradient-to-b from-[#E7F8D9] to-[#CBEFB1]
-                          shadow-md flex items-center justify-center text-center">
-            <h3 className="font-semibold text-[#60A34F] text-base sm:text-lg">
-              User Needs &amp; Pain Points
-            </h3>
-          </div>
-          <ul className="mt-4 list-disc pl-5 text-[13px] sm:text-sm text-white/80">
-            <li>HR teams: manual gifting is time-consuming.</li>
-            <li>Employees: generic, non-personalized gifts.</li>
-          </ul>
-        </div>
+        {/* Grid: big context + 4 small (total 5 cards) */}
+        <div className="mt-6 grid gap-6 lg:grid-cols-3">
+          {/* 1) Big Context Card (2 columns on lg) */}
+          <Card className="lg:col-span-2">
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <Briefcase className="h-4 w-4" />
+              <span className="font-semibold">Project Context</span>
+            </div>
 
-        {/* Card 3 */}
-        <div className="flex flex-col items-center">
-          <div className="rounded-full w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]
-                          bg-gradient-to-b from-[#DCEEFF] to-[#BFD9FF]
-                          shadow-md flex items-center justify-center text-center">
-            <h3 className="font-semibold text-[#3E86E0] text-base sm:text-lg">
-              Technical Capabilities
-            </h3>
-          </div>
-          <ul className="mt-4 list-disc pl-5 text-[13px] sm:text-sm text-white/80">
-            <li>Voucher generation system (unique codes, expiry, denominations).</li>
-            <li>Bulk distribution via email/SMS.</li>
-            <li>Wallet integration for tracking balance &amp; redemption.</li>
-            <li>Analytics dashboard for budget &amp; redemption tracking.</li>
-            <li>Enterprise-grade security for transactions.</li>
-          </ul>
+            {/* inner 3-column layout (same as FeatureListing big card) */}
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Business Goals */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-white/70">
+                  Business Goals
+                </h3>
+                <ul className="mt-2 space-y-1 text-sm text-white/70 leading-relaxed">
+                  <li>• Simplify employee gifting → reduce HR workload.</li>
+                  <li>• Grow revenue via SaaS tiers & voucher partners.</li>
+                  <li>• Improve retention with delightful, flexible gifting.</li>
+                </ul>
+              </div>
+
+              {/* User Needs & Pain Points */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-white/70">
+                  User Needs &amp; Pain Points
+                </h3>
+                <ul className="mt-2 space-y-1 text-sm text-white/70 leading-relaxed">
+                  <li>• HR: manual gifting and follow-ups are time-consuming.</li>
+                  <li>• Employees: generic gifts, poor personalization.</li>
+                  <li>• Finance: low visibility on spend & redemption.</li>
+                </ul>
+              </div>
+
+              {/* Technical Capabilities */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-white/70">
+                  Technical Capabilities
+                </h3>
+                <ul className="mt-2 space-y-1 text-sm text-white/70 leading-relaxed">
+                  <li>• Voucher engine (codes, expiry, denominations).</li>
+                  <li>• Bulk distribution (email/SMS) + scheduling.</li>
+                  <li>• Wallet/balance tracking & redemption logs.</li>
+                  <li>• Analytics dashboard (budgets, redemption, ROI).</li>
+                  <li>• Enterprise security & audit trails.</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+
+          {/* 2) Persona Card */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <User className="h-4 w-4" />
+              <span className="font-semibold">User Persona</span>
+            </div>
+
+            <div className="mt-6 flex items-center gap-4">
+              <div className="relative">
+                <img
+                  src={persona.avatar}
+                  alt={persona.name}
+                  className="h-14 w-14 rounded-xl object-cover ring-1 ring-white/10"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div>
+                <h3 className="text-base font-medium">{persona.name}</h3>
+                <p className="text-xs text-white/60">{persona.role}</p>
+              </div>
+            </div>
+
+            <p className="mt-4 text-sm text-white/70">{persona.bio}</p>
+
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {persona.traits?.map((t, i) => (
+                <span
+                  key={i}
+                  className="px-2 py-0.5 rounded-md text-[10px] border border-emerald-400/25 text-emerald-200/90 bg-emerald-500/10"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </Card>
+
+          {/* 3) Business Goals — compact */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <CheckCircle2 className="h-4 w-4" />
+              <span className="font-semibold">Business Goals</span>
+            </div>
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
+              <li>• Increase adoption & renewal rates.</li>
+              <li>• Upsell via advanced analytics & automation.</li>
+              <li>• Strengthen brand trust with smooth UX.</li>
+            </ul>
+          </Card>
+
+          {/* 4) User Needs & Pain Points — compact */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <AlertTriangle className="h-4 w-4" />
+              <span className="font-semibold">User Needs &amp; Pain Points</span>
+            </div>
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
+              <li>• Bulk send in minutes; no spreadsheets.</li>
+              <li>• Personalization options (amount, message, brand).</li>
+              <li>• Real-time status: sent, opened, redeemed.</li>
+            </ul>
+          </Card>
+
+          {/* 5) Technical Capabilities — compact */}
+          <Card>
+            <div className="flex items-center gap-2 text-sm text-white/80">
+              <Cpu className="h-4 w-4" />
+              <span className="font-semibold">Technical Capabilities</span>
+            </div>
+            <ul className="mt-6 space-y-2 text-sm text-white/70">
+              <li>• Role-based access & SSO/SAML.</li>
+              <li>• API/webhooks for HRIS & payroll systems.</li>
+              <li>• Audit logs, exports & compliance-ready reports.</li>
+            </ul>
+          </Card>
         </div>
       </div>
     </section>
+  );
+}
+
+/* ---------- Dark Card primitive (shared style) ---------- */
+function Card({ className = "", children }) {
+  return (
+    <div
+      className={[
+        "relative overflow-hidden rounded-2xl border border-white/10 bg-white/5",
+        "shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]",
+        "p-6 sm:p-7",
+        "transition-transform duration-300 hover:-translate-y-0.5",
+        className,
+      ].join(" ")}
+    >
+      {/* subtle grid */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.10]"
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg,rgba(255,255,255,0.2) 1px,transparent 1px),linear-gradient(rgba(255,255,255,0.2) 1px,transparent 1px)",
+          backgroundSize: "16px 16px",
+        }}
+      />
+      {/* soft fade */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
+      <div className="relative z-10">{children}</div>
+    </div>
   );
 }
