@@ -9,6 +9,9 @@ import SlideMenu    from './components/SlideMenu';
 import HeroSection1 from './components/HeroSection1';
 import HeroSection  from './components/HeroSection';
 import KnowMore     from './components/KnowMoreSection';
+import Design     from './components/about/DesignPhilosophy'; 
+import TeamPhotocase from './components/TeamPhoto';
+
 import CounterSection from './components/CounterSection';
 import WorkSection  from './components/WorksSection';
 import Banner       from './components/BannersSection1';
@@ -31,7 +34,9 @@ import Copartnerappmain from './components/copartnerapp/Copartnerappmain';
 import Budgettreemain   from './components/budgettree/Budgettreemain';
 import Bepromain        from './components/bepro/Bepromain';
 import Investockmain    from './components/investock/Investockmain';
+import Cryptomatymain        from './components/cryptomaty/Cryptomatymain';
 import Page             from './components/page';
+
 
 import { LampDemo } from "./components/lamp-demo";
 
@@ -101,6 +106,9 @@ export default function App() {
                 <ScrollCard>
                   <CounterSection />
                 </ScrollCard>
+
+                <Design />
+                <TeamPhotocase />
 
                 <ScrollCard>
                   <ProvidedSection />
@@ -173,6 +181,7 @@ export default function App() {
           <Route path="/budgettree/:slug" element={<Budgettreemain />} />
           <Route path="/bepro/:slug" element={<Bepromain />} />
           <Route path="/investock/:slug" element={<Investockmain />} />
+           <Route path="/cryptomaty/:slug" element={<Cryptomatymain />} />
 
           {/* CONTACT */}
           <Route

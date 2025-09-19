@@ -4,14 +4,28 @@ import WorkCardFX from "./WorkCardFX"; // ⬅️ animated card
 
 import img1 from "../assets/Algorooms/Mockuplight.webp";
 import img2 from "../assets/Alpha/MacBook_Mockup_3.webp";
-import img3 from "../assets/CopartnerApp/copartner-1.webp";
+
 
 import img5 from "../assets/Cribonix/cribonix-1.webp";
 import img from "../assets/Bepro/homemockup.webp";
 import imgs from "../assets/Investock/lightmockup.webp";
+import cryptomaty from "../assets/Cryptomaty/mobile.webp";
 
 export default function WorksSection() {
   const posts = [
+    {
+      slug: "cryptomaty-dashboard",
+      path: "/cryptomaty/cryptomaty-dashboard",
+      frontImage: cryptomaty,
+      title: "Cryptomaty Dashboard",
+      author: "Cryptomaty",
+      content:
+        "A free crypto trading platform where users can explore RA-curated strategy templates, backtest them on historical data, and deploy live via Delta Exchange. Includes visual analytics and detailed PnL reports to learn and reduce losses.",
+      role: "UX flows • Web/App • Crypto",
+      result:
+        "Enabled beginners to start safely with backtests, helped pros optimize faster, and reduced trial-and-error losses by providing clear analytics and reporting.",
+      tags: ["Crypto", "Web/App", "Backtesting", "Analytics"],
+    },
     {
       slug: "investock",
       path: "/investock/investock-app",
@@ -62,18 +76,7 @@ export default function WorksSection() {
       result: "Clearer order states; improved first-trade completion.",
       tags: ["Crypto", "Web", "Growth", "Dashboard", "Mobile"],
     },
-    {
-      slug: "copartner-app",
-      path: "/copartnerapp/copartner-app",
-      frontImage: img3,
-      title: "Copartner App",
-      author: "Copartner",
-      content:
-        "Actionable buy/sell ideas and research in a subscription model.",
-      role: "UX flows • Mobile",
-      result: "Reduced ‘where to act’ confusion; fewer support pings.",
-      tags: ["Finance", "Mobile", "Subscriptions"],
-    },
+
     {
       slug: "cribonix",
       path: "/cribonix/cribonix",
