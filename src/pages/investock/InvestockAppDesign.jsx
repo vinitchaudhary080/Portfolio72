@@ -4,7 +4,7 @@ import Meta from "@/seo/Meta";
 import { breadcrumbs, articleSchema } from "@/seo/schema";
 
 export default function InvestockAppDesignCaseStudy() {
-    const url = "https://vinitchaudhary.in/investock/investock-app-design";
+    const url = "https://tishakakkar.in/investock/investock-app-design";
     const title = "Investock.ai — AI Trading Platform | UX Case Study (India)";
     const description =
         "AI-powered trading & investing platform: advanced charting, real-time market data, strategy builder, and backtesting — designed for stock and crypto traders.";
@@ -27,14 +27,14 @@ export default function InvestockAppDesignCaseStudy() {
                 ]}
                 jsonLd={[
                     breadcrumbs([
-                        { name: "Home", url: "https://vinitchaudhary.in/" },
-                        { name: "Works", url: "https://vinitchaudhary.in/works" },
+                        { name: "Home", url: "https://tishakakkar.in/" },
+                        { name: "Works", url: "https://tishakakkar.in/works" },
                         { name: "Investock.ai — App Design", url },
                     ]),
                     articleSchema({
                         headline: title,
                         url,
-                        image: "https://vinitchaudhary.in/og-investock.jpg", // optional: add 1200x630 in /public
+                        image: "https://tishakakkar.in/og-investock.jpg", // optional: add 1200x630 in /public
                         description,
                         datePublished: "2025-09-01", // update to real dates if needed
                         dateModified: "2025-09-01",

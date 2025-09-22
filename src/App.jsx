@@ -85,7 +85,7 @@ export default function App() {
               <>
                 <SEO19
                   path="/"
-                  title=" Vinit Chaudhary | UX/UI Designer in India | App & Web Design "
+                  title=" Tisha Kakkar | UX/UI Designer in India | App & Web Design "
                   description="Research-driven UX/UI for apps, websites & design systems. See case studies & hire me."
                   ogImage="/og-cover.png"
                   schema={[personSchema, websiteSchema]}
@@ -134,12 +134,12 @@ export default function App() {
               <>
                 <SEO19
                   path="/about"
-                  title="About — UX/UI Designer | Vinit Chaudhary"
-                  description="About Vinit Chaudhary — Senior UX/UI Designer & Team Lead. Fintech/trading app specialist. Process-first, research-driven design."
+                  title="About — UX/UI Designer | Tisha Kakkar"
+                  description="About Tisha Kakkar — UX/UI Designer & Team Lead. Fintech/trading app specialist. Process-first, research-driven design."
                   schema={[
                     breadcrumb([
-                      { name:"Home", item:"https://vinitchaudhary.in" },
-                      { name:"About", item:"https://vinitchaudhary.in/about" }
+                      { name:"Home", item:"https://tishakkar.in" },
+                      { name:"About", item:"https://tishakakkar.in/about" }
                     ])
                   ]}
                 />
@@ -155,12 +155,12 @@ export default function App() {
               <>
                 <SEO19
                   path="/works"
-                  title="Works & Case Studies — Vinit Chaudhary | UX/UI Designer "
+                  title="Works & Case Studies — Tisha Kakkar | UX/UI Designer "
                   description="Selected UX/UI case studies across fintech, trading, sports & SaaS—research, IA, flows, UI, and dev handoff."
                   schema={[
                     breadcrumb([
-                      { name:"Home", item:"https://vinitchaudhary.in" },
-                      { name:"Works", item:"https://vinitchaudhary.in/works" }
+                      { name:"Home", item:"https://tishakakkar.in" },
+                      { name:"Works", item:"https://tishakakkar.in/works" }
                     ])
                   ]}
                 />
@@ -190,12 +190,12 @@ export default function App() {
               <>
                 <SEO19
                   path="/contact"
-                  title="Contact — Hire a UX/UI Designer | Vinit Chaudhary"
+                  title="Contact — Hire a UX/UI Designer | Tisha Kakkar"
                   description="Have a brief? I’ll map scope, risks, and a first sprint plan in 48 hours. Contact for app & web UX/UI, design systems & handoff."
                   schema={[
                     breadcrumb([
-                      { name:"Home", item:"https://vinitchaudhary.in" },
-                      { name:"Contact", item:"https://vinitchaudhary.in/contact" }
+                      { name:"Home", item:"https://tishakakkar.in" },
+                      { name:"Contact", item:"https://tishakakkar.in/contact" }
                     ]),
                     contactFAQ
                   ]}

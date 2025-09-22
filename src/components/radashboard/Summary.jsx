@@ -19,7 +19,7 @@ export default function Summary() {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">My Contributions</h3>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-              As the Senior UI/UX Designer, I led stakeholder workshops and user interviews to define core workflows, created low- and high-fidelity wireframes & interactive prototypes in Figma for rapid validation, established a modular design system, and collaborated with engineers to integrate data-visualization libraries (Highcharts) into responsive React components—while ensuring accessibility and performance optimizations.
+              As the UI/UX Designer, I led stakeholder workshops and user interviews to define core workflows, created low- and high-fidelity wireframes & interactive prototypes in Figma for rapid validation, established a modular design system, and collaborated with engineers to integrate data-visualization libraries (Highcharts) into responsive React components—while ensuring accessibility and performance optimizations.
             </p>
           </div>
         </div>

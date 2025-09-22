@@ -6,10 +6,10 @@ import { baseKeywords } from "@/seo/keywords";
 import ProvidedSection from "@/components/about/ProvidedSection";
 
 export default function Services() {
-  const url = "https://vinitchaudhary.in/services";
-  const title = "UX/UI Services in India — Website, App, SaaS Dashboard | Hire Vinit";
+  const url = "https://tishakakkar.in/services";
+  const title = "UX/UI Services in India — Website, App, SaaS Dashboard | Hire Tisha";
   const description =
-    "Freelance services: website UX/UI, mobile app design, and SaaS dashboard UX for Indian startups & businesses. Hire a senior designer.";
+    "Freelance services: website UX/UI, mobile app design, and SaaS dashboard UX for Indian startups & businesses. Hire a UX/UI designer.";
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function Services() {
         jsonLd={[
           // Breadcrumbs for the page
           breadcrumbs([
-            { name: "Home", url: "https://vinitchaudhary.in/" },
+            { name: "Home", url: "https://tishakakkar.in/" },
             { name: "Services", url },
           ]),
           // Rich services list schema for this page

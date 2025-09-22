@@ -39,7 +39,7 @@ export function LampDemo() {
 
       {/* CTA button */}
       <motion.a
-        href="https://wa.me/918398020076"
+        href="https://wa.me/919138607772"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ opacity: 0, scale: 0.9 }}

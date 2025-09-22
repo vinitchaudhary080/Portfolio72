@@ -28,7 +28,7 @@ export default function BannersSection() {
 </h2>
 
         <a
-          href="https://wa.me/918398020076"
+          href="https://wa.me/919138607772"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl text-sm font-medium hover:scale-105 transition"

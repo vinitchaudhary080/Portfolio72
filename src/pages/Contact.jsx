@@ -6,8 +6,8 @@ import { baseKeywords } from "@/seo/keywords";
 import ContactPage from "@/components/contact/ContactPage";
 
 export default function Contact() {
-  const url = "https://vinitchaudhary.in/contact";
-  const title = "Contact — Hire Freelance UX/UI Designer in India | Vinit Chaudhary";
+  const url = "https://tishakakkaar.in/contact";
+  const title = "Contact — Hire Freelance UX/UI Designer in India | Tisha Kakkar";
   const description =
     "Hire a freelance UX/UI designer for websites, mobile apps, or SaaS dashboards. Based in India, available for remote projects.";
 
@@ -19,14 +19,14 @@ export default function Contact() {
     url,
     mainEntity: {
       "@type": "Person",
-      name: "Vinit Chaudhary",
-      url: "https://vinitchaudhary.in",
+      name: "Tisha Kakkar",
+      url: "https://tishakakkar.in",
       contactPoint: [
         {
           "@type": "ContactPoint",
           contactType: "business",
-          email: "mailto:vinitchaudhary080@gmail.com",
-          telephone: "+918398020076",
+          email: "mailto:tishakakkar05@gmail.com",
+          telephone: "+919138607772",
           areaServed: "IN",
           availableLanguage: ["en", "hi"],
         },
@@ -51,7 +51,7 @@ export default function Contact() {
         keywords={[...baseKeywords, "contact ux designer india", "hire ux ui designer india"]}
         jsonLd={[
           breadcrumbs([
-            { name: "Home", url: "https://vinitchaudhary.in/" },
+            { name: "Home", url: "https://tishakakkar.in/" },
             { name: "Contact", url },
           ]),
           faqSchema([

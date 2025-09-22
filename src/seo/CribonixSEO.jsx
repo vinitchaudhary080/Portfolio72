@@ -3,7 +3,7 @@ import ProjectSEO from "./ProjectSEO";
 
 const metaMap = {
   "cribonix": {
-    title: "Cribonix – Marketing Agency Website UX/UI Case Study | Vinit Chaudhary",
+    title: "Cribonix – Marketing Agency Website UX/UI Case Study | Tisha Kakkar",
     description: "Conversion-focused website with cleaner funnels attracting more qualified leads.",
     og: "/og-cover.png",
     keywords: ["marketing site","seo","conversion","web ux"]

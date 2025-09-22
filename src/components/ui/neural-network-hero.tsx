@@ -178,11 +178,11 @@ export default function NeuralNetworkHeroContact() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <h4 className="uppercase text-gray-300/80 text-xs mb-2">Email Address</h4>
-              <p className="text-lg break-words">vinitchaudhary080@gmail.com</p>
+              <p className="text-lg break-words">tishakakkar05@gmail.com</p>
             </div>
             <div>
               <h4 className="uppercase text-gray-300/80 text-xs mb-2">Phone</h4>
-              <p className="text-lg">+91-8398020076</p>
+              <p className="text-lg">+91-9138607772</p>
             </div>
           </div>
 
@@ -218,7 +218,7 @@ export default function NeuralNetworkHeroContact() {
           </p>
 
          <a
-  href="https://wa.me/918398020076"
+  href="https://wa.me/919138607772"
   target="_blank"
   rel="noopener noreferrer"
   className="

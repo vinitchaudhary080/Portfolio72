@@ -3,7 +3,7 @@ import ProjectSEO from "./ProjectSEO";
 
 const metaMap = {
   "bepro-app": {
-    title: "BePro – Cricket Scoring & Tournaments UX Case Study | Vinit Chaudhary",
+    title: "BePro – Cricket Scoring & Tournaments UX Case Study | Tisha kakkar",
     description: "Local to semi-pro cricket: live scoring, team & tournament flows, faster setup, clearer roles.",
     og: "/og-cover.png",
     keywords: ["sports app","cricket","live scoring","ux"]

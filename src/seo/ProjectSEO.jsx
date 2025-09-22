@@ -3,7 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import SEO19, { breadcrumb } from "../components/SEO19";
 
-const BASE_URL = "https://vinitchaudhary.in";
+const BASE_URL = "https://tishakakkar.in";
 
 /**
  * Reusable SEO injector for project detail pages.
@@ -15,7 +15,7 @@ export default function ProjectSEO({ base, display, metaMap = {} }) {
   const { slug } = useParams();
 
   const fallback = {
-    title: `${display} — Case Study | Vinit Chaudhary`,
+    title: `${display} — Case Study | Tisha Kakkar`,
     description: "UX/UI case study: research → IA/flows → UI → dev handoff.",
     og: "/og-cover.png",
     keywords: [],
@@ -40,7 +40,7 @@ export default function ProjectSEO({ base, display, metaMap = {} }) {
           "@context": "https://schema.org",
           "@type": "CreativeWork",
           "name": m.title,
-          "author": { "@type": "Person", "name": "Vinit Chaudhary" },
+          "author": { "@type": "Person", "name": "Tisha Kakkar" },
           "image": `${BASE_URL}${m.og}`,
           "url": `${BASE_URL}${path}`,
           "keywords": (m.keywords || []).join(", "),

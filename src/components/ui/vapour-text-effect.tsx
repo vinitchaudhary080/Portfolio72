@@ -34,7 +34,7 @@ export const Component = () => {
         {/* Animated headline (keeps looping) */}
         <div className="flex items-center justify-center" style={{ height: `${headingBoxHeight}px` }}>
           <VaporizeTextCycle
-            texts={["Hi,", "I’m Vinit Chaudhary", "A Senior UX/UI Designer"]}
+            texts={["Hi,", "I’m Tisha Kakkar", "A UX/UI Designer"]}
             font={{ fontFamily: "Inter, sans-serif", fontSize: `${fontPx}px`, fontWeight: 600 }}
             color="rgb(255,255,255)"
             spread={5}
@@ -54,8 +54,8 @@ export const Component = () => {
         </p>
 
         <button
-          onClick={() => window.open("https://wa.me/918398020076", "_blank")}
-          aria-label="Discuss your project with Vinit on WhatsApp"
+          onClick={() => window.open("https://wa.me/919138607772", "_blank")}
+          aria-label="Discuss your project with Tisha on WhatsApp"
           className="
             inline-flex items-center gap-2
             px-6 py-3 mt-10 mx-auto

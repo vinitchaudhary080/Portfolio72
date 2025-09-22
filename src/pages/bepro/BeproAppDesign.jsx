@@ -4,7 +4,7 @@ import Meta from "@/seo/Meta";
 import { breadcrumbs, articleSchema } from "@/seo/schema";
 
 export default function BeproAppDesignCaseStudy() {
-    const url = "https://vinitchaudhary.in/bepro/bepro-app-design";
+    const url = "https://tishakakkar.in/bepro/bepro-app-design";
     const title = "BePro — Cricket App UX Case Study (India) | Play, Track & Relive Matches";
     const description =
         "End-to-end UX for BePro, a cricket app for local players and teams: match creation, live scoring, tournaments, and performance tracking.";
@@ -26,14 +26,14 @@ export default function BeproAppDesignCaseStudy() {
                 ]}
                 jsonLd={[
                     breadcrumbs([
-                        { name: "Home", url: "https://vinitchaudhary.in/" },
-                        { name: "Works", url: "https://vinitchaudhary.in/works" },
+                        { name: "Home", url: "https://tishakakkar.in/" },
+                        { name: "Works", url: "https://tishakakkar.in/works" },
                         { name: "BePro App Design", url },
                     ]),
                     articleSchema({
                         headline: title,
                         url,
-                        image: "https://vinitchaudhary.in/og-bepro.jpg", // optional: add a project OG in /public
+                        image: "https://tishakakkar.in/og-bepro.jpg", // optional: add a project OG in /public
                         description,
                         datePublished: "2025-09-01",   // update to real dates if needed
                         dateModified: "2025-09-01",

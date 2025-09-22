@@ -26,7 +26,7 @@ export default function Hero() {
       aria-labelledby="hero-heading"
     >
       <p className="text-white/70 italic text-xs sm:text-sm tracking-wide mb-3 z-10 text-center">
-        Hello, I’m Vinit Chaudhary
+        Hello, I’m Tisha Kakkar
       </p>
 
       <h1
@@ -60,7 +60,7 @@ export default function Hero() {
 
       <div className="relative z-10 mt-6 sm:mt-8 max-w-md sm:max-w-xl text-center">
         <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed mb-4 sm:mb-6">
-          As a Senior UX/UI Designer, I partner with brands to transform ideas into
+          As a UX/UI Designer, I partner with brands to transform ideas into
           seamless digital experiences that engage users and elevate your business.
         </p>
 

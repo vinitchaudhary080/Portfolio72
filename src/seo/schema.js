@@ -2,13 +2,13 @@
 export const personSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Vinit Chaudhary",
-  jobTitle: "Senior UX/UI Designer & Team Lead",
-  url: "https://vinitchaudhary.in/",
-  image: "https://vinitchaudhary.in/og-default.jpg",
+  name: "Tisha Kakkar",
+  jobTitle: "UX/UI Designer & Team Lead",
+  url: "https://tishakakkar.in/",
+  image: "https://tishakakkar.in/og-default.jpg",
   sameAs: [
-    "https://www.linkedin.com/in/vinitc69/",
-    "https://behance.net/vinitchaudhary1"
+    "https://www.linkedin.com/in/tisha-kakkar-55b0a41a0/",
+    "https://behance.net/tishakakkar"
   ],
   worksFor: { "@type": "Organization", name: "Freelance" },
   address: { "@type": "PostalAddress", addressCountry: "IN" },
@@ -28,19 +28,19 @@ export const servicesSchema = () => ({
       "@type": "Service",
       name: "Freelance Website UX/UI Design (India)",
       areaServed: "IN",
-      provider: { "@type": "Person", name: "Vinit Chaudhary" }
+      provider: { "@type": "Person", name: "Tisha Kakkar" }
     },
     {
       "@type": "Service",
       name: "Freelance Mobile App UI/UX (India)",
       areaServed: "IN",
-      provider: { "@type": "Person", name: "Vinit Chaudhary" }
+      provider: { "@type": "Person", name: "Tisha Kakkar" }
     },
     {
       "@type": "Service",
       name: "SaaS & Dashboard UX (India)",
       areaServed: "IN",
-      provider: { "@type": "Person", name: "Vinit Chaudhary" }
+      provider: { "@type": "Person", name: "Tisha Kakkar" }
     }
   ]
 });
@@ -59,12 +59,12 @@ export const breadcrumbs = (items) => ({
 export const webSiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Vinit Chaudhary — UX/UI Designer",
-  url: "https://vinitchaudhary.in/",
+  name: "Tisha Kakkar — UX/UI Designer",
+  url: "https://tishakakkar.in/",
   inLanguage: "en-IN",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://www.google.com/search?q=site%3Avinitchaudhary.in+{search_term_string}",
+    target: "https://www.google.com/search?q=site%3Atishakakkar.in+{search_term_string}",
     "query-input": "required name=search_term_string"
   }
 });
@@ -86,8 +86,8 @@ export const articleSchema = ({ headline, url, image, datePublished, dateModifie
   description,
   mainEntityOfPage: url,
   image,
-  author: { "@type": "Person", name: "Vinit Chaudhary", url: "https://vinitchaudhary.in/" },
-  publisher: { "@type": "Person", name: "Vinit Chaudhary" },
+  author: { "@type": "Person", name: "Tisha Kakkar", url: "https://tishakakkar.in/" },
+  publisher: { "@type": "Person", name: "Tisha Kakkar" },
   datePublished,
   dateModified
 });

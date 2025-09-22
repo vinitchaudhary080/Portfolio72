@@ -36,10 +36,10 @@ export default function ContactPage() {
               <h4 className="uppercase text-gray-400 text-xs mb-2">Email Address</h4>
               <p className="text-lg">
                 <a
-                  href="mailto:vinitchaudhary080@gmail.com"
+                  href="mailto:tishakakkar05@gmail.com"
                   className="underline decoration-white/20 hover:decoration-white/60 underline-offset-4"
                 >
-                  vinitchaudhary080@gmail.com
+                  tishakakkar05@gmail.com
                 </a>
               </p>
             </div>
@@ -47,10 +47,10 @@ export default function ContactPage() {
               <h4 className="uppercase text-gray-400 text-xs mb-2">Phone</h4>
               <p className="text-lg">
                 <a
-                  href="tel:+918398020076"
+                  href="tel:+919138607772"
                   className="underline decoration-white/20 hover:decoration-white/60 underline-offset-4"
                 >
-                  +91-8398020076
+                  +91-9138607772
                 </a>
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
           </p>
 
           <a
-            href="https://wa.me/918398020076"
+            href="https://wa.me/919138607772"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -100,7 +100,7 @@ export default function ContactPage() {
               transition-colors duration-300
               focus:outline-none focus:ring-2 focus:ring-white/30
             "
-            aria-label="Open WhatsApp chat with Vinit Chaudhary"
+            aria-label="Open WhatsApp chat with Tisha Kakkar"
           >
             <FaRegCommentDots className="text-base opacity-90" />
             Let’s talk&nbsp;→

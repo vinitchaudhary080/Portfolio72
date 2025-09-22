@@ -14,26 +14,26 @@ import { LampDemo } from "@/components/lamp-demo";
 import Page from "@/components/page";
 
 export default function About() {
-  const url = "https://vinitchaudhary.in/about";
-  const title = "About — Vinit Chaudhary | Senior UX/UI Designer (India)";
+  const url = "https://tishakakkar.in/about";
+  const title = "About — Tisha Kakkar | UX/UI Designer (India)";
   const description =
-    "Senior UX/UI designer with 5+ years experience shaping websites, mobile apps, and SaaS dashboards for Indian startups & businesses.";
+    "UX/UI designer with 5+ years experience shaping websites, mobile apps, and SaaS dashboards for Indian startups & businesses.";
 
   // Structured data for the About page (merged via Meta -> <head>)
   const aboutPageSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About — Vinit Chaudhary | UX/UI Designer",
+    name: "About — Tisha Kakkar| UX/UI Designer",
     url,
     description:
-      "About Vinit Chaudhary — Senior UI/UX Designer specializing in fintech/trading products, research-first UX and production-ready UI systems.",
+      "About Tisha Kakkar — UI/UX Designer specializing in fintech/trading products, research-first UX and production-ready UI systems.",
     mainEntity: {
       "@type": "Person",
-      name: "Vinit Chaudhary",
-      url: "https://vinitchaudhary.in",
+      name: "Tisha Kakkar",
+      url: "https://tishakakkar.in",
       sameAs: [
-        "https://www.linkedin.com/in/vinitc69/",
-        "https://www.behance.net/vinitchaudhary1",
+        "https://www.linkedin.com/in/tisha-kakkar-55b0a41a0/",
+        "https://www.behance.net/tishakakkar",
       ],
     },
   };
@@ -45,10 +45,10 @@ export default function About() {
         description={description}
         url={url}
         canonical={url}
-        keywords={[...baseKeywords, "senior ux ui designer india", "team lead ux ui india"]}
+        keywords={[...baseKeywords, "ux ui designer india", "team lead ux ui india"]}
         jsonLd={[
           breadcrumbs([
-            { name: "Home", url: "https://vinitchaudhary.in/" },
+            { name: "Home", url: "https://tishakkakr.in/" },
             { name: "About", url },
           ]),
           personSchema(),
@@ -58,7 +58,7 @@ export default function About() {
 
       <main id="main-content" className="bg-black min-h-screen">
         {/* Accessible H1 for SEO without changing visual layout */}
-        <h1 className="sr-only">About Vinit Chaudhary — Senior UX/UI Designer</h1>
+        <h1 className="sr-only">About Tisha Kakkar — UX/UI Designer</h1>
 
         {/* Your original sections (unchanged visuals) */}
         <ScrollCard>

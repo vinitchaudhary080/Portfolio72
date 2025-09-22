@@ -5,7 +5,7 @@ export default function Meta({
   title,
   description,
   url,
-  image = "https://vinitchaudhary.in/og-default.jpg",
+  image = "https://tishakakkar.in/og-default.jpg",
   keywords = [],
   canonical,
   noindex = false,

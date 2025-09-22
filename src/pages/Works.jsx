@@ -6,7 +6,7 @@ import { baseKeywords } from "@/seo/keywords";
 import Workmain from "@/components/work/Workmain";
 
 export default function Works() {
-  const url = "https://vinitchaudhary.in/works";
+  const url = "https://tishakakkar.in/works";
   const title = "UX/UI Case Studies — Websites, Apps & SaaS Dashboards (India)";
   const description =
     "Selected UX/UI case studies: fintech dashboards, trading platforms, mobile apps, and web products designed for Indian startups & businesses.";
@@ -21,7 +21,7 @@ export default function Works() {
         keywords={[...baseKeywords, "ux case studies india", "ui portfolio india"]}
         jsonLd={[
           breadcrumbs([
-            { name: "Home", url: "https://vinitchaudhary.in/" },
+            { name: "Home", url: "https://tishakakkar.in/" },
             { name: "Works", url },
           ]),
         ]}

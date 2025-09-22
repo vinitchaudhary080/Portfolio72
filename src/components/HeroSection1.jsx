@@ -17,7 +17,7 @@ export default function HeroSection() {
             sequence={[
               'LOS ANGELES BASED',
               2000,
-              'Senior UI/UX Designer',
+              'UI/UX Designer',
               2000,
               'Product Thinker',
               2000,
@@ -31,7 +31,7 @@ export default function HeroSection() {
 
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-          Vinit Chaudhary<sup className="text-sm">®</sup>
+          Tisha Kakkar<sup className="text-sm">®</sup>
         </h1>
 
         {/* Right (Typing Text) */}

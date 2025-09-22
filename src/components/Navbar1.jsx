@@ -13,7 +13,7 @@ export default function Navbar1({ onMenuClick }) {
         <Link to="/" className="flex items-center" aria-label="Go to homepage">
           <img
             src={logo}
-            alt="Vinitchaudhary Logo"
+            alt="Tishakakkar Logo"
             className="h-8 sm:h-10 w-auto object-contain"
           />
         </Link>
@@ -82,7 +82,7 @@ export default function Navbar1({ onMenuClick }) {
             <h4 className="uppercase mb-1 text-white text-[13px]">Social</h4>
             <p className="leading-relaxed space-y-2 text-gray-400">
               <a
-                href="https://www.behance.net/vinitchaudhary1"
+                href="https://www.behance.net/tishakakkar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
@@ -92,7 +92,7 @@ export default function Navbar1({ onMenuClick }) {
               </a>
               <br />
               <a
-                href="https://www.linkedin.com/in/vinitc69/"
+                href="https://www.linkedin.com/in/tisha-kakkar-55b0a41a0/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"

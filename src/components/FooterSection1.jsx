@@ -8,11 +8,11 @@ export default function FooterSection() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 items-start text-center sm:text-left">
         {/* Email */}
         <a
-          href="mailto:vinitchaudhary080@gmail.com"
+          href="mailto:tishakakkar05@gmail.com"
           className="text-xl sm:text-2xl font-light hover:underline flex justify-center sm:justify-start items-center gap-2"
-          aria-label="Email Vinit Chaudhary"
+          aria-label="Email Tisha Kakkar"
         >
-          vinitchaudhary080@gmail.com <span className="text-lg">↗</span>
+          tishakakkar050@gmail.com <span className="text-lg">↗</span>
         </a>
 
         {/* Message */}
@@ -22,14 +22,14 @@ export default function FooterSection() {
 
         {/* Social Icons */}
         <div className="flex justify-center sm:justify-end items-center gap-6 text-white text-xl" aria-label="Social links">
-          <a href="https://www.linkedin.com/in/vinitc69/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/tisha-kakkar-55b0a41a0/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
           {/* Keep Instagram commented if unused */}
           {/* <a href="https://www.instagram.com/ui_ux.uiigsh=eXpzcDVlaGZoNzVv&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400" aria-label="Instagram">
             <FaInstagram />
           </a> */}
-          <a href="https://www.behance.net/vinitchaudhary1" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400" aria-label="Behance">
+          <a href="https://www.behance.net/tishakakkar" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400" aria-label="Behance">
             <FaBehance />
           </a>
         </div>

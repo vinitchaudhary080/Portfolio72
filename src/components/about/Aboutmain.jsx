@@ -22,16 +22,16 @@ export default function About() {
   const aboutSchema = {
     "@context":"https://schema.org",
     "@type":"AboutPage",
-    "name":"About — Vinit Chaudhary | UX/UI Designer",
-    "url":"https://vinitchaudhary.in/about",
-    "description":"About Vinit Chaudhary — Senior UX/UI Designer specializing in fintech/trading products, research-first UX and production-ready UI systems.",
+    "name":"About — Tisha Kakkar | UX/UI Designer",
+    "url":"https://tishakakkar.in/about",
+    "description":"About Tisha Kakkar — UX/UI Designer specializing in fintech/trading products, research-first UX and production-ready UI systems.",
     "mainEntity":{
       "@type":"Person",
-      "name":"Vinit Chaudhary",
-      "url":"https://vinitchaudhary.in",
+      "name":"Tisha Kakkar",
+      "url":"https://tishakakkar.in",
       "sameAs":[
-        "https://www.linkedin.com/in/vinitc69/",
-        "https://www.behance.net/vinitchaudhary1"
+        "https://www.linkedin.com/in/tisha-kakkar-55b0a41a0/",
+        "https://www.behance.net/tishakakkar"
       ]
     }
   };

@@ -28,7 +28,7 @@ export default function HeroSection() {
         {/* Left block */}
         <div className="flex-1 flex flex-col items-start text-white mb-8 lg:mb-0">
           <p className="italic text-sm sm:text-base mb-4">
-            Hello, I’m Vinit Chaudhary
+            Hello, I’m Tisha Kakkar
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight max-w-lg">
             I design human-centered product interfaces that move the metrics.
@@ -38,7 +38,7 @@ export default function HeroSection() {
         {/* Right block */}
         <div className="flex-1 flex flex-col items-start lg:items-start text-white max-w-md">
           <p className="text-base sm:text-lg lg:text-xl mb-6">
-            As a Senior UX/UI Designer, I partner with brands to transform ideas into
+            As a UX/UI Designer, I partner with brands to transform ideas into
             seamless digital experiences that engage users and elevate your business.
           </p>
           <Link

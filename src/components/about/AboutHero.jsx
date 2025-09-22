@@ -22,8 +22,8 @@ export default function AboutHero() {
         {/* Centered content */}
         <div className="relative z-10 max-w-5xl text-white text-center p-6">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight">
-            Hi, I’m Vinit Chaudhary<br />
-            Senior UX/UI Designer
+            Hi, I’m Tisha Kakkar<br />
+            UX/UI Designer
           </h1>
 
           <p className="mt-6 text-base sm:text-xl font-light text-gray-200">
@@ -33,8 +33,8 @@ export default function AboutHero() {
           </p>
 
           <button
-            onClick={() => window.open("https://wa.me/918398020076", "_blank")}
-            aria-label="Discuss your project with Vinit on WhatsApp"
+            onClick={() => window.open("https://wa.me/919138607772", "_blank")}
+            aria-label="Discuss your project with Tisha on WhatsApp"
             className="
               inline-flex items-center gap-2
               px-6 py-3 mt-10 mx-auto

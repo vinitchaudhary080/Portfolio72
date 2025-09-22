@@ -48,8 +48,8 @@ export const personSchema = {
   "jobTitle":"UI/UX Designer",
   "url": BASE_URL,
   "sameAs":[
-    "https://www.linkedin.com/in/vinitc69/",
-    "https://www.behance.net/vinitchaudhary1"
+    "https://www.linkedin.com/in/tisha-kakkar-55b0a41a0/",
+    "https://www.behance.net/tishakakkar"
   ],
   "image": `${BASE_URL}/tisha-profile.jpg`,
   "knowsAbout":["UI/UX","Design Systems","Fintech UX","Trading Apps"]

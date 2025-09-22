@@ -52,7 +52,7 @@ export default function AboutContent() {
           <div className="flex flex-col gap-4 mt-10 md:flex-row md:gap-6">
             {/* Primary CTA */}
             <a
-              href="https://wa.me/918398020076"
+              href="https://wa.me/919138607772"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Book a 15-minute call on WhatsApp"
