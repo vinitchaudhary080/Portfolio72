@@ -134,8 +134,8 @@ export default function App() {
               <>
                 <SEO19
                   path="/about"
-                  title="About — UI/UX Designer | Vinit Chaudhary"
-                  description="About Vinit Chaudhary — Senior UI/UX Designer & Team Lead. Fintech/trading app specialist. Process-first, research-driven design."
+                  title="About — UX/UI Designer | Vinit Chaudhary"
+                  description="About Vinit Chaudhary — Senior UX/UI Designer & Team Lead. Fintech/trading app specialist. Process-first, research-driven design."
                   schema={[
                     breadcrumb([
                       { name:"Home", item:"https://vinitchaudhary.in" },

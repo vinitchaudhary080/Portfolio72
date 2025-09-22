@@ -24,7 +24,7 @@ export default function About() {
     "@type":"AboutPage",
     "name":"About — Vinit Chaudhary | UX/UI Designer",
     "url":"https://vinitchaudhary.in/about",
-    "description":"About Vinit Chaudhary — Senior UI/UX Designer specializing in fintech/trading products, research-first UX and production-ready UI systems.",
+    "description":"About Vinit Chaudhary — Senior UX/UI Designer specializing in fintech/trading products, research-first UX and production-ready UI systems.",
     "mainEntity":{
       "@type":"Person",
       "name":"Vinit Chaudhary",
