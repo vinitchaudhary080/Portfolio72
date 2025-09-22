@@ -1,11 +1,11 @@
 // src/components/SEO19.jsx
 import React from "react";
 
-const BASE_URL = "https://vinitchaudhary.in";
+const BASE_URL = "https://tishakakkar.in";
 
 export default function SEO19({
-  title = "UI/UX Designer in India | Vinit Chaudhary",
-  description = "Senior UI/UX designer building apps, websites & design systems that convert.",
+  title = "UI/UX Designer in India | Tisha Kakkar",
+  description = "UI/UX designer building apps, websites & design systems that convert.",
   path = "/",
   ogImage = "/og-cover.png",
   noindex = false,
@@ -44,21 +44,21 @@ export default function SEO19({
 export const personSchema = {
   "@context":"https://schema.org",
   "@type":"Person",
-  "name":"Vinit Chaudhary",
+  "name":"Tisha Kakkar",
   "jobTitle":"UI/UX Designer",
   "url": BASE_URL,
   "sameAs":[
     "https://www.linkedin.com/in/vinitc69/",
     "https://www.behance.net/vinitchaudhary1"
   ],
-  "image": `${BASE_URL}/vinit-profile.jpg`,
+  "image": `${BASE_URL}/tisha-profile.jpg`,
   "knowsAbout":["UI/UX","Design Systems","Fintech UX","Trading Apps"]
 };
 
 export const websiteSchema = {
   "@context":"https://schema.org",
   "@type":"WebSite",
-  "name":"Vinit Chaudhary Portfolio",
+  "name":"Tisha Kakkar Portfolio",
   "url": BASE_URL,
   "potentialAction":{
     "@type":"SearchAction",
@@ -79,6 +79,6 @@ export const creativeWork = ({ name, url, image, datePublished, keywords = [] })
   "@context":"https://schema.org",
   "@type":"CreativeWork",
   name, url, image, datePublished,
-  "author": {"@type":"Person","name":"Vinit Chaudhary"},
+  "author": {"@type":"Person","name":"Tisha Kakkar"},
   "keywords": keywords.join(", ")
 });
