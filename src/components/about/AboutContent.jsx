@@ -21,7 +21,7 @@ export default function AboutContent() {
         >
           <span className="block">How it started → How it’s going</span>
           <span className="block text-gray-300">
-            From Gurugram Streets to Design Sprints
+            From Karnal Streets to Design Sprints
           </span>
         </h1>
 
